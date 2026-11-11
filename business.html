@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>마케팅 지식사업 사업성</title>
+<meta name="description" content="마케팅·사업 지식 뉴스레터 사업의 사업성과 실행 전략: 한국 유사 서비스 25곳의 고객 목소리, 재무, 수익 모델 분석 (2026.11)">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --bg:#f6f5f1;--surface:#ffffff;--ink:#17181a;--ink2:#4f535a;--ink3:#868a91;--line:#e4e3de;
+  --accent:#1f5bd6;--accent-soft:#e3ebfb;--hot:#c2410c;--hot-soft:#fbe9df;--ok:#2f6f4f;--ok-soft:#e1efe6;--warn:#8a6100;--warn-soft:#f5ecd3;
+  --bar:#1f5bd6;--bar2:#9aa0a8;--neg:#c2410c;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121315;--surface:#1b1c1f;--ink:#ecedef;--ink2:#b5b9c0;--ink3:#80848b;--line:#2c2e32;
+  --accent:#7aa5ff;--accent-soft:#1a2540;--hot:#ff9a62;--hot-soft:#3a2216;--ok:#7cc29b;--ok-soft:#1a2c22;--warn:#e3b54c;--warn-soft:#332910;
+  --bar:#7aa5ff;--bar2:#5b6068;--neg:#ff9a62;}}
+:root[data-theme="dark"]{
+  --bg:#121315;--surface:#1b1c1f;--ink:#ecedef;--ink2:#b5b9c0;--ink3:#80848b;--line:#2c2e32;
+  --accent:#7aa5ff;--accent-soft:#1a2540;--hot:#ff9a62;--hot-soft:#3a2216;--ok:#7cc29b;--ok-soft:#1a2c22;--warn:#e3b54c;--warn-soft:#332910;
+  --bar:#7aa5ff;--bar2:#5b6068;--neg:#ff9a62;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:16px;line-height:1.75;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+a:hover{border-bottom-color:var(--accent)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+.topnav{border-bottom:1px solid var(--line);font-size:13.5px}
+.topnav .wrap{display:flex;gap:18px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.topnav a{color:var(--ink2);border:0}.topnav a.on{color:var(--ink);font-weight:700}
+header.hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+.kicker{font-size:13px;letter-spacing:.08em;color:var(--accent);font-weight:700}
+h1{font-size:clamp(30px,5vw,50px);line-height:1.18;letter-spacing:-.035em;margin:12px 0 16px;font-weight:800}
+.lede{font-size:18px;color:var(--ink2);max-width:800px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;font-size:14px;color:var(--ink3)}
+.layout{display:grid;grid-template-columns:210px 1fr;gap:48px;padding:40px 0 80px}
+nav.toc{position:sticky;top:20px;align-self:start;font-size:13.5px;max-height:calc(100vh - 40px);overflow:auto}
+nav.toc b{display:block;font-size:12px;color:var(--ink3);letter-spacing:.06em;margin-bottom:8px}
+nav.toc a{display:block;color:var(--ink2);padding:3px 0;border:0}
+nav.toc a:hover{color:var(--accent)}
+main{min-width:0}
+section{margin-bottom:76px;scroll-margin-top:20px}
+h2{font-size:28px;letter-spacing:-.025em;margin:0 0 8px;font-weight:800;line-height:1.3}
+h2 .no{color:var(--accent);margin-right:8px}
+h3{font-size:19px;margin:34px 0 10px;letter-spacing:-.01em}
+h4{margin:0 0 6px;font-size:16.5px}
+.sub{color:var(--ink2);margin:0 0 24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.stat .n{font-size:28px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.stat .l{font-size:13px;color:var(--ink3);margin-top:4px}
+.stat .d{font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.55}
+.callout{border-left:4px solid var(--accent);background:var(--accent-soft);padding:18px 22px;border-radius:0 12px 12px 0;margin:20px 0}
+.callout.hot{border-color:var(--hot);background:var(--hot-soft)}
+.callout.ok{border-color:var(--ok);background:var(--ok-soft)}
+.callout b.t{display:block;margin-bottom:4px}
+.verdict{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
+.verdict .badge{font-size:15px;font-weight:800;background:var(--ok);color:#fff;border-radius:12px;padding:14px 18px;text-align:center;line-height:1.3}
+:root[data-theme="dark"] .verdict .badge{color:#0f1a14}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .verdict .badge{color:#0f1a14}}
+ul.tight{padding-left:20px;margin:8px 0}ul.tight li{margin:4px 0}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12.5px;color:var(--ink3);font-weight:600;white-space:nowrap}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.neg{color:var(--neg)}.pos{color:var(--ok)}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 6px}
+.tag{display:inline-block;font-size:11.5px;font-weight:600;padding:2px 9px;border-radius:999px;margin:0 4px 2px 0;white-space:nowrap}
+.t-pay{background:var(--ok-soft);color:var(--ok)}
+.t-keep{background:var(--accent-soft);color:var(--accent)}
+.t-churn{background:var(--hot-soft);color:var(--hot)}
+.t-free{background:var(--warn-soft);color:var(--warn)}
+.t-op{background:var(--line);color:var(--ink2)}
+.quotes{display:grid;gap:12px;margin:14px 0}
+.quotes.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+blockquote{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:15px 17px}
+blockquote p{margin:0 0 8px;font-size:15px;line-height:1.65}
+blockquote p::before{content:"“";color:var(--accent);font-weight:800;margin-right:2px}
+blockquote p::after{content:"”";color:var(--accent);font-weight:800;margin-left:2px}
+blockquote footer{font-size:12.5px;color:var(--ink3);line-height:1.55}
+.insight{font-size:15px;color:var(--ink2);border-top:1px dashed var(--line);padding-top:12px;margin-top:6px}
+.insight b{color:var(--ink)}
+.theme{margin-top:30px}
+.theme-head h3{margin:0 0 4px}
+.svc{display:grid;gap:12px}
+.svc .card{padding:18px 20px}
+.svc .card h4{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px}
+.svc .card h4 small{font-weight:500;color:var(--ink3);font-size:12.5px}
+.svc .card p{margin:4px 0 0;font-size:14px;color:var(--ink2);line-height:1.6}
+.kv{display:grid;grid-template-columns:76px 1fr;gap:2px 10px;font-size:13.5px;margin-top:8px}
+.kv dt{color:var(--ink3)}.kv dd{margin:0;color:var(--ink2)}
+.bars{display:grid;gap:9px;margin-top:10px}
+.bar-row{display:grid;grid-template-columns:120px 1fr 64px;gap:10px;align-items:center;font-size:13px}
+.bar-track{height:13px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar-fill{height:100%;background:var(--bar);border-radius:4px}
+.bar-fill.alt{background:var(--bar2)}
+.bar-row .v{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink2)}
+.opt{position:relative}
+.opt .ol{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.06em}
+.opt.rec{border:2px solid var(--accent)}
+.opt.rec::after{content:"추천";position:absolute;top:-11px;right:16px;background:var(--accent);color:var(--surface);font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 4px;font-size:13px}
+.flow span{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:3px 9px}
+.flow i{font-style:normal;color:var(--ink3)}
+.road{display:grid;gap:12px}
+.road .card{display:grid;grid-template-columns:120px 1fr;gap:18px}
+.road .ph{font-weight:800;color:var(--accent);font-size:15px}
+.road .ph small{display:block;font-weight:500;color:var(--ink3);font-size:12.5px}
+.road ul{margin:0;padding-left:18px;font-size:14.5px;color:var(--ink2)}
+.road .gate{margin-top:8px;font-size:13.5px;background:var(--ok-soft);color:var(--ok);border-radius:8px;padding:6px 10px;display:inline-block}
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.calc label{display:block;font-size:13px;color:var(--ink2);margin-bottom:12px}
+.calc label span{display:flex;justify-content:space-between}
+.calc label b{color:var(--ink);font-variant-numeric:tabular-nums}
+.calc input[type=range]{width:100%;accent-color:var(--accent)}
+.calc .out{display:grid;gap:10px;align-content:start}
+.calc .row{display:flex;justify-content:space-between;font-size:14.5px;border-bottom:1px solid var(--line);padding:6px 0}
+.calc .row b{font-variant-numeric:tabular-nums}
+.calc .total{font-size:22px;font-weight:800}
+.calc .note{font-size:12.5px;color:var(--ink3);line-height:1.55}
+.stack{display:flex;height:26px;border-radius:6px;overflow:hidden;background:var(--line)}
+.stack div{height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;color:var(--ink3);margin-top:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+ol.src{font-size:13px;color:var(--ink2);padding-left:22px;columns:2;column-gap:32px}
+ol.src li{margin:3px 0;break-inside:avoid}
+footer.end{border-top:1px solid var(--line);padding:28px 0 60px;font-size:13px;color:var(--ink3)}
+.themebtn{position:fixed;right:16px;bottom:16px;background:var(--surface);color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:inherit;font-size:13px;cursor:pointer}
+@media (max-width:960px){.layout{grid-template-columns:1fr;gap:0}nav.toc{display:none}.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:1fr}.calc{grid-template-columns:1fr}ol.src{columns:1}}
+@media (max-width:620px){.g2,.g4,.quotes.two{grid-template-columns:1fr}header.hero{padding:44px 0 28px}h2{font-size:23px}.card{padding:18px}.road .card{grid-template-columns:1fr;gap:6px}.verdict{grid-template-columns:1fr}.bar-row{grid-template-columns:92px 1fr 56px}}
+</style>
+</head>
+<body>
+<div class="topnav"><div class="wrap">
+  <a href="./business.html" class="on">① 마케팅 지식사업 사업성 리포트</a>
+  <a href="./index.html">② 롱블랙 이탈 원인 리포트</a>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">RESEARCH REPORT · 2026.11 · VOL.2</div>
+  <h1>마케팅에서 출발한 사업 지식 뉴스레터,<br>돈이 되는가 · 어떻게 풀어야 하는가</h1>
+  <p class="lede">콘텐츠 마케팅과 퍼포먼스 마케팅에서 출발해 사업 전반을 다루는 뉴스레터를 전제로, 한국인을 대상으로 하는 유사 서비스 25곳을 조사했습니다. 고객이 남긴 실제 문장, 공시·기업 DB의 재무, 광고 단가와 오픈율, 운영자 인터뷰를 모아 <b>사업성</b>과 <b>실행 방법</b>을 정리했습니다.</p>
+  <div class="meta">
+    <span>조사: Claude Code + OpenAI Codex 교차 리서치 (3회 병렬)</span>
+    <span>고객·운영자 발화 70건+</span>
+    <span>기준일: 2026-11-11</span>
+  </div>
+</div></header>
+
+<div class="wrap layout">
+<nav class="toc">
+  <b>목차</b>
+  <a href="#verdict">00 결론</a>
+  <a href="#map">01 시장 지도: 5가지 유형</a>
+  <a href="#money">02 재무: 누가 돈을 버나</a>
+  <a href="#why-pay">03 고객은 왜 돈을 내나</a>
+  <a href="#why-leave">04 고객은 왜 떠나나</a>
+  <a href="#knowledge">05 돈이 되는 지식의 조건</a>
+  <a href="#econ">06 숫자로 본 뉴스레터 경제학</a>
+  <a href="#models">07 수익 모델별 성공·실패</a>
+  <a href="#options">08 사업 구조 옵션</a>
+  <a href="#calc">09 수익 시뮬레이터</a>
+  <a href="#playbook">10 실행 로드맵</a>
+  <a href="#content">11 콘텐츠 설계 원칙</a>
+  <a href="#kpi">12 봐야 할 지표</a>
+  <a href="#risk">13 리스크</a>
+  <a href="#method">14 방법과 한계</a>
+  <a href="#sources">15 출처</a>
+</nav>
+
+<main>
+<!-- 00 -->
+<section id="verdict">
+  <h2><span class="no">00</span>결론</h2>
+  <div class="card verdict">
+    <div class="badge">조건부<br>사업성 있음</div>
+    <div>
+      <b>뉴스레터 구독료만으로는 어렵습니다. 뉴스레터는 신뢰를 쌓는 '입구'로 쓰고, 돈은 그 뒤에 있는 상품에서 벌어야 합니다.</b>
+      <p style="margin:6px 0 0;color:var(--ink2);font-size:15px">조사한 25곳 가운데 <b>월 5천~1만 원대 개인 구독료만으로 흑자를 낸다고 확인된 곳은 없었습니다.</b> 롱블랙과 뉴닉은 매출이 늘어도 적자이고, 퍼블리는 사업을 나눠 매각했습니다. 반면 돈을 버는 곳은 <b>광고·스폰서(캐릿 500~800만 원/회, 어피티 600만 원/회), B2B 콘텐츠 공급(너겟 매출의 80%), 교육·코호트, 대행·자문 리드 확보</b>로 수익을 냅니다.</p>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card"><h4>① 마케팅 지식 뉴스레터 시장은 '무료가 기본'이다</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">큐레터(아이보스), 오픈애즈, 모비인사이드, 드리븐, 플레이디, 엠포스, 콘텐타처럼 마케팅 뉴스레터 대부분은 <b>대행사·플랫폼이 무료로 발행</b>합니다. 뉴스레터는 그 회사들의 영업 채널입니다. 고객은 "무료인데 양질"이라는 기준에 익숙합니다.</p></div>
+    <div class="card"><h4>② 고객은 '정보'가 아니라 '막힌 일을 푸는 것'에 돈을 낸다</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">결제 이유로 나온 말은 "사수 없이 광고를 집행해야 해서", "현직자 Q&A만 보고도 한 달 결제는 해볼 만", "기획 비하인드를 내 기획에 참고"였습니다. 일반 트렌드 요약은 "구글에서 찾으면 충분"하다는 반응을 받습니다.</p></div>
+    <div class="card"><h4>③ 이탈 원인은 품질이 아니라 '안 읽게 됨'과 '관심사 불일치'다</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">"초반엔 많이 보다가 어느 순간 잘 안 찾게 되는 구독 서비스", "메일이 쌓이기만 하더라", "패션에 관심이 없다보니". 주제가 넓어질수록 독자 한 명에게 필요한 글의 비율은 떨어집니다.</p></div>
+    <div class="card"><h4>④ 가장 현실적인 경로: 좁은 무료 레터 → 실무 자료·진단 → B2B</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">'마케팅에서 사업 전반까지'라는 넓은 주제를 입구에서는 좁혀야 합니다. 예를 들어 "직접 광고를 돌리는 소규모 브랜드 대표의 의사결정"처럼 정하고, <b>템플릿·진단·팀 교육</b>을 먼저 팔아 검증한 뒤 반복 사용이 확인된 부분을 구독으로 묶습니다.</p></div>
+  </div>
+</section>
+
+<!-- 01 -->
+<section id="map">
+  <h2><span class="no">01</span>시장 지도: 한국 지식사업의 5가지 유형</h2>
+  <p class="sub">같은 '뉴스레터'라도 돈을 버는 방식이 완전히 다릅니다. 어떤 유형으로 시작할지가 사업의 성격을 정합니다.</p>
+
+  <h3>A. 유료 지식 구독형: 독자가 직접 돈을 낸다</h3>
+  <div class="svc grid g2">
+    <div class="card"><h4>롱블랙 <small>타임앤코 · 30일 5,900원</small></h4><p>하루 한 편, 24시간 열람이라는 습관 장치. 월간 독자 약 20만 명(2026.09 발표, 유료 회원 수 아님). Team Pass, 굿즈, 컨퍼런스로 확장. 매출은 늘지만 영업적자가 이어짐.</p></div>
+    <div class="card"><h4>캐릿 <small>대학내일 · 월 9,900원(2026.07~)</small></h4><p>무료 주간 트렌드 레터(약 24만 명) + 유료 아카이브 + <b>뉴스레터 광고 500~800만 원/회</b>. 무료 레터가 광고 매체 역할도 겸하는 하이브리드 모델.</p></div>
+    <div class="card"><h4>아웃스탠딩 <small>월 13,900원 · DB 포함 월 199,900원</small></h4><p>IT·스타트업 기사 구독에 <b>고가 스타트업 DB</b>와 그룹 구독(5인 이상 20~40% 할인)을 붙임. 2018년 리디, 2022년 이브로드캐스팅에 인수. 2018~2020년에는 매출 4~5억 원, 영업적자.</p></div>
+    <div class="card"><h4>퍼블리 <small>현 뉴닉 소유 · 12개월 119,000원</small></h4><p>누적 유료 가입자 14만 명(2023.03). 매출은 2021년 35.5억 원에서 2023년 20.1억 원으로 줄었고, 세 차례 레이오프 뒤 2024년 멤버십 사업을 뉴닉에 매각했습니다.</p></div>
+    <div class="card"><h4>폴인 <small>중앙그룹</small></h4><p>아티클, 영상, 세미나 멤버십. 2023년 신규 구독자 증가율이 둔화하자 멤버십 상품을 9종에서 4종으로 줄였습니다. SKT 혜택에 Lite 상품을 넣는 제휴 유통도 합니다.</p></div>
+    <div class="card"><h4>데일리바이트 · 커피팟 <small>Byte+ 월 9,900원 · 그룹 월 299,000원/50계정</small></h4><p>바이트는 무료 뉴스레터 13만 명에 누적 유료 3천 명 이상이고, 수익의 중심은 증권사 등에 콘텐츠를 공급하는 B2B입니다. 커피팟은 해외 비즈니스라는 좁은 주제와 세미나로 운영합니다.</p></div>
+  </div>
+
+  <h3>B. 무료 + 광고·제휴형: 광고주가 돈을 낸다</h3>
+  <div class="svc grid g3">
+    <div class="card"><h4>어피티 <small>머니레터</small></h4><p>누적 51만 명(2026.10). 수입의 "반은 광고"(2021년), 나머지는 금융사 콘텐츠 공급. 광고 상품 600만 원부터.</p></div>
+    <div class="card"><h4>뉴닉</h4><p>무료 뉴스. 광고·브랜디드 콘텐츠·캠페인으로 운영하고 퍼블리 구독 사업을 인수. 매출 20.2억 원, 영업손실 8.4억 원(2024).</p></div>
+    <div class="card"><h4>너겟 <small>경제</small></h4><p>구독자 약 1만 명. 광고 단가 기준이 없어 고전하다가 <b>매출의 80%가 B2B(금융사 콘텐츠 공급)</b>로 바뀌었습니다.</p></div>
+  </div>
+
+  <h3>C. 대행사·플랫폼 리드형: 뉴스레터는 영업 채널</h3>
+  <div class="svc grid g3">
+    <div class="card"><h4>아이보스 · 큐레터</h4><p>마케팅 커뮤니티와 무료 뉴스레터를 교육·대행으로 연결. 법인 매출 28.9억 원, 영업이익 1.9억 원(2023). <b>2과목 이상 수강자가 교육 매출의 45%</b>를 차지합니다.</p></div>
+    <div class="card"><h4>오픈애즈 · 모비인사이드</h4><p>마케터 대상 무료 매체. 월간 이용자 15만 명(오픈애즈). 모비인사이드는 광고대행사 모비데이즈 계열로, 뉴스레터 배너 35~50만 원, 콘텐츠형 115만 원(과거 소개서).</p></div>
+    <div class="card"><h4>드리븐 · 플레이디 · 엠포스 · 콘텐타 · CCFM</h4><p>퍼포먼스·콘텐츠 대행사의 무료 뉴스레터. 뉴스레터 자체 매출보다 <b>본업 수주가 목적</b>입니다. 기여 매출은 공개하지 않습니다.</p></div>
+  </div>
+
+  <h3>D. 교육·코호트·커뮤니티형: 실행과 결과물에 돈을 낸다</h3>
+  <div class="svc grid g3">
+    <div class="card"><h4>패스트캠퍼스 · 콜로소 <small>데이원컴퍼니</small></h4><p>연결 매출 1,239억 원, 영업이익 45.7억 원(2025). B2C 61%, B2B 12%, B2G 15%, 글로벌 12%(2024). 마케팅비가 매출의 26%를 차지합니다.</p></div>
+    <div class="card"><h4>클래스101 · 인프런</h4><p>클래스101은 매출이 줄었지만 비용을 조정해 2024년 첫 흑자(영업이익 39억 원)를 냈습니다. 인프런은 매출 인식 방식을 바꿔 매출 숫자를 단순 비교할 수 없습니다.</p></div>
+    <div class="card"><h4>하이아웃풋클럽</h4><p>기수제 실행 프로그램과 커뮤니티. 마스터클래스 49만~99만 원, 누적 멤버 900명 이상(2026.05).</p></div>
+  </div>
+
+  <h3>E. 1인 크리에이터 복합형: 뉴스레터 + 코호트 + 멤버십</h3>
+  <div class="card">
+    <h4>조쉬(솔로프리너) 사례 <small>2024.09 자기 보고 · 감사받지 않은 수치</small></h4>
+    <p style="margin:4px 0 0;font-size:14.5px;color:var(--ink2)">뉴스레터 7,150명으로 <b>월 매출 2,080만 원</b>을 냈다고 밝혔습니다. 구독료가 아니라 ① 4주 챌린지(기당 평균 771만 원) ② 글쓰기 클럽(기당 917만 원, 35만 원 × 30~40명) ③ 월 7만 원 멤버십 약 100명(월 700만 원)에서 나온 매출입니다. 멤버십 첫 달 리텐션은 90%였습니다. 운영자는 "혼자서 3개의 코호트를 동시에 하다보니 리소스의 한계가 나타났죠"라고 썼습니다.</p>
+  </div>
+  <div class="callout">
+    <b class="t">지도에서 읽히는 것</b>
+    유료 구독형(A)은 브랜드 인지도는 가장 높지만 재무가 가장 불안합니다. 반대로 대행·교육형(C·D)은 뉴스레터가 덜 화려해도 돈이 도는 구조입니다. <b>마케팅 지식이라는 주제는 C·D형과 가장 잘 맞습니다.</b> 독자가 곧 잠재 고객(광고주, 수강생, 대행 의뢰인)이기 때문입니다.
+  </div>
+</section>
+
+<!-- 02 -->
+<section id="money">
+  <h2><span class="no">02</span>재무: 누가 실제로 돈을 버나</h2>
+  <p class="sub">공시와 기업정보 DB(NICE 기반)의 법인 전체 수치입니다. 단위는 억 원입니다. 서비스 하나의 손익이 아니라는 점에 주의하세요.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>법인 (서비스)</th><th>유형</th><th class="num">매출 추이</th><th class="num">영업손익 (최근)</th><th>읽는 법</th></tr></thead>
+    <tbody>
+      <tr><td><b>타임앤코</b> (롱블랙)</td><td>A</td><td class="num">1.0 → 8.6 → 18.1 → 23.1 (2021~24)</td><td class="num neg">−7.95 (2024)</td><td>매출이 22배로 늘어도 적자. 2025년 30.4억 원, −2.6억 원이라는 자료도 있음(단일 출처)</td></tr>
+      <tr><td><b>퍼블리</b></td><td>A</td><td class="num">35.5 → 23.4 → 20.1 (2021~23)</td><td class="num neg">순손실 −28.4 (2023)</td><td>비용을 줄여 콘텐츠 사업 이익은 확보했지만 "매출 성장도 포기"(창업자). 이후 매각</td></tr>
+      <tr><td><b>아웃스탠딩컴퍼니</b></td><td>A</td><td class="num">4.25 → 4.24 → 5.16 (2018~20)</td><td class="num neg">−3.65 (2020)</td><td>재구독률 90% 이상(자체 발표)이어도 소규모 적자. 이후 매각</td></tr>
+      <tr><td><b>뉴닉</b></td><td>B</td><td class="num">1.2 → 6.6 → 10.6 → 20.2 (2021~24)</td><td class="num neg">−8.37 (2024)</td><td>광고형도 규모가 커지기 전에는 적자. 2024년은 퍼블리 인수 효과 포함</td></tr>
+      <tr><td><b>아이보스</b></td><td>C</td><td class="num">30.5 → 25.0 → 28.9 (2021~23)</td><td class="num pos">+1.88 (2023)</td><td>커뮤니티 + 교육 + 대행. 규모는 작아도 흑자</td></tr>
+      <tr><td><b>클래스101</b></td><td>D</td><td class="num">656 → 325 → 310 → 282 (2022~25)</td><td class="num pos">+14.1 (2025)</td><td>매출이 절반 이하로 줄어도 비용 구조를 바꿔 흑자 전환</td></tr>
+      <tr><td><b>데이원컴퍼니</b> (패스트캠퍼스·콜로소)</td><td>D</td><td class="num">1,166 → 1,277 → 1,239 (2023~25)</td><td class="num pos">+45.7 (2025)</td><td>B2C·B2B·B2G·해외로 같은 콘텐츠를 여러 번 판매</td></tr>
+      <tr><td><b>인프랩</b> (인프런)</td><td>D</td><td class="num">210 → 70 → 79 (2023~25)</td><td class="num neg">−10.0 (2025)</td><td>2024년 매출 감소는 회계 기준(총액→순액) 변경 때문. 단순 비교 금지</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="grid g3" style="margin-top:16px">
+    <div class="card stat"><div class="n">0곳</div><div class="l">저가 개인 구독만으로 흑자가 확인된 곳</div><div class="d">공개 재무를 확인한 유료 구독형 3곳(타임앤코·퍼블리·아웃스탠딩) 모두 적자이고, 2곳은 매각</div></div>
+    <div class="card stat"><div class="n">80%</div><div class="l">너겟 매출 중 B2B 비중</div><div class="d">"콘텐츠 비즈니스가 오래 지속되려면, 서비스와 결합되어야 한다"</div></div>
+    <div class="card stat"><div class="n">41.7%</div><div class="l">데이원 교육 공헌이익률(2024)</div><div class="d">강사료 22.7%, 마케팅비 26.2%, 제작비 6.3%, PG 3.1%를 뺀 값. 인건비·관리비는 별도</div></div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section id="why-pay">
+  <h2><span class="no">03</span>고객은 왜 돈을 내나: 실제 발화로 본 6가지 구매 이유</h2>
+  <p class="sub">마케터, 주니어 직장인, 사업자가 블로그·앱 리뷰·수강평에 남긴 문장입니다. <span class="tag t-pay">결제 이유</span><span class="tag t-keep">유지 이유</span><span class="tag t-op">운영자</span></p>
+
+  <div class="theme">
+    <div class="theme-head"><h3>P1. 사수가 없다: 막힌 실무를 대신 풀어 줄 사람</h3></div>
+    <div class="quotes two">
+      <blockquote><p>광고를 집행하면서 얻은 인사이트를 알려준다고해서 냉큼 강의를 결제했다.</p><footer><span class="tag t-pay">결제</span>스타트업 마케팅 담당 · 탈잉 퍼포먼스 마케팅 강의 · 2020.10.31</footer></blockquote>
+      <blockquote><p>그래도 실무를 경험할 수 있는 경험이 흔치 않으니 지불했죠.</p><footer><span class="tag t-pay">결제</span>마케팅 취준생 · 코멘토 직무부트캠프 · 2020.11.01</footer></blockquote>
+      <blockquote><p>솔직히 이거만 보고도 한 달 결재는 해볼만 합니다.</p><footer><span class="tag t-pay">결제</span>대학생 · 퍼블리 '현직자 Q&A'에 대해 · 2022.01.05</footer></blockquote>
+      <blockquote><p>구독을 끊는다면 솔직히 아티클보다도 세미나가 더 아쉬울 것 같다.</p><footer><span class="tag t-keep">유지</span>폴인 장기 구독자 · 1~2달 안 봐도 실시간 Q&A 때문에 유지 · 2022.05.29</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> 소규모 조직의 1인 마케터와 직접 광고를 돌리는 대표는 물어볼 사람이 없습니다. <b>Q&A, 피드백, 세미나처럼 '사람에게 접근하는 권리'</b>가 글보다 강한 유지 이유입니다.</p>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>P2. 결과가 아니라 '판단 과정'을 알고 싶다</h3></div>
+    <div class="quotes two">
+      <blockquote><p>담당자들의 기획 비하인드를 기획에 참고해요</p><footer><span class="tag t-keep">유지</span>7년차 마케터 · 캐릿 (운영사 선별 인터뷰) · 2024.01.30</footer></blockquote>
+      <blockquote><p>유행은 시간이 지나면 사라지지만, 인사이트는 그렇지 않거든요.</p><footer><span class="tag t-keep">유지</span>F&B R&D 4년차 · 캐릿 (운영사 선별) · 2024.01.30</footer></blockquote>
+      <blockquote><p>우리 회사에 더 알맞는 방법을 선택할 수 있게 되었다.</p><footer><span class="tag t-keep">유지</span>현직 마케터 · 코멘토 퍼포먼스 마케팅 실무PT · 2023.01.30 (후기 챌린지)</footer></blockquote>
+      <blockquote><p>지표변화가 어떤 것을 의미하는지는 자세히 알려주지 않는다.</p><footer><span class="tag t-churn">불만</span>탈잉 수강생 · 지표 정의보다 '다음에 뭘 해야 하는지'를 원함 · 2020.10.31</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> "어떤 캠페인이 성공했다"는 무료로도 넘칩니다. <b>"왜 그 예산 구조를 골랐고, 무엇을 버렸고, 지표가 꺾였을 때 무엇을 했나"</b>가 돈을 받을 수 있는 지점입니다.</p>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>P3. 바로 쓸 수 있는 자료와 결과물</h3></div>
+    <div class="quotes two">
+      <blockquote><p>미디어 플랜 가이드, 광고 체크리스트, UTM 생성 안내, 픽셀 설치 문서, Q&A 자료 (요약)</p><footer><span class="tag t-keep">높게 평가</span>탈잉 수강생이 꼽은 '좋았던 자료' · 2020.10.31</footer></blockquote>
+      <blockquote><p>얼른 포트폴리오 강의도 런칭됐으면 좋겠어요!</p><footer><span class="tag t-keep">추가 수요</span>콘텐츠 마케터 이직 준비생 · 인프런 수강평 · 2025.04.15</footer></blockquote>
+      <blockquote><p>형광펜 안되면 읽는의미 없어요..</p><footer><span class="tag t-churn">불만</span>퍼블리 앱 · 저장과 재활용이 구독 목적 · 2023.11.04</footer></blockquote>
+      <blockquote><p>저도 직접 판매하는 제품이 있는데, 배운 걸 바로 적용해보려고 합니다!</p><footer><span class="tag t-keep">적용 동기</span>사업자 · 인프런 '마케팅 OS 구축' · 2026.06.14</footer></blockquote>
+    </div>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>P4. 시간 절약: 고르고 거르는 수고를 대신</h3></div>
+    <div class="quotes two">
+      <blockquote><p>짧은 시간에 많은 정보를 확인할 수 있도록, 시간이 없는 '나'를 배려해 주는 느낌이었습니다.</p><footer><span class="tag t-keep">유지</span>큐레터(무료) 2019년부터 구독 · 2021.03.03</footer></blockquote>
+      <blockquote><p>마케터로서 놓치면 안 되는 뉴스를 알아서 큐레이션 해주고, 요약까지 해줘서 좋다 (요약)</p><footer><span class="tag t-keep">유지</span>마케터 · 캐릿 인터뷰 · 2024</footer></blockquote>
+    </div>
+    <p class="insight"><b>주의:</b> 시간 절약은 <b>무료 뉴스레터도 똑같이 제공하는 가치</b>입니다. 유지 이유는 되지만 결제 이유로는 약합니다.</p>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>P5. 대체 불가능한 독점 관점·데이터</h3></div>
+    <div class="quotes two">
+      <blockquote><p>캐릿의 트렌드 콘텐츠는 대체 불가능해서, 구취하면 아쉽다.</p><footer><span class="tag t-keep">유지</span>주니어 마케터 · 브런치 · 2022.03.03</footer></blockquote>
+      <blockquote><p>아웃스탠딩에서 활동하시는 작가님들의 글 퀄리티가 정말 뛰어난 것이 가장 큰 장점이라고 생각합니다</p><footer><span class="tag t-pay">결제</span>스타트업 투자자 · 무료로 충분하다고 생각했다가 바뀜 · 2021.02.17</footer></blockquote>
+      <blockquote><p>트렌드 분석에 목말라있던 저로서는 한 줄기의 샘과 같은 곳이었습니다.</p><footer><span class="tag t-pay">회사에 요청해 정식 구독</span>팀장 마케터 · 캐릿 · 2024.05.09</footer></blockquote>
+      <blockquote><p>결국 실무에 도움이 된다 느껴지고</p><footer><span class="tag t-keep">유지</span>서비스기획자 · 퍼블리·캐릿·아웃스탠딩을 써 보고 남긴 기준 · 2023.10.26</footer></blockquote>
+    </div>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>P6. 회사가 대신 낸다 / 부수입을 기대한다</h3></div>
+    <div class="quotes two">
+      <blockquote><p>그래서 회사에 요청해 캐릿을 정식 구독하고 있어요.</p><footer><span class="tag t-pay">B2B 결제</span>팀장 마케터 · 2024.05.09</footer></blockquote>
+      <blockquote><p>한달에 치킨값이라도 벌면 좋겠다 싶었던 거였다.</p><footer><span class="tag t-pay">결제</span>직장인 · 클래스101+ 연간권 · 2023.04.10</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> 마케팅 지식은 <b>회사 비용으로 처리하기 쉬운 품목</b>입니다. 팀장이 "업무에 필요하다"고 말할 수 있는 형태(팀 계정, 세금계산서, 교육 수료증)를 갖추면 개인 지갑의 저항을 피할 수 있습니다.</p>
+  </div>
+</section>
+
+<!-- 04 -->
+<section id="why-leave">
+  <h2><span class="no">04</span>고객은 왜 떠나나, 왜 무료로 충분하다고 하나</h2>
+  <p class="sub">롱블랙 사례를 깊게 다룬 <a href="./index.html">이탈 원인 리포트</a>와 같은 패턴이 마케팅·비즈니스 지식 서비스 전반에서 반복됩니다. <span class="tag t-churn">해지·미이용</span><span class="tag t-free">무료 선호</span></p>
+  <div class="grid g2">
+    <div class="card">
+      <h4>L1. 안 읽게 된다 (가장 강한 신호)</h4>
+      <div class="quotes">
+        <blockquote><p>초반엔 많이 보다가 어느 순간 잘 안 찾게 되는 구독 서비스가 되었다.</p><footer><span class="tag t-churn">미이용</span>퍼블리 · 2022.05.29</footer></blockquote>
+        <blockquote><p>잘 사용하지 않아서 올해는 연장하지 않고 해지 했어요.</p><footer><span class="tag t-churn">해지</span>마케터 · 퍼블리 연간권 · 2024.01</footer></blockquote>
+        <blockquote><p>실제로 메일 확인을 자주 하지 않으니 메일이 쌓이기만 하더라는...</p><footer><span class="tag t-churn">해지</span>뉴닉 · 2025.01.25</footer></blockquote>
+        <blockquote><p>레니 뉴스레터 유료 구독자인데, 너무 안 읽어서 맘에 쓰였음.</p><footer><span class="tag t-churn">결제 후 미이용</span>한국 PM · LinkedIn · 슬랙으로 옮겨 함께 읽기 모임을 만듦</footer></blockquote>
+      </div>
+    </div>
+    <div class="card">
+      <h4>L2. 무료로도 충분하다 / 검색하면 나온다</h4>
+      <div class="quotes">
+        <blockquote><p>구글에서 찾으려면 충분히 찾을 수 있을 것 같아요.</p><footer><span class="tag t-free">무료 대체</span>퍼블리 실무 팁에 대해 · 2022.01.05</footer></blockquote>
+        <blockquote><p>무료라고 절대 내용이 부실하거나 가볍지 않다.</p><footer><span class="tag t-free">무료 대체</span>복수 구독자 · 2022.05.29</footer></blockquote>
+        <blockquote><p>무료 서비스다. 양질의 콘텐츠를 제공하면서 비용도 없어서 구독하기에 부담이 없다.</p><footer><span class="tag t-free">무료 선호</span>순살·뉴닉·어피티 비교 후기 · 2023.04.16</footer></blockquote>
+        <blockquote><p>뉴닉 하나만 받아봐도 충분하다.</p><footer><span class="tag t-free">무료 선호</span>주니어 마케터 · 2022.03.03</footer></blockquote>
+      </div>
+    </div>
+    <div class="card">
+      <h4>L3. 깊이·관심사·품질 편차</h4>
+      <div class="quotes">
+        <blockquote><p>자세하고 집중력이 요구되는 deep한 내용들은 찾기 어려웠어요.</p><footer><span class="tag t-churn">불만</span>퍼블리 · 2022.01.05</footer></blockquote>
+        <blockquote><p>아티클의 퀄리티나 길이가 들쑥날쑥하고, 매번 비슷한 인사이터들의 글이 노출된다</p><footer><span class="tag t-churn">불만</span>오픈애즈에 대해 · 주니어 마케터 · 2022.03.03</footer></blockquote>
+        <blockquote><p>모두가 다 아는 트렌드는 말고 더 빠른 정보가 필요해요.</p><footer><span class="tag t-churn">요구</span>캐릿 독자 (운영사가 전달) · 2024.01.30</footer></blockquote>
+        <blockquote><p>중복되는 이야기라 구취한 적도 있다.</p><footer><span class="tag t-churn">해지</span>뉴닉에 대해 · 2022.03.03</footer></blockquote>
+      </div>
+    </div>
+    <div class="card">
+      <h4>L4. 홍보성·과다 발송·가격·앱 품질</h4>
+      <div class="quotes">
+        <blockquote><p>아쉬운 점은 뉴스레터에 담긴 콘텐츠가 대부분 세션 홍보에 그친다는 점이다.</p><footer><span class="tag t-churn">불만</span>헤이조이스에 대해 · 2022.03.03</footer></blockquote>
+        <blockquote><p>한때 뉴스레터를 미친듯이 구독해두는 바람에 미개봉 메일을 보며 스트레스를 받지 않으려면…</p><footer><span class="tag t-churn">피로</span>주니어 마케터 · 2022.03.03</footer></blockquote>
+        <blockquote><p>구독료를 지불하고 이용하고 있는데 구독 privilege를 느끼지 못하고 있습니다</p><footer><span class="tag t-churn">불만</span>아웃스탠딩 App Store(평점 1.7) · 2023.08.04</footer></blockquote>
+        <blockquote><p>아웃스탠딩이랑 요기요가 만원이라 비싸서</p><footer><span class="tag t-churn">가격</span>블라인드 직장인 · 2021.12.01</footer></blockquote>
+      </div>
+    </div>
+  </div>
+  <div class="callout hot">
+    <b class="t">대행사형 뉴스레터에 주는 경고</b>
+    "콘텐츠가 대부분 홍보에 그친다"는 무료 레터를 구독 해지하게 만드는 직접 원인입니다. 대행·교육으로 연결하려는 뉴스레터일수록 <b>본문은 순수하게 쓸모 있는 내용으로 채우고, 판매 메시지는 하단 1~2줄로 제한</b>해야 신뢰가 쌓입니다. 구독을 취소하는 이유로는 "너무 자주 와서"(51%)가 콘텐츠 가치 하락(9%)보다 훨씬 많다는 조사(헬로디지털, 2020)도 있습니다.
+  </div>
+</section>
+
+<!-- 05 -->
+<section id="knowledge">
+  <h2><span class="no">05</span>마케터·사업가가 돈을 내는 지식의 6가지 조건</h2>
+  <p class="sub">03~04장의 고객 발화를 종합했습니다. 왼쪽으로 갈수록 무료 시장과 경쟁하고, 오른쪽으로 갈수록 돈을 받을 수 있습니다.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>축</th><th>무료로 충분 (경쟁 과열)</th><th>돈을 낼 만함</th><th>근거</th></tr></thead>
+    <tbody>
+      <tr><td><b>업무와의 거리</b></td><td>트렌드, 뉴스 요약, 교양</td><td>이번 주에 해야 하는 일(광고 세팅, 보고서, 기획안)</td><td>P1, L2</td></tr>
+      <tr><td><b>정보의 층</b></td><td>"무엇이 일어났나" (사례 결과)</td><td>"왜 그렇게 판단했나" (선택지, 버린 안, 실패)</td><td>P2, 탈잉 불만</td></tr>
+      <tr><td><b>형태</b></td><td>읽고 끝나는 글</td><td>남는 자산: 템플릿, 체크리스트, 수식, 대시보드</td><td>P3</td></tr>
+      <tr><td><b>출처</b></td><td>공개 자료 재가공 (AI로 대체 가능)</td><td>직접 집행한 데이터, 독점 인터뷰, 현장 숫자</td><td>P5, L2</td></tr>
+      <tr><td><b>상호작용</b></td><td>일방향 발송</td><td>Q&A, 피드백, 동료 네트워크</td><td>P1 폴인·퍼블리</td></tr>
+      <tr><td><b>타깃 폭</b></td><td>"모든 마케터와 사업가"</td><td>특정 직무×업종×단계 (예: 월 광고비 1천만 원 이하 D2C 대표)</td><td>L3, 커피팟</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="callout">
+    <b class="t">사용자의 구상에 대입하면</b>
+    "콘텐츠·퍼포먼스 마케팅에서 출발해 사업 전반으로 확장"이라는 방향은 <b>독자의 다음 고민을 따라간다</b>는 점에서 타당합니다. 광고 다음에는 전환, 재구매, 가격, 수익성 문제가 옵니다. 다만 그 확장은 <b>같은 독자의 문제를 따라가는 수직 확장</b>이어야 합니다. 주제를 옆으로 넓히는 수평 확장은 L3(관심사 불일치)를 키웁니다.
+  </div>
+</section>
+
+<!-- 06 -->
+<section id="econ">
+  <h2><span class="no">06</span>숫자로 본 한국 뉴스레터 경제학</h2>
+
+  <h3>광고·스폰서 단가 (공개 제안가, VAT 별도)</h3>
+  <div class="card">
+    <div class="bars">
+      <div class="bar-row"><span>캐릿 프리미엄</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="v">800만</span></div>
+      <div class="bar-row"><span>어피티 머니레터</span><div class="bar-track"><div class="bar-fill" style="width:75%"></div></div><span class="v">600만</span></div>
+      <div class="bar-row"><span>캐릿 기본</span><div class="bar-track"><div class="bar-fill" style="width:62.5%"></div></div><span class="v">500만</span></div>
+      <div class="bar-row"><span>모비인사이드 eDM</span><div class="bar-track"><div class="bar-fill alt" style="width:15.6%"></div></div><span class="v">125만</span></div>
+      <div class="bar-row"><span>모비인사이드 콘텐츠형</span><div class="bar-track"><div class="bar-fill alt" style="width:14.4%"></div></div><span class="v">115만</span></div>
+      <div class="bar-row"><span>모비 배너 (1만 명)</span><div class="bar-track"><div class="bar-fill alt" style="width:6.25%"></div></div><span class="v">35~50만</span></div>
+    </div>
+    <p style="font-size:13px;color:var(--ink3);margin:12px 0 0">캐릿은 2025.08 소개서(구독자 약 24만), 어피티는 판매 페이지(2026.11 확인, 누적 51만), 모비인사이드는 과거 v1.4 소개서(구독자 약 1.2만) 기준입니다. 구독자 1만 명 규모의 배너는 <b>회당 35~70만 원</b>에서 시작한다고 보는 것이 현실적입니다.</p>
+  </div>
+
+  <h3>오픈율 기준선 (스티비)</h3>
+  <div class="grid g2">
+    <div class="card">
+      <b>미디어 업종, 구독자 규모별 평균 오픈율</b>
+      <div class="bars">
+        <div class="bar-row"><span>1천 명 이하</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="v">32.2%</span></div>
+        <div class="bar-row"><span>1천~5천</span><div class="bar-track"><div class="bar-fill" style="width:91%"></div></div><span class="v">29.3%</span></div>
+        <div class="bar-row"><span>5천~1만</span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><span class="v">16.1%</span></div>
+        <div class="bar-row"><span>1만~5만</span><div class="bar-track"><div class="bar-fill" style="width:61%"></div></div><span class="v">19.6%</span></div>
+        <div class="bar-row"><span>5만 초과</span><div class="bar-track"><div class="bar-fill" style="width:44%"></div></div><span class="v">14.3%</span></div>
+      </div>
+      <p style="font-size:12.5px;color:var(--ink3);margin:10px 0 0">2025.04~09 발송 데이터, 2025.11.17 갱신. 규모가 커질수록 오픈율이 떨어지는 경향(인과는 아님).</p>
+    </div>
+    <div class="card">
+      <b>발행 주체별 · 업종별</b>
+      <div class="bars">
+        <div class="bar-row"><span>개인 발행</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="v">25.4%</span></div>
+        <div class="bar-row"><span>기업 발행</span><div class="bar-track"><div class="bar-fill alt" style="width:55%"></div></div><span class="v">13.9%</span></div>
+        <div class="bar-row"><span>미디어 업종</span><div class="bar-track"><div class="bar-fill alt" style="width:74%"></div></div><span class="v">18.9%</span></div>
+        <div class="bar-row"><span>취업·교육</span><div class="bar-track"><div class="bar-fill alt" style="width:59%"></div></div><span class="v">15.0%</span></div>
+        <div class="bar-row"><span>IT·통신</span><div class="bar-track"><div class="bar-fill alt" style="width:56%"></div></div><span class="v">14.3%</span></div>
+      </div>
+      <p style="font-size:12.5px;color:var(--ink3);margin:10px 0 0">스티비 2025 리포트(2022.11~2024.10 발송 63.6만 건). <b>개인 발행이 기업 발행보다 오픈율이 거의 2배</b>입니다. '사람의 목소리'가 열람을 만든다는 근거입니다.</p>
+    </div>
+  </div>
+
+  <h3>유료 전환 · 정산 · 손익분기 참고값</h3>
+  <div class="grid g4">
+    <div class="card stat"><div class="n">15~25%</div><div class="l">블루닷 회원 중 유료 비중</div><div class="d">미디어스피어, 2022. 크리에이터형 유료 구독 플랫폼 기준</div></div>
+    <div class="card stat"><div class="n">700명</div><div class="l">오터레터 유료 독자</div><div class="d">월 약 400만 원(2022). 국내 1인 유료 레터의 현실적인 상단 사례</div></div>
+    <div class="card stat"><div class="n">96.5%</div><div class="l">스티비 정산률</div><div class="d">1만 원 결제 시 9,648원. 메일리는 20% 차감(PG·부가세·이용료 포함)</div></div>
+    <div class="card stat"><div class="n">~200명</div><div class="l">1인 유료 레터 손익분기(해외 사례)</div><div class="d">월 8유로, 전환 3.4%, 월 이탈 4.7%. 무료 레터 12호 이상 쌓기 전 유료화 금지</div></div>
+  </div>
+  <div class="callout">
+    <b class="t">"구독만으로는 위험하다": 운영자들의 공통 진술</b>
+    <ul class="tight">
+      <li>"구독은 대안이 아니다. 안정적 수입원 중 하나일 뿐이다." "경험상 구독 하나에만 의존하는 모델들은 위험하다." (미디어스피어 이성규 대표, 2022)</li>
+      <li>국내 대형 크리에이터는 "대부분 구독료가 아닌, 광고 수입으로 운영한다." (같은 인터뷰)</li>
+      <li>"결국 콘텐츠 비즈니스가 오래 지속되려면, 서비스와 결합되어야 한다는 걸 깨달은 겁니다." (너겟, 2024)</li>
+      <li>"지속적인 운영을 위해선 뉴스레터를 통한 수입이 꼭 필요한 상황입니다." (트렌드라이트 자체 회고, 2023 말 · 1.6만 명 무료 레터)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 07 -->
+<section id="models">
+  <h2><span class="no">07</span>수익 모델별 성공·실패 패턴</h2>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>모델</th><th>작동하는 조건</th><th>실패·제약 패턴</th><th>사례</th><th>마케팅 지식 적합도</th></tr></thead>
+    <tbody>
+      <tr><td><b>저가 개인 구독</b> (월 5~15천 원)</td><td>일관된 편집 관점, 읽는 습관, 반복 사용 자료</td><td>객단가가 낮은데 제작비와 고객 획득비는 계속 듦. 미이용으로 이탈</td><td>롱블랙·퍼블리·아웃스탠딩 (적자·매각)</td><td>낮음</td></tr>
+      <tr><td><b>무료 + 광고·스폰서</b></td><td>광고주가 원하는 독자층, 브랜디드 콘텐츠 제작 능력, 재계약</td><td>광고 영업도 노동집약적. 슬롯이 비면 매출 0. 독자 신뢰 훼손 위험</td><td>캐릿·어피티·뉴닉</td><td>높음 (마케팅 SaaS·툴·대행사가 광고주)</td></tr>
+      <tr><td><b>무료 + B2B 콘텐츠 공급</b></td><td>기업이 자사 채널에 쓸 전문 콘텐츠를 원함</td><td>고객 집중도, 맞춤 제작 부담</td><td>너겟(80%)·데일리바이트·어피티</td><td>중간</td></tr>
+      <tr><td><b>무료 + 대행·자문 리드</b></td><td>콘텐츠가 전문성을 증명하고 상담·수주로 연결</td><td>납품이 늘면 발행 여력이 줄어듦. 대표에게 영업이 집중</td><td>아이보스·콘텐타·CCFM·드리븐</td><td><b>매우 높음</b></td></tr>
+      <tr><td><b>개인 + 팀 구독</b></td><td>조직이 반복 쓰는 DB·템플릿·공동 학습, 관리자 기능</td><td>구매자(팀장)와 사용자(팀원)가 달라 사용률 관리 필요</td><td>아웃스탠딩 그룹·Byte+ 그룹·롱블랙 Team Pass</td><td>높음</td></tr>
+      <tr><td><b>뉴스레터 + 교육</b></td><td>반복 질문을 강의로 제품화하고, 여러 고객군에 재판매</td><td>마케팅비·강사료가 높고 재구매가 자동으로 생기지 않음</td><td>데이원·클래스101·아이보스(2과목+ 45%)</td><td>높음</td></tr>
+      <tr><td><b>코호트·유료 커뮤니티</b></td><td>피드백, 실행 책임, 동료, 결과물</td><td>운영자 노동, 기수별 모집 부담, 친목화</td><td>하이아웃풋클럽·조쉬</td><td>높음</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- 08 -->
+<section id="options">
+  <h2><span class="no">08</span>사업 구조 옵션: 어떻게 풀어 나갈 것인가</h2>
+  <p class="sub">조사 사례를 바탕으로 한 설계 제안입니다. 특정 회사의 수익률을 그대로 재현할 수 있다는 예측은 아닙니다.</p>
+  <div class="grid g2">
+    <div class="card opt rec">
+      <div class="ol">OPTION A</div>
+      <h4>전문 뉴스레터 + 진단·자문·대행 (B2B)</h4>
+      <div class="flow"><span>무료 사례 분석 레터</span><i>→</i><span>유료 진단·감사</span><i>→</i><span>월 자문·대행</span><i>→</i><span>사내 교육</span></div>
+      <p style="font-size:14.5px;color:var(--ink2);margin:8px 0">구독자가 수천 명만 있어도 매출을 검증할 수 있습니다. 실제 집행 경험을 콘텐츠로 증명하므로, <b>이미 마케팅 실무를 하는 조직에게 가장 자연스러운 출발점</b>입니다.</p>
+      <dl class="kv"><dt>근거</dt><dd>아이보스(흑자), 콘텐타·CCFM·드리븐, 너겟 B2B 80%</dd><dt>검증</dt><dd>레터 → 상담 전환율, 계약당 납품 시간, 재계약률</dd><dt>위험</dt><dd>납품이 늘면 발행이 멈춤. 레터가 홍보물로 변질됨</dd></dl>
+    </div>
+    <div class="card opt rec">
+      <div class="ol">OPTION B</div>
+      <h4>실무 자료 구독 + 팀 플랜</h4>
+      <div class="flow"><span>무료 브리핑</span><i>→</i><span>템플릿·사례 DB·벤치마크</span><i>→</i><span>팀 계정</span></div>
+      <p style="font-size:14.5px;color:var(--ink2);margin:8px 0">"읽는 구독"이 아니라 <b>"업무에 쓰는 구독"</b>입니다. 광고 소재 DB, 업종별 CPA·ROAS 벤치마크, 기획서 템플릿처럼 쓸수록 쌓이는 자산을 만들면 이탈이 줄어듭니다.</p>
+      <dl class="kv"><dt>근거</dt><dd>아웃스탠딩 DB(월 19.99만 원), 캐릿 기업 구독, Byte+ 그룹</dd><dt>검증</dt><dd>주간 사용 빈도, 갱신률, 계정당 사용률</dd><dt>위험</dt><dd>데이터 업데이트 비용. 무료 자료와의 차별성</dd></dl>
+    </div>
+    <div class="card opt">
+      <div class="ol">OPTION C</div>
+      <h4>뉴스레터 + 실행형 코호트 + 졸업생 멤버십</h4>
+      <div class="flow"><span>무료 레터</span><i>→</i><span>4주 프로젝트 과정</span><i>→</i><span>월 멤버십</span><i>→</i><span>VOD</span></div>
+      <p style="font-size:14.5px;color:var(--ink2);margin:8px 0">객단가가 높고(30~100만 원) 구독자 수천 명으로도 월 천만 원대를 만들 수 있습니다. 대신 운영 노동이 큽니다.</p>
+      <dl class="kv"><dt>근거</dt><dd>조쉬(월 2,080만 원 자기 보고), 하이아웃풋클럽, 아이보스 교육</dd><dt>검증</dt><dd>수료 결과물, 환불률, 다음 상품 구매율</dd></dl>
+    </div>
+    <div class="card opt">
+      <div class="ol">OPTION D</div>
+      <h4>버티컬 미디어 + 스폰서 + 유료 리포트</h4>
+      <div class="flow"><span>무료 레터 (대규모)</span><i>→</i><span>스폰서 슬롯</span><i>→</i><span>리포트·행사</span></div>
+      <p style="font-size:14.5px;color:var(--ink2);margin:8px 0">마케터는 광고주(마케팅 SaaS, 광고 플랫폼, 대행사)가 가장 원하는 독자층입니다. 다만 <b>1만 명 이하에서는 회당 수십만 원</b>이라, 규모가 생긴 뒤에 붙이는 수익원입니다.</p>
+      <dl class="kv"><dt>근거</dt><dd>캐릿·어피티·모비인사이드</dd><dt>검증</dt><dd>슬롯 판매율, 실수령 단가, 재계약</dd></dl>
+    </div>
+  </div>
+  <div class="callout ok">
+    <b class="t">권장 조합: A로 시작하고, B를 쌓고, D를 얹는다</b>
+    0~6개월에는 무료 레터와 B2B 진단·자문(A)으로 <b>현금과 고객 문제 데이터</b>를 확보합니다. 6~12개월에는 반복해서 받는 질문을 템플릿·DB·팀 플랜(B)으로 만들어 <b>대표의 시간과 매출을 분리</b>합니다. 구독자가 1만 명을 넘으면 마케팅 툴·플랫폼 스폰서(D)를 붙입니다. 코호트(C)는 운영 인력이 생긴 뒤 선택합니다.
+  </div>
+</section>
+
+<!-- 09 -->
+<section id="calc">
+  <h2><span class="no">09</span>수익 시뮬레이터</h2>
+  <p class="sub">슬라이더로 가정을 바꿔 보세요. 기본값은 조사에서 나온 범위의 보수적인 값입니다. <b>설명용 가정이며 시장 평균이 아닙니다.</b></p>
+  <div class="card calc">
+    <div>
+      <label><span>무료 구독자 수 <b id="o_subs"></b></span><input type="range" id="subs" min="1000" max="50000" step="1000" value="8000"></label>
+      <label><span>유료 전환율 (%) <b id="o_conv"></b></span><input type="range" id="conv" min="0" max="8" step="0.5" value="2"></label>
+      <label><span>유료 월 구독료 (원) <b id="o_price"></b></span><input type="range" id="price" min="0" max="50000" step="1000" value="15000"></label>
+      <label><span>스폰서 슬롯/월 × 판매율 50% <b id="o_slots"></b></span><input type="range" id="slots" min="0" max="8" step="1" value="2"></label>
+      <label><span>B2B 자문·대행 고객 수 <b id="o_b2b"></b></span><input type="range" id="b2b" min="0" max="15" step="1" value="3"></label>
+      <label><span>B2B 월 단가 (원) <b id="o_b2bp"></b></span><input type="range" id="b2bp" min="500000" max="5000000" step="100000" value="1500000"></label>
+      <label><span>코호트 (기수/분기 × 인원 × 단가 40만 원) <b id="o_coh"></b></span><input type="range" id="coh" min="0" max="60" step="5" value="0"></label>
+    </div>
+    <div class="out">
+      <div class="row"><span>유료 구독 (정산 96.5%)</span><b id="r_sub"></b></div>
+      <div class="row"><span>스폰서 (슬롯 단가: 구독자 1천 명당 6만 원)</span><b id="r_ad"></b></div>
+      <div class="row"><span>B2B 자문·대행</span><b id="r_b2b"></b></div>
+      <div class="row"><span>코호트 (분기 1기, 월 환산)</span><b id="r_coh"></b></div>
+      <div class="row total"><span>월 매출</span><b id="r_total"></b></div>
+      <div class="stack" id="stack"></div>
+      <div class="legend"><span><i style="background:#1f5bd6"></i>구독</span><span><i style="background:#c2410c"></i>스폰서</span><span><i style="background:#2f6f4f"></i>B2B</span><span><i style="background:#8a6100"></i>코호트</span></div>
+      <p class="note" id="r_note"></p>
+      <p class="note">스폰서 단가는 모비인사이드(1.2만 명, 35~50만 원)와 캐릿(24만 명, 500만 원)을 잇는 단순 근사입니다. B2B·코호트 매출에는 납품 노동이 들어가므로 구독 매출과 이익률이 다릅니다. 고정비(인건비, 툴, 제작비)는 빼지 않았습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section id="playbook">
+  <h2><span class="no">10</span>실행 로드맵: 단계마다 다음으로 넘어갈 조건</h2>
+  <div class="road">
+    <div class="card"><div class="ph">0~3개월<small>신뢰 증명</small></div><div>
+      <ul>
+        <li>타깃을 한 문장으로 좁히기 (예: "광고비 월 300~3,000만 원을 직접 운영하는 D2C·로컬 브랜드 대표와 1인 마케터")</li>
+        <li>주 1회, 5분 분량 레터. 매 호는 <b>실제 집행 사례 1건 + 판단 기준 + 바로 쓸 체크리스트 1개</b></li>
+        <li>필자 1인의 이름과 목소리로 발행 (개인 발행 오픈율 25.4% vs 기업 13.9%)</li>
+        <li>유입: 스레드·링크드인·디스콰이엇·이오플래닛에 요약을 배포하고, 템플릿을 주는 대신 이메일을 받기</li>
+        <li>모든 호에 "답장으로 질문 주세요"를 넣어 고객 문제를 데이터베이스로 쌓기</li>
+      </ul>
+      <span class="gate">다음 단계 조건: 구독자 1,000명 이상, 오픈율 35% 이상, 답장·질문 월 20건 이상, 무료 레터 12호 이상</span>
+    </div></div>
+    <div class="card"><div class="ph">3~6개월<small>첫 매출 검증</small></div><div>
+      <ul>
+        <li>가장 많이 받은 질문 3개를 <b>유료 진단 상품</b>으로 (예: 광고 계정 진단 30~50만 원, 콘텐츠 퍼널 진단)</li>
+        <li>진단 고객의 20~30%를 월 자문·대행으로 전환 시도</li>
+        <li>진단에서 나온 패턴을 익명화해 레터 소재로 다시 활용 (콘텐츠 → 매출 → 콘텐츠 순환)</li>
+        <li>사전 판매로 템플릿 팩 1종 테스트 (1~5만 원)</li>
+      </ul>
+      <span class="gate">다음 단계 조건: 유료 고객 10곳 이상, 레터 경유 상담 전환율 측정 시작, 템플릿 구매자 50명 이상</span>
+    </div></div>
+    <div class="card"><div class="ph">6~12개월<small>상품화와 반복</small></div><div>
+      <ul>
+        <li>반복되는 진단 결과를 <b>업종별 벤치마크 DB와 템플릿 라이브러리</b>로 묶어 월 1~3만 원 멤버십 (+ 팀 플랜)</li>
+        <li>멤버십 혜택은 '글'이 아니라 <b>월 1회 라이브 Q&A, 계정 피드백, 자료 업데이트</b> (해외 사례: 라이브 콜이 없으면 8주 내 이탈 3배)</li>
+        <li>주제를 수직으로 확장: 광고 → 랜딩·전환 → CRM·재구매 → 가격·마진</li>
+        <li>일시정지 기능, 연간권(10개월 가격) 도입</li>
+      </ul>
+      <span class="gate">다음 단계 조건: 유료 멤버 200명 이상, 월 이탈 5% 미만, 팀 플랜 5곳 이상</span>
+    </div></div>
+    <div class="card"><div class="ph">12개월~<small>규모화</small></div><div>
+      <ul>
+        <li>구독자 1만 명 이상부터 마케팅 SaaS·광고 플랫폼 스폰서 (월 2~4슬롯, 본문 신뢰 기준 공개)</li>
+        <li>B2B 사내 교육, 기관(B2G) 교육 입찰. 데이원은 B2B·B2G 비중이 27%</li>
+        <li>코호트 과정은 운영 매니저를 확보한 뒤 분기 1기로</li>
+        <li>외부 필자 풀 구성. 단 편집 기준은 유지 ("기고를 받는 경우에도 우리 스타일에 맞게 많이 고쳐요" – 롱블랙)</li>
+      </ul>
+    </div></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section id="content">
+  <h2><span class="no">11</span>콘텐츠 설계 원칙: 고객 목소리에서 바로 나온 10가지</h2>
+  <div class="grid g2">
+    <div class="card"><h4>1. 매 호에 '이번 주에 쓸 것' 하나</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">체크리스트, 수식, 문구 템플릿. 읽고 끝나지 않고 결과물이 남게 합니다. (P3)</p></div>
+    <div class="card"><h4>2. 결과보다 판단: 선택지, 버린 안, 실패</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">"지표 변화가 뭘 의미하는지"를 설명합니다. 무료 레터와 갈리는 지점입니다. (P2)</p></div>
+    <div class="card"><h4>3. 실제 숫자 (익명화)</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">CPA, ROAS, 전환율 범위. 단, 숫자 공개에 돈을 더 낸다는 직접 발화는 아직 부족하므로 가설로 두고 테스트합니다.</p></div>
+    <div class="card"><h4>4. 짧은 무료 레터, 깊은 유료 부록을 분리</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">"15분 이상 걸려 부담"과 "deep한 내용이 없다"는 불만을 동시에 해결합니다. (L3)</p></div>
+    <div class="card"><h4>5. 발송은 주 1~2회로 제한</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">구독을 취소하는 가장 큰 이유는 발송 빈도입니다(51%). 미개봉 메일 스트레스를 만들지 않습니다. (L4)</p></div>
+    <div class="card"><h4>6. 홍보는 하단 1~2줄</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">"대부분 세션 홍보에 그친다"는 해지 사유입니다. 판매 메시지는 본문과 분리합니다. (L4)</p></div>
+    <div class="card"><h4>7. 사람의 목소리로</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">개인 발행 오픈율이 기업 발행의 1.8배입니다. 회사 이름보다 필자 이름이 앞에 와야 합니다.</p></div>
+    <div class="card"><h4>8. 독자 세그먼트별 경로</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">구독할 때 직무, 업종, 광고비 규모를 받아 관련 호를 추천하고 아카이브를 필터로 제공합니다. (L3)</p></div>
+    <div class="card"><h4>9. 답장과 질문을 상품 원천으로</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">Q&A가 가장 강한 유지 이유입니다. 질문 → 레터 → 진단 상품의 순환을 만듭니다. (P1)</p></div>
+    <div class="card"><h4>10. AI가 못 하는 것에 집중</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">공개 자료 요약은 AI로 대체됩니다. 직접 집행한 데이터, 현장 인터뷰, 피드백처럼 대체되지 않는 영역에 비중을 둡니다.</p></div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section id="kpi">
+  <h2><span class="no">12</span>봐야 할 지표: 구독자 수가 아니다</h2>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>단계</th><th>핵심 지표</th><th>참고 기준</th><th>함정</th></tr></thead>
+    <tbody>
+      <tr><td>관심</td><td>고유 오픈율, 클릭률, <b>답장 수</b></td><td>미디어 1천~5천 명: 오픈 29.3%, 클릭 6.4%</td><td>중복 오픈 포함 수치(캐릿 33.28%)와 비교 금지</td></tr>
+      <tr><td>신뢰</td><td>4주 연속 오픈 비율, 레터 공유 수</td><td>자체 기준 설정</td><td>누적 구독자는 휴면 독자 포함</td></tr>
+      <tr><td>첫 매출</td><td>레터 → 상담·구매 전환율 (코호트별)</td><td>국내 평균 자료 없음. 직접 측정</td><td>누적 유료 ÷ 현재 구독자로 계산 금지</td></tr>
+      <tr><td>반복</td><td>월 재결제율, 유료 회원의 주간 사용</td><td>롱블랙 87%(2023 상반기), 해외 1인 사례 월 이탈 4.7%</td><td>결제 유지 ≠ 실제 사용</td></tr>
+      <tr><td>B2B</td><td>계약당 공헌이익, 재계약률, 상위 1곳 매출 비중</td><td>상위 고객 1곳 30% 이하 권장(일반 원칙)</td><td>대표 시간을 비용에서 빼지 말 것</td></tr>
+      <tr><td>광고</td><td>슬롯 판매율, 실수령 단가, 재구매 광고주</td><td>1만 명 배너 35~70만 원</td><td>제안가 ≠ 계약가</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- 13 -->
+<section id="risk">
+  <h2><span class="no">13</span>리스크</h2>
+  <div class="grid g2">
+    <div class="card"><h4>무료 대체재와 AI 요약</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">마케팅 뉴스레터 시장은 대행사·플랫폼의 무료 레터로 포화되어 있습니다. 일반 트렌드와 사례 요약은 차별성이 없습니다. → 직접 데이터와 판단 과정, 상호작용으로 차별화합니다.</p></div>
+    <div class="card"><h4>독자 수 착시</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">무료 구독자, 누적 회원, 월간 방문자는 유료 고객이 아닙니다. 롱블랙(월 독자 20만 명)도 적자입니다.</p></div>
+    <div class="card"><h4>창업자 노동 누락</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">글쓰기, 영업, 상담, 강의 시간을 0원으로 계산하면 흑자로 착각합니다. 1인 운영자도 "인력 부족을 절감"했다고 썼습니다.</p></div>
+    <div class="card"><h4>홍보와 편집 신뢰의 충돌</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">대행 수주용 레터가 홍보물이 되면 구독 취소로 이어집니다. 광고 기준을 공개하고 빈도를 제한합니다.</p></div>
+    <div class="card"><h4>넓은 주제</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">"사업 전반"은 흥미로운 글을 만들지만 구매 이유를 흐립니다. 수직 확장만 합니다.</p></div>
+    <div class="card"><h4>성장 방식과 자본의 불일치</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">퍼블리는 콘텐츠 사업에서 이익을 냈지만 투자사가 원하는 성장과 충돌했습니다. 처음부터 <b>현금 창출형 전문 사업</b>인지 <b>플랫폼</b>인지 정합니다.</p></div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section id="method">
+  <h2><span class="no">14</span>조사 방법과 한계</h2>
+  <div class="card">
+    <ul class="tight">
+      <li><b>방법:</b> Claude Code가 웹 검색과 페이지 원문 확인을 맡고, OpenAI Codex가 두 갈래(고객 목소리, 사업 모델·재무)로 따로 리서치했습니다. 헤드라인 수치 9건은 원문을 다시 열어 대조했습니다(확인 5건, 접근 실패 4건).</li>
+      <li><b>재확인하지 못한 항목:</b> 큐레터 11만 명·아이보스 커뮤니티 44만 명(접근 차단), 부딩 유료 중단(네이버 차단), 커피팟·조쉬 인터뷰 인용(인코딩·로그인 벽). 본문에서 이 항목들은 핵심 근거로 쓰지 않았습니다.</li>
+      <li><b>표본:</b> 공개 후기는 무작위 표본이 아니고, 주니어·취업준비생의 발화가 많고 <b>대표·사업자의 직접 결제 발화는 적습니다.</b> 사업자 대상 지불 의향은 인터뷰나 사전 판매로 따로 검증해야 합니다.</li>
+      <li><b>재무:</b> 비상장사 수치는 NICE 기반 기업 DB(사람인·잡코리아·인크루트), 상장사는 공시입니다. 모두 법인 전체 수치이고 서비스 단독 손익은 아닙니다. 캐릿·어피티·오픈애즈·큐레터의 단독 손익은 공개되지 않았습니다.</li>
+      <li><b>시점:</b> 후기 중 일부는 2018~2022년 자료입니다. 가격은 확인 시점(2026.11) 기준이며 과거 가격과 섞지 않았습니다.</li>
+      <li><b>해외 자료:</b> 200명 손익분기 사례(유로화)와 모닝브루는 해외 사례이므로 참고값으로만 썼습니다.</li>
+      <li><b>추론 표시:</b> 08~13장의 옵션, 로드맵, 원칙은 조사를 바탕으로 한 제안입니다. 시뮬레이터 값은 가정입니다.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 15 -->
+<section id="sources">
+  <h2><span class="no">15</span>출처</h2>
+  <h3>고객 발화</h3>
+  <ol class="src">
+    <li><a href="https://www.careet.net/1255" target="_blank" rel="noopener">캐릿 활용 인터뷰 (2024.01)</a></li>
+    <li><a href="https://firstyeolim.com/%EC%BA%90%EB%A6%BF-%ED%8A%B8%EB%A0%8C%EB%93%9C-%ED%8C%8C%EC%95%85%EC%9D%B4-%ED%95%84%EC%9A%94%ED%95%A0-%EB%95%90-%EC%BA%90%EB%A6%BF%EC%9D%B4%EC%A3%A0/" target="_blank" rel="noopener">팀장 마케터의 캐릿 후기 (2024.05)</a></li>
+    <li><a href="https://community.linkareer.com/jayuu/2396931?page=3" target="_blank" rel="noopener">링커리어: 마케팅 소식지 구독 (2023.11)</a></li>
+    <li><a href="https://brunch.co.kr/@2hopper/12" target="_blank" rel="noopener">주니어 마케터가 받아보는 뉴스레터 (2022.03)</a></li>
+    <li><a href="https://venture-capital.tistory.com/7?category=842155" target="_blank" rel="noopener">아웃스탠딩 내돈내산 후기 (2021.02)</a></li>
+    <li><a href="https://apps.apple.com/kr/app/outstanding/id1564686117?see-all=reviews" target="_blank" rel="noopener">아웃스탠딩 App Store 리뷰</a></li>
+    <li><a href="https://odotpedia.tistory.com/216" target="_blank" rel="noopener">퍼블리·폴인·롱블랙 비교 후기 (2022.05)</a></li>
+    <li><a href="https://fast1597.tistory.com/27" target="_blank" rel="noopener">퍼블리 한 달 사용 후기 (2022.01)</a></li>
+    <li><a href="https://apps.apple.com/kr/app/id1440756899" target="_blank" rel="noopener">퍼블리 App Store 리뷰</a></li>
+    <li><a href="https://stibee.com/api/v1.0/emails/share/qgAsJ3LOadckO8VnX0ww9mKYQ4HMHSI" target="_blank" rel="noopener">마케터블 #91 (2024.01)</a></li>
+    <li><a href="https://brunch.co.kr/@144ce42dff304dd/9" target="_blank" rel="noopener">서비스기획자의 유료 구독 후기 (2023.10)</a></li>
+    <li><a href="https://brunch.co.kr/@mobiinside/2853" target="_blank" rel="noopener">큐레터 구독 후기 (2021.03)</a></li>
+    <li><a href="https://peapatch815.tistory.com/entry/경제뉴스" target="_blank" rel="noopener">경제 뉴스레터 비교 (2023.04)</a></li>
+    <li><a href="https://ipersonallythink33likethat33.tistory.com/entry/뉴닉-구독-취소-방법-수신-거부" target="_blank" rel="noopener">뉴닉 구독 취소 후기 (2025.01)</a></li>
+    <li><a href="https://kr.linkedin.com/posts/simpsonsim_wanted-레니-뉴스레터-공부할-pmgrowthai-직군-레니-activity-7414909851090300930-rUfG" target="_blank" rel="noopener">LinkedIn: 레니 뉴스레터 함께 읽기</a></li>
+    <li><a href="https://zzalgalyang.tistory.com/5" target="_blank" rel="noopener">탈잉 퍼포먼스 마케팅 수강 후기 (2020.10)</a></li>
+    <li><a href="https://zzalgalyang.tistory.com/6" target="_blank" rel="noopener">코멘토 부트캠프 후기 (2020.11)</a></li>
+    <li><a href="https://bjhee927.tistory.com/5" target="_blank" rel="noopener">코멘토 실무PT 후기 (2023.01)</a></li>
+    <li><a href="https://avocadocream.tistory.com/33" target="_blank" rel="noopener">패스트캠퍼스 마케팅 환급 후기 (2021.10)</a></li>
+    <li><a href="https://www.inflearn.com/community/reviews/182102" target="_blank" rel="noopener">인프런 수강평 (2025.04)</a></li>
+    <li><a href="https://www.inflearn.com/community/reviews/268023" target="_blank" rel="noopener">인프런 수강평 (2026.06)</a></li>
+    <li><a href="https://alpha.atoz101.com/entry/클래스101-내돈내산-후기-리뷰요정-리남-강의-장단점" target="_blank" rel="noopener">클래스101+ 후기 (2023.04)</a></li>
+    <li><a href="https://www.teamblind.com/kr/post/%EA%B5%AC%EB%8F%85-%EC%84%9C%EB%B9%84%EC%8A%A4-%EB%AA%A9%EB%A1%9D-d5FvD8qe" target="_blank" rel="noopener">블라인드: 구독 서비스 목록 (2021.12)</a></li>
+    <li><a href="https://www.hellodigital.kr/blog/dmkt-general-subscribe-unsubscribe-02/" target="_blank" rel="noopener">헬로디지털: 구독·취소 이유 (2020.08)</a></li>
+  </ol>
+  <h3>사업·재무·데이터</h3>
+  <ol class="src">
+    <li><a href="https://www.careet.net/Newsletter/Detail?id=4317" target="_blank" rel="noopener">캐릿 가격 변경 공지 (2026.06)</a></li>
+    <li><a href="https://s3.ap-northeast-2.amazonaws.com/package-univ/Download/CAREET_MEDIA.pdf" target="_blank" rel="noopener">캐릿 매체소개서 (2025.08)</a></li>
+    <li><a href="https://www.mediatoday.co.kr/news/articleView.html?idxno=213509" target="_blank" rel="noopener">미디어오늘: 5만 명 뉴스레터 광고비 (2021)</a></li>
+    <li><a href="https://outstanding.kr/premium-membership" target="_blank" rel="noopener">아웃스탠딩 멤버십 가격</a></li>
+    <li><a href="https://www.mobiinside.co.kr/2022/01/06/outstanding-interview/" target="_blank" rel="noopener">모비인사이드: 아웃스탠딩 최용식 인터뷰 (2022)</a></li>
+    <li><a href="https://www.fnnews.com/news/202204281921007922" target="_blank" rel="noopener">아웃스탠딩 인수 기사 (2022.04)</a></li>
+    <li><a href="https://www.saramin.co.kr/zf_user/company-info/view-inner-finance/csn/emNnZ1EyY0xwZkN2Y2lhaDQ5QXdhZz09/company_nm/%28%EC%A3%BC%29%EC%95%84%EC%9B%83%EC%8A%A4%ED%83%A0%EB%94%A9%EC%BB%B4%ED%8D%BC%EB%8B%88" target="_blank" rel="noopener">아웃스탠딩컴퍼니 재무 (사람인)</a></li>
+    <li><a href="https://www.saramin.co.kr/zf_user/company-info/view-inner-finance/csn/SWp2bGNRcEI0NEd2dzBlRExBL1FoUT09/company_nm/%28%EC%A3%BC%29%ED%83%80%EC%9E%84%EC%95%A4%EC%BD%94" target="_blank" rel="noopener">타임앤코 재무 (사람인)</a></li>
+    <li><a href="https://www.saramin.co.kr/zf_user/company-info/view-inner-finance/csn/S2dSbmVNUHJKUlhiVDNGZ3VtUG9sUT09/company_nm/%28%EC%A3%BC%29%EB%89%B4%EB%8B%89" target="_blank" rel="noopener">뉴닉 재무 (사람인)</a></li>
+    <li><a href="https://www.incruit.com/company/1686348865/" target="_blank" rel="noopener">퍼블리 재무 (인크루트)</a></li>
+    <li><a href="https://www.mk.co.kr/news/business/11452140" target="_blank" rel="noopener">매경: 퍼블리 박소령 인터뷰 (2025.10)</a></li>
+    <li><a href="https://www.joonganggroup.com/newsroom/article/view?pno=2916" target="_blank" rel="noopener">중앙그룹: 폴인 리브랜딩 (2023.10)</a></li>
+    <li><a href="https://news.sktelecom.com/218462" target="_blank" rel="noopener">SKT: 폴인 Lite 제휴 (2026.01)</a></li>
+    <li><a href="https://longblack.co/f/biz" target="_blank" rel="noopener">롱블랙 Team Pass</a></li>
+    <li><a href="https://www.mydailybyte.com/about/membership" target="_blank" rel="noopener">데일리바이트 멤버십</a></li>
+    <li><a href="https://platum.kr/archives/188927" target="_blank" rel="noopener">플래텀: 바이트컴퍼니 투자</a></li>
+    <li><a href="https://contents.premium.naver.com/byteplus/byte/subscriptions?rContentId=251121042453812yq" target="_blank" rel="noopener">Byte+ 그룹 구독</a></li>
+    <li><a href="https://letter.wepick.kr/510/4405145/" target="_blank" rel="noopener">위픽레터: 너겟이 살아남은 비결 (2024.03)</a></li>
+    <li><a href="https://blog.stibee.com/stibee-interview-uppity/" target="_blank" rel="noopener">스티비: 어피티 인터뷰 (2021.02)</a></li>
+    <li><a href="https://uppity.co.kr/partnership/" target="_blank" rel="noopener">어피티 광고·제휴</a></li>
+    <li><a href="https://www.ads-soon.com/product/details/425" target="_blank" rel="noopener">어피티 광고 상품 (애즈순)</a></li>
+    <li><a href="https://www.jobkorea.co.kr/Recruit/Co_Read/C/being0" target="_blank" rel="noopener">아이보스 기업정보 (잡코리아)</a></li>
+    <li><a href="https://openads.oopy.io/" target="_blank" rel="noopener">오픈애즈 광고 안내</a></li>
+    <li><a href="https://www.adure.net/uploads/adure/1681696409_1679899225_%EB%AA%A8%EB%B9%84%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C_%EA%B4%91%EA%B3%A0_%EC%83%81%ED%92%88_%EC%86%8C%EA%B0%9C%EC%84%9C_v1.4.pdf" target="_blank" rel="noopener">모비인사이드 광고 소개서 v1.4</a></li>
+    <li><a href="https://stibee.com/api/v1.0/emails/share/a89uTRgeCD47vpvamUjVmBHFQ_KQVpE" target="_blank" rel="noopener">트렌드라이트 운영 회고 (2023)</a></li>
+    <li><a href="https://class101.ghost.io/press_250317/" target="_blank" rel="noopener">클래스101 첫 흑자 (2025.03)</a></li>
+    <li><a href="https://venturelog.kr/company/%ED%81%B4%EB%9E%98%EC%8A%A4101" target="_blank" rel="noopener">클래스101 재무 DB</a></li>
+    <li><a href="https://www.jobkorea.co.kr/Recruit/Co_Read/C/28279060" target="_blank" rel="noopener">인프랩 재무 (잡코리아)</a></li>
+    <li><a href="https://jojoldu.tistory.com/856" target="_blank" rel="noopener">인프런 CTO 회고 (2026.01)</a></li>
+    <li><a href="https://financialfilings.com/filings/day1-company-inc/annual-report/2026/32933356/" target="_blank" rel="noopener">데이원컴퍼니 2025 사업보고서</a></li>
+    <li><a href="https://securities.miraeasset.com/bbs/download/2136898.pdf?attachmentId=2136898" target="_blank" rel="noopener">미래에셋증권: 데이원컴퍼니 (2025.06)</a></li>
+    <li><a href="https://www.mk.co.kr/news/it/11210877" target="_blank" rel="noopener">매경: 데이원 이강민 인터뷰 (2025.01)</a></li>
+    <li><a href="https://blog.highoutputclub.com/hoc-program/" target="_blank" rel="noopener">하이아웃풋클럽 프로그램</a></li>
+    <li><a href="https://maily.so/josh/posts/2qzp0jlwr4x" target="_blank" rel="noopener">조쉬: 월 2,080만 원 회고 (2024.09)</a></li>
+    <li><a href="https://maily.so/josh/posts/1do1q3kxrx6" target="_blank" rel="noopener">조쉬: 3개월 회고 (2024.01)</a></li>
+    <li><a href="https://www.mediatoday.co.kr/news/articleView.html?idxno=305400" target="_blank" rel="noopener">미디어오늘: 블루닷 이성규 인터뷰 (2022.08)</a></li>
+    <li><a href="https://relijournal.com/ko/digital-products/paid-newsletter-the-200-subscriber-math" target="_blank" rel="noopener">유료 뉴스레터 200명의 수학 (해외)</a></li>
+    <li><a href="https://help.stibee.com/paid-newsletter/billing/process" target="_blank" rel="noopener">스티비 유료 뉴스레터 정산</a></li>
+    <li><a href="https://maily.so/app/guides/monetization/withdraw" target="_blank" rel="noopener">메일리 정산 안내</a></li>
+    <li><a href="https://report.stibee.com/2025/" target="_blank" rel="noopener">스티비 2025 이메일 마케팅 리포트</a></li>
+    <li><a href="https://blog.stibee.com/2025_email-marketing-data/" target="_blank" rel="noopener">스티비 2025 데이터 세션</a></li>
+    <li><a href="https://benchmark.stibee.com/" target="_blank" rel="noopener">스티비 벤치마크 (2025.11)</a></li>
+    <li><a href="https://blog.opensurvey.co.kr/article/subscription-economy-2026-2/" target="_blank" rel="noopener">오픈서베이: 2026 구독 서비스</a></li>
+    <li><a href="https://www.godo.co.kr/main/blog/25/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4-%EC%84%B1%EC%9E%A5%EC%9D%84-%EB%8F%95%EB%8A%94-%EB%89%B4%EC%8A%A4%EB%A0%88%ED%84%B0-%EC%B6%94%EC%B2%9C-15%EA%B0%80%EC%A7%80-%EB%A7%88%EC%BC%80%ED%8C%85%EC%B0%BD%EC%97%85%EC%9D%B4%EC%BB%A4%EB%A8%B8%EC%8A%A4-4615" target="_blank" rel="noopener">고도몰: 2026 비즈니스 뉴스레터 15</a></li>
+    <li><a href="https://www.i-boss.co.kr/ab-qletter-1063708" target="_blank" rel="noopener">아이보스 큐레터 발표 (2026.10)</a></li>
+  </ol>
+</section>
+</main>
+</div>
+
+<footer class="end"><div class="wrap">공개 웹 자료를 바탕으로 작성했으며 언급된 기업과는 관련이 없습니다. 인용문의 저작권은 각 작성자에게 있습니다. · 2026.11.11</div></footer>
+<button class="themebtn" id="tb" type="button">테마 전환</button>
+<script>
+(function(){
+  var r=document.documentElement,b=document.getElementById('tb');
+  try{var s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s);}catch(e){}
+  b.addEventListener('click',function(){var cur=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');var n=cur==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n);}catch(e){}});
+  var $=function(id){return document.getElementById(id)};
+  var won=function(v){return Math.round(v).toLocaleString('ko-KR')+'원'};
+  var man=function(v){return (Math.round(v/10000)).toLocaleString('ko-KR')+'만 원'};
+  function calc(){
+    var subs=+$('subs').value,conv=+$('conv').value,price=+$('price').value,slots=+$('slots').value,b2b=+$('b2b').value,b2bp=+$('b2bp').value,coh=+$('coh').value;
+    $('o_subs').textContent=subs.toLocaleString('ko-KR')+'명';
+    $('o_conv').textContent=conv+'%';
+    $('o_price').textContent=won(price);
+    $('o_slots').textContent=slots+'개';
+    $('o_b2b').textContent=b2b+'곳';
+    $('o_b2bp').textContent=man(b2bp);
+    $('o_coh').textContent=coh+'명';
+    var paid=Math.round(subs*conv/100);
+    var rs=paid*price*0.965;
+    var slotPrice=Math.max(300000,subs/1000*60000);
+    var ra=slots*0.5*slotPrice;
+    var rb=b2b*b2bp;
+    var rc=coh*400000/3;
+    var t=rs+ra+rb+rc;
+    $('r_sub').textContent=man(rs)+' ('+paid+'명)';
+    $('r_ad').textContent=man(ra);
+    $('r_b2b').textContent=man(rb);
+    $('r_coh').textContent=man(rc);
+    $('r_total').textContent=man(t);
+    var cols=['#1f5bd6','#c2410c','#2f6f4f','#8a6100'],vals=[rs,ra,rb,rc],h='';
+    for(var i=0;i<4;i++){if(t>0&&vals[i]>0)h+='<div style="width:'+(vals[i]/t*100)+'%;background:'+cols[i]+'"></div>';}
+    $('stack').innerHTML=h;
+    var share=t>0?Math.round(rs/t*100):0;
+    $('r_note').textContent='현재 가정에서 구독료가 차지하는 비중은 '+share+'%입니다. 유료 구독만으로 월 800만 원(1인 운영 고정비 가정)을 만들려면 이 가격에서 유료 회원 약 '+(price>0?Math.ceil(8000000/(price*0.965)).toLocaleString('ko-KR'):'—')+'명이 필요합니다.';
+  }
+  ['subs','conv','price','slots','b2b','b2bp','coh'].forEach(function(id){$(id).addEventListener('input',calc);});
+  calc();
+})();
+</script>
+</body>
+</html>
