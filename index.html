@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>지식 구독 이탈 리포트</title>
+<meta name="description" content="롱블랙 등 한국 지식 콘텐츠 구독 서비스의 매출·리텐션 문제를 실제 고객 목소리로 분석한 리서치 리포트 (2026.11)">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --bg:#f7f5f0;--surface:#ffffff;--ink:#1c1a17;--ink2:#55504a;--ink3:#8a837a;--line:#e6e1d8;
+  --accent:#b4441f;--accent-soft:#f6e6de;--ok:#2f6f4f;--ok-soft:#e2efe7;--warn:#9a6a00;--warn-soft:#f6ecd2;
+  --info:#2c5a8a;--info-soft:#e0eaf5;--bar:#b4441f;--bar2:#8a837a;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141311;--surface:#1d1b18;--ink:#eeeae3;--ink2:#bdb6ab;--ink3:#8a837a;--line:#2f2c27;
+  --accent:#e8794f;--accent-soft:#3a2219;--ok:#7cc29b;--ok-soft:#1b2d23;--warn:#e0b24a;--warn-soft:#33290f;
+  --info:#7fb0e6;--info-soft:#18273a;--bar:#e8794f;--bar2:#6d665d;}}
+:root[data-theme="dark"]{
+  --bg:#141311;--surface:#1d1b18;--ink:#eeeae3;--ink2:#bdb6ab;--ink3:#8a837a;--line:#2f2c27;
+  --accent:#e8794f;--accent-soft:#3a2219;--ok:#7cc29b;--ok-soft:#1b2d23;--warn:#e0b24a;--warn-soft:#33290f;
+  --info:#7fb0e6;--info-soft:#18273a;--bar:#e8794f;--bar2:#6d665d;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:16px;line-height:1.75;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+a:hover{border-bottom-color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header.hero{padding:72px 0 40px;border-bottom:1px solid var(--line)}
+.kicker{font-size:13px;letter-spacing:.08em;color:var(--accent);font-weight:700;text-transform:uppercase}
+h1{font-size:clamp(30px,5vw,48px);line-height:1.2;letter-spacing:-.03em;margin:12px 0 16px;font-weight:800}
+.lede{font-size:18px;color:var(--ink2);max-width:760px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:24px;font-size:14px;color:var(--ink3)}
+.layout{display:grid;grid-template-columns:220px 1fr;gap:48px;padding:40px 0 80px}
+nav.toc{position:sticky;top:24px;align-self:start;font-size:14px}
+nav.toc b{display:block;font-size:12px;color:var(--ink3);letter-spacing:.06em;margin-bottom:8px}
+nav.toc a{display:block;color:var(--ink2);padding:4px 0;border:0}
+nav.toc a:hover{color:var(--accent)}
+section{margin-bottom:72px;scroll-margin-top:24px}
+h2{font-size:28px;letter-spacing:-.02em;margin:0 0 8px;font-weight:800}
+h2 .no{color:var(--accent);margin-right:8px}
+h3{font-size:20px;margin:36px 0 10px;letter-spacing:-.01em}
+.sub{color:var(--ink2);margin:0 0 24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.stat .n{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.stat .l{font-size:13px;color:var(--ink3);margin-top:4px}
+.stat .d{font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.55}
+.callout{border-left:4px solid var(--accent);background:var(--accent-soft);padding:18px 22px;border-radius:0 12px 12px 0;margin:20px 0}
+.callout.info{border-color:var(--info);background:var(--info-soft)}
+.callout.ok{border-color:var(--ok);background:var(--ok-soft)}
+.callout b{display:block;margin-bottom:4px}
+ul.tight{padding-left:20px;margin:8px 0}ul.tight li{margin:4px 0}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12.5px;color:var(--ink3);font-weight:600;letter-spacing:.02em}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.neg{color:var(--accent)}.pos{color:var(--ok)}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;margin-right:4px;white-space:nowrap}
+.t-churn{background:var(--accent-soft);color:var(--accent)}
+.t-consider{background:var(--warn-soft);color:var(--warn)}
+.t-complain{background:var(--info-soft);color:var(--info)}
+.t-op{background:var(--line);color:var(--ink2)}
+.theme{margin-top:28px}
+.theme-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:6px}
+.theme-head h3{margin:0}
+.sev{font-size:13px;color:var(--ink3)}
+.dots{letter-spacing:2px;color:var(--accent)}
+.quotes{display:grid;gap:12px;margin:16px 0}
+blockquote{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+blockquote p{margin:0 0 8px;font-size:15.5px;line-height:1.65}
+blockquote p::before{content:"“";color:var(--accent);font-weight:800;margin-right:2px}
+blockquote p::after{content:"”";color:var(--accent);font-weight:800;margin-left:2px}
+blockquote footer{font-size:13px;color:var(--ink3)}
+.insight{font-size:15px;color:var(--ink2);border-top:1px dashed var(--line);padding-top:12px;margin-top:4px}
+.insight b{color:var(--ink)}
+.bars{display:grid;gap:10px;margin-top:12px}
+.bar-row{display:grid;grid-template-columns:52px 1fr 70px;gap:10px;align-items:center;font-size:13.5px}
+.bar-track{height:14px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar-fill{height:100%;background:var(--bar);border-radius:4px}
+.bar-fill.alt{background:var(--bar2)}
+.bar-row .v{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink2)}
+.funnel{display:grid;gap:8px}
+.fstep{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.fstep .k{width:44px;height:44px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:800}
+.fstep h4{margin:0 0 4px;font-size:16px}
+.fstep p{margin:0;font-size:14.5px;color:var(--ink2)}
+.matrix td:first-child{font-weight:600}
+.rx{counter-reset:rx}
+.rx .card{position:relative;padding-left:64px}
+.rx .card::before{counter-increment:rx;content:counter(rx,decimal-leading-zero);position:absolute;left:22px;top:20px;font-weight:800;color:var(--accent);font-size:18px}
+.rx h4{margin:0 0 6px;font-size:17px}
+.rx p{margin:0 0 6px;font-size:14.5px;color:var(--ink2)}
+.rx .ev{font-size:13px;color:var(--ink3)}
+ol.src{font-size:13.5px;color:var(--ink2);padding-left:22px}
+ol.src li{margin:3px 0}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px;font-size:13px;color:var(--ink3);align-items:center}
+footer.end{border-top:1px solid var(--line);padding:28px 0 60px;font-size:13px;color:var(--ink3)}
+.themebtn{position:fixed;right:16px;bottom:16px;background:var(--surface);color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:inherit;font-size:13px;cursor:pointer}
+@media (max-width:900px){.layout{grid-template-columns:1fr;gap:0}nav.toc{display:none}.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr}}
+@media (max-width:600px){.g2,.g4{grid-template-columns:1fr}header.hero{padding:48px 0 28px}h2{font-size:24px}.card{padding:18px}.rx .card{padding-left:54px}.rx .card::before{left:16px}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <div class="kicker">Research Report · 2026.11</div>
+  <h1>사람들은 왜 롱블랙 같은<br>지식 구독을 그만두는가</h1>
+  <p class="lede">롱블랙·퍼블리·폴인·밀리의서재 등 한국 지식 콘텐츠 구독 서비스의 이탈 원인을 <b>실제 고객이 남긴 문장</b>으로 분석했습니다. 앱스토어·구글플레이·29CM 리뷰, 블로그 해지 후기, 커뮤니티 글, 공시·기사를 모았습니다.</p>
+  <div class="meta">
+    <span>조사: Claude Code + OpenAI Codex 교차 리서치</span>
+    <span>수집 고객 발화: 40건+ (원문 인용 30건)</span>
+    <span>기준일: 2026-11-11</span>
+  </div>
+</div></header>
+
+<div class="wrap layout">
+<nav class="toc">
+  <b>목차</b>
+  <a href="#tldr">00 핵심 요약</a>
+  <a href="#premise">01 전제 점검: 정말 매출이 떨어지나</a>
+  <a href="#signals">02 정량 신호</a>
+  <a href="#voices">03 고객 목소리 9가지 이탈 사유</a>
+  <a href="#funnel">04 이탈이 일어나는 경로</a>
+  <a href="#matrix">05 사유별 심각도</a>
+  <a href="#structure">06 구조적 원인</a>
+  <a href="#rx">07 리텐션 처방</a>
+  <a href="#method">08 방법과 한계</a>
+  <a href="#sources">09 출처</a>
+</nav>
+
+<main>
+<!-- 00 -->
+<section id="tldr">
+  <h2><span class="no">00</span>핵심 요약</h2>
+  <p class="sub">고객이 이 서비스를 그만두는 가장 큰 이유는 "콘텐츠가 나빠서"가 아닙니다. <b>"좋은 건 아는데, 안 읽게 되고, 나한테 필요한 게 줄어서"</b>입니다.</p>
+  <div class="grid g2">
+    <div class="card"><b>① 시간 부족으로 쌓이기만 한다</b><br><span style="color:var(--ink2);font-size:15px">해지 후기에서 가장 많이 나온 사유입니다. "잘 사용하지 않아서 올해는 연장하지 않고 해지했어요." 운영사도 "쌓인 텍스트를 다 소비하지 못하고 피로감을 느껴 해지한다"고 인정했습니다.</span></div>
+    <div class="card"><b>② 내 관심사와 맞는 글의 비율이 줄어든다</b><br><span style="color:var(--ink2);font-size:15px">"패션에 관심이 없다보니 … 흥미가 없었습니다(해지 예약)." "요즘 롱블랙, 소스가 떨어졌나?" 비즈니스·브랜드 주제에 쏠렸다는 지적과 "자가복제 같은 글"이라는 표현도 반복됩니다.</span></div>
+    <div class="card"><b>③ 다른 구독과 합쳐 보면 비싸다</b><br><span style="color:var(--ink2);font-size:15px">단독 가격보다 구독 고정비 총액이 문제입니다. 구독을 정리할 때 '없어도 당장 불편하지 않은' 지식 구독이 먼저 잘립니다. 2026년 조사에서 콘텐츠 멤버십은 5.7%p 줄었고 AI 구독은 8.4%p 늘었습니다.</span></div>
+    <div class="card"><b>④ 읽는 과정이 불편하다</b><br><span style="color:var(--ink2);font-size:15px">완독하지 못한 글을 다시 찾기 어렵고, 이미 읽은 사람에게도 알림이 가고, 형광펜이 고장 나고, 음성 듣기가 없습니다. 롱블랙 구글플레이 평점은 <b>2.9</b>(142개)입니다.</span></div>
+  </div>
+  <div class="callout info">
+    <b>단, "매출이 계속 떨어진다"는 전제는 롱블랙에는 맞지 않습니다</b>
+    운영사 타임앤코의 매출은 2022년 8.6억 원에서 2025년 30.4억 원으로 늘었습니다. 하락이 확인된 곳은 <b>퍼블리</b>(2021→2023 매출 −43%, 레이오프, 사업 매각)와 <b>밀리의서재 직접 구독(B2C) 매출</b>(2025 −2.5%)입니다. 이 리포트는 "매출 하락"보다 <b>"성장 속에서도 새는 리텐션"</b>을 진단합니다.
+  </div>
+</section>
+
+<!-- 01 -->
+<section id="premise">
+  <h2><span class="no">01</span>전제 점검: 정말 매출이 떨어지나</h2>
+  <p class="sub">서비스마다 상황이 다릅니다. 법인 전체 실적과 구독 사업 실적, 직접 결제와 제휴 채널을 나눠서 봐야 원인을 잘못 짚지 않습니다.</p>
+
+  <div class="grid g2">
+    <div class="card">
+      <b>롱블랙 운영사 타임앤코: 매출 성장, 적자 지속</b>
+      <div class="legend"><span>단위: 억 원 · 막대 = 매출</span></div>
+      <div class="bars">
+        <div class="bar-row"><span>2022</span><div class="bar-track"><div class="bar-fill" style="width:28%"></div></div><span class="v">8.55</span></div>
+        <div class="bar-row"><span>2023</span><div class="bar-track"><div class="bar-fill" style="width:59%"></div></div><span class="v">18.05</span></div>
+        <div class="bar-row"><span>2024</span><div class="bar-track"><div class="bar-fill" style="width:76%"></div></div><span class="v">23.12</span></div>
+        <div class="bar-row"><span>2025</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="v">30.41</span></div>
+      </div>
+      <p style="font-size:13.5px;color:var(--ink2);margin:14px 0 0">영업손익: −5.84 → −4.98 → <span class="neg">−7.95</span> → −2.60억 원. 법인 전체 수치(키링 같은 굿즈, 컨퍼런스, Ep9 포함)이며 구독 매출만의 수치는 아닙니다. 롱블랙 측은 강연에서 "작년 매출 전년 대비 20~30% 성장", "구독이 4,900원인데 키링이 더 잘 팔려요"라고 말했습니다.</p>
+    </div>
+    <div class="card">
+      <b>퍼블리: 매출 감소, 대규모 손실, 사업 분할 매각</b>
+      <div class="legend"><span>단위: 억 원 · 막대 = 매출</span></div>
+      <div class="bars">
+        <div class="bar-row"><span>2021</span><div class="bar-track"><div class="bar-fill alt" style="width:100%"></div></div><span class="v">35.51</span></div>
+        <div class="bar-row"><span>2022</span><div class="bar-track"><div class="bar-fill alt" style="width:66%"></div></div><span class="v">23.38</span></div>
+        <div class="bar-row"><span>2023</span><div class="bar-track"><div class="bar-fill alt" style="width:57%"></div></div><span class="v">20.14</span></div>
+      </div>
+      <p style="font-size:13.5px;color:var(--ink2);margin:14px 0 0">당기순손익 −44.5 → −46.4 → −28.4억 원. 세 차례 레이오프 후 2024년 6월 멤버십 사업을 뉴닉에, 9월 커리어리 법인을 시소에 매각했습니다. 창업자는 "비용을 쥐어짠다는 것은 매출 성장도 포기한다는 의미였다"고 말했습니다.</p>
+    </div>
+  </div>
+
+  <h3>서비스별 상태 한눈에 보기</h3>
+  <div class="tablewrap card" style="padding:6px 8px">
+  <table>
+    <thead><tr><th>서비스</th><th>매출 추세</th><th>리텐션·성장 신호</th><th>판정</th></tr></thead>
+    <tbody>
+      <tr><td>롱블랙 (타임앤코)</td><td>2022→2025 약 3.6배 성장, 영업적자 지속</td><td>2023년 상반기 월 재결제율 87%(회사 발표), 2026.1 가격 인상(4,900→5,900원), 무제한 플랜(9,900원) 출시</td><td><span class="tag t-complain">성장 중 · 리텐션 관리 과제</span></td></tr>
+      <tr><td>퍼블리</td><td>2021→2023 −43%</td><td>창업자: "신규 유치보다 기존 구독자 리텐션(재결제)이 훨씬 힘들다", "첫 결제는 … 이탈이 문제였다"</td><td><span class="tag t-churn">하락 확인</span></td></tr>
+      <tr><td>폴인 (중앙그룹)</td><td>단독 수치 미확인</td><td>2023년 사보: 신규 구독자 증가율 둔화, 상품 9종 → 4종 축소, 종이 매거진 중단</td><td><span class="tag t-consider">성장 둔화 확인</span></td></tr>
+      <tr><td>밀리의서재</td><td>전체 매출 +21.5%(2025, 881.9억)</td><td>B2C 매출 371.8억, <b>−2.5%</b>. 성장은 통신사 제휴가 이끔</td><td><span class="tag t-consider">직접 구독 하락</span></td></tr>
+      <tr><td>뉴닉</td><td>법인 매출 성장(2024 20.2억), 영업적자</td><td>퍼블리 멤버십 인수로 사업 범위가 바뀌어 프리미엄 단독 실적은 분리 불가</td><td><span class="tag t-op">판단 불가</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="callout">
+    <b>읽는 법</b>
+    "매출 하락"과 "고객 이탈"은 같은 현상이 아닙니다. 밀리의서재에서는 직접 결제를 해지하고 <b>통신사 혜택으로 옮겨 계속 쓰는</b> 고객이 있습니다. 퍼블리 매출 감소에는 고객 불만뿐 아니라 <b>광고비 축소(신규 유입 감소)</b>도 영향을 줬습니다. 롱블랙은 신규 유입과 굿즈·행사 매출이 리텐션 누수를 가리고 있을 가능성이 있습니다(추정).
+  </div>
+</section>
+
+<!-- 02 -->
+<section id="signals">
+  <h2><span class="no">02</span>정량 신호</h2>
+  <p class="sub">공개적으로 확인되는 숫자입니다. 앱 평점은 표본이 작고 불만이 있는 사람이 리뷰를 더 남기는 경향이 있으므로 방향만 참고하세요.</p>
+  <div class="grid g4">
+    <div class="card stat"><div class="n">2.9</div><div class="l">롱블랙 구글플레이 평점</div><div class="d">리뷰 142개, 1만+ 다운로드</div></div>
+    <div class="card stat"><div class="n">3.9</div><div class="l">롱블랙 App Store 평점</div><div class="d">174개 평가</div></div>
+    <div class="card stat"><div class="n">3.1</div><div class="l">퍼블리 App Store 평점</div><div class="d">167개 평가, 앱 오류 불만 다수</div></div>
+    <div class="card stat"><div class="n">4.6</div><div class="l">폴인 App Store 평점</div><div class="d">17개 평가로 표본이 매우 작음</div></div>
+    <div class="card stat"><div class="n">87%</div><div class="l">롱블랙 월 재결제율</div><div class="d">2023년 상반기, 회사 발표. 월 13% 이탈로 바꿔 계산하면 12번 갱신 뒤 남는 비율은 약 19%(단순 계산)</div></div>
+    <div class="card stat"><div class="n">−5.7%p</div><div class="l">콘텐츠 멤버십 구독률</div><div class="d">오픈서베이 2026 조사(20~59세 1,500명), 전년 대비</div></div>
+    <div class="card stat"><div class="n">+8.4%p</div><div class="l">생성형 AI 유료 구독률</div><div class="d">같은 조사. 구독 예산이 AI로 옮겨 가는 흐름</div></div>
+    <div class="card stat"><div class="n">+20%</div><div class="l">롱블랙 신규 월 구독료 인상</div><div class="d">2026.1.5부터 4,900→5,900원. 기존 회원은 4,900원 유지</div></div>
+  </div>
+  <div class="callout info">
+    <b>87%라는 숫자의 의미</b>
+    월 재결제율 87%는 콘텐츠 구독 업계에서 나쁘지 않은 수치입니다. 하지만 월마다 13%가 빠지면 같은 달 가입자 100명 중 12번 갱신한 뒤 남는 사람은 약 19명입니다(0.87<sup>12</sup>, 단순 가정). 매출이 성장해도 <b>신규 유입이 멈추면 바로 꺾이는 구조</b>라는 뜻입니다. 운영사가 연간권 할인, 29CM 판매, SKT VIP 제휴, 무료 공유 링크를 계속 늘리는 이유와도 맞습니다.
+  </div>
+</section>
+
+<!-- 03 -->
+<section id="voices">
+  <h2><span class="no">03</span>고객 목소리로 본 9가지 이탈 사유</h2>
+  <p class="sub">모든 인용은 공개 페이지의 원문입니다. 행동 수준에 따라 표시했습니다.</p>
+  <div class="legend">
+    <span class="tag t-churn">실제 해지</span><span class="tag t-consider">해지 고민·의향</span><span class="tag t-complain">사용 중 불만</span><span class="tag t-op">운영자 발언</span>
+    <span>· 심각도 <span class="dots">●●●</span>는 이 리포트의 판단입니다</span>
+  </div>
+
+  <!-- T1 -->
+  <div class="theme">
+    <div class="theme-head"><h3>T1. "좋은데, 안 읽게 된다": 시간 부족과 쌓이는 부채감</h3><span class="sev">심각도 <span class="dots">●●●●●</span></span></div>
+    <p style="margin:0;color:var(--ink2)">가장 강하고 일관된 신호입니다. 콘텐츠를 칭찬하면서도 해지합니다. 지식 구독은 <b>쓰지 않으면 가치가 0인 상품</b>입니다.</p>
+    <div class="quotes">
+      <blockquote><p>잘 사용하지 않아서 올해는 연장하지 않고 해지 했어요.</p><footer><span class="tag t-churn">실제 해지</span>퍼블리 연간 구독자 · 마케터블 #91 뉴스레터 · 2024.01 · 같은 글에서 롱블랙은 "1년 이상 구독하는 중이라 연간 할인을 받아 결제"</footer></blockquote>
+      <blockquote><p>바쁠때는 1~2달 정도 찾아보지 않을때도 있어 구독을 끊을까 싶다가도…</p><footer><span class="tag t-consider">해지 고민</span>폴인 구독자 · 오닷 블로그 · 2022.05.29</footer></blockquote>
+      <blockquote><p>한동안 일도 바쁘고 해야 할 일도 많아서 볼 시간이 없는데</p><footer><span class="tag t-churn">실제 해지</span>밀리의서재 · 개인 블로그 · 2019.05.02 · 여유가 생기면 재구독 의사</footer></blockquote>
+      <blockquote><p>본인이 너무 게을러서 잘 안읽게 되버리는</p><footer><span class="tag t-complain">사용 중</span>롱블랙 365일권 구매자 · 29CM 리뷰 · 2026.10.03</footer></blockquote>
+      <blockquote><p>이미 쌓여 있는 텍스트를 다 소비하지 못하고, 피로감을 느껴 해지하는 거죠.</p><footer><span class="tag t-op">운영자</span>롱블랙 김종원 부대표 · 미디어오늘 · 2022.01.31 · 이전에 운영한 무제한형 서비스의 경험</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> 롱블랙의 '24시간 한 편'은 바로 이 문제를 풀려고 만든 장치입니다. 그런데 2026년 출시한 <b>무제한 플랜(1,600+ 노트)</b>은 운영자 스스로 이탈 원인으로 꼽았던 '쌓이는 텍스트' 구조로 다시 돌아간 셈입니다. 무제한 플랜 가입자의 리텐션을 따로 추적해야 합니다. 또한 29CM 판매 조건에 따르면 <b>"멤버십 사용 중에는 사용 기간을 중지하거나 연기할 수 없습니다."</b> 바쁜 시기에 고객이 고를 수 있는 선택지가 해지밖에 없습니다.</p>
+  </div>
+
+  <!-- T2 -->
+  <div class="theme">
+    <div class="theme-head"><h3>T2. "나랑 상관없는 글이 늘었다": 관심사 불일치, 주제 쏠림, 반복감</h3><span class="sev">심각도 <span class="dots">●●●●○</span></span></div>
+    <p style="margin:0;color:var(--ink2)">고객은 전체 콘텐츠 수가 아니라 <b>"나에게 유효한 글의 비율"</b>로 가치를 판단합니다. 하루 한 편을 모든 독자에게 똑같이 보내는 모델은 이 비율에 특히 민감합니다.</p>
+    <div class="quotes">
+      <blockquote><p>제가 패션에 관심이 없다보니 배달되는 글 중 적잖은 수에 대하여 흥미가 없었습니다.</p><footer><span class="tag t-churn">해지 예약</span>롱블랙 3개월 구독자 · 개인 블로그 · 2022.03.30</footer></blockquote>
+      <blockquote><p>'요즘 롱블랙, 소스가 떨어졌나?' 싶어 구독을 해지할까 고민한 적도 많았다.</p><footer><span class="tag t-consider">해지 고민 후 유지</span>롱블랙 · 성장형 마케터 아이린 블로그 · 2025.03.15</footer></blockquote>
+      <blockquote><p>가끔 자가복제 같은 글이 올라올때도 많지만</p><footer><span class="tag t-complain">사용 중 불만</span>롱블랙 · 29CM 리뷰 · 2024.07.05</footer></blockquote>
+      <blockquote><p>사업을 주제로 하여 주로 다루는 것 같아 아쉽습니다</p><footer><span class="tag t-complain">사용 중 불만</span>롱블랙 · App Store 리뷰 「개선해주세요!」 · 2024.05.20 · 공학 주제 요청</footer></blockquote>
+      <blockquote><p>약간 마케팅에 집중된 느낌은 있지만</p><footer><span class="tag t-complain">사용 중</span>롱블랙 · 29CM 리뷰 · 2022.05.26</footer></blockquote>
+      <blockquote><p>올라오는 글들이 전체적으로 조금 늘어지는 감이 있지만</p><footer><span class="tag t-complain">사용 중</span>퍼블리 · 이동영 작가 브런치 · 2021.10.13</footer></blockquote>
+      <blockquote><p>하지만 읽고 싶은 책을 검색해 보면 없는 책도 많아요ㅠㅠ</p><footer><span class="tag t-complain">사용 중</span>밀리의서재 5개월 이용자 · 개인 블로그 · 2020.10.28</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> 노트가 1,600개를 넘으면 '브랜드 성공 스토리'라는 틀이 비슷하게 반복되고, 장기 구독자일수록 이를 먼저 느낍니다. "소스가 떨어졌나"는 장기 구독자의 <b>신선도 피로</b> 신호입니다. 반면 같은 글이 신규 구독자에게는 새롭게 읽힙니다. 따라서 이 문제는 <b>가입 기간별 리텐션 곡선</b>에서 늦게 나타납니다.</p>
+  </div>
+
+  <!-- T3 -->
+  <div class="theme">
+    <div class="theme-head"><h3>T3. 24시간 제한과 '샷' 추가 결제: 돈을 냈는데 놓친다</h3><span class="sev">심각도 <span class="dots">●●●○○</span></span></div>
+    <p style="margin:0;color:var(--ink2)">롱블랙의 대표 장치이자 양날의 검입니다. 습관을 만든다는 평가와, 유료 고객에게 손실감을 준다는 평가가 함께 나옵니다.</p>
+    <div class="quotes">
+      <blockquote><p>24시간안에 콘텐츠를 읽어야하는 시스템은 돈을 내는 소비자 입장에서는 조금 불만일 수 있지만</p><footer><span class="tag t-complain">사용 중 불만</span>롱블랙 90일권 · 29CM 리뷰 · 2022.12.28</footer></blockquote>
+      <blockquote><p>나 역시 추가 결제를 자꾸 유도하는 것 같아 불편했는데 마침 무료 체험을 하길래 가입했다.</p><footer><span class="tag t-complain">가입 전 저항</span>롱블랙 · 브런치 칼럼(김소여) · 2022.03.15 · 같은 글에서 24시간 제한은 "가입을 가로막는 진입장벽이 될 수도 있다"</footer></blockquote>
+      <blockquote><p>후회 안 할라믄 부지런히 찾아 읽어야 된다,,</p><footer><span class="tag t-churn">체험 등록과 동시에 해지 예약</span>롱블랙 무료체험 · 개인 블로그 · 2022.04.15</footer></blockquote>
+      <blockquote><p>그날 읽지 못하면 사라지게 했어요.</p><footer><span class="tag t-op">운영자</span>롱블랙 김종원 부대표 · 미디어오늘 · 2022 · 습관 형성 장치로 설명</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> "24시간 제한 때문에 다수가 이탈한다"는 근거는 부족합니다. 구독을 유지하는 사람은 오히려 이 제한을 장점으로 꼽기도 합니다. 문제는 <b>놓쳤을 때의 감정</b>입니다. 놓친 날이 쌓이면 "돈 내고 못 보는 서비스"로 인식이 바뀝니다. 2026년 무제한 플랜 출시는 이 불만에 대한 회사의 응답으로 보입니다.</p>
+  </div>
+
+  <!-- T4 -->
+  <div class="theme">
+    <div class="theme-head"><h3>T4. "합쳐 보니 비싸다": 단독 가격보다 구독 총액</h3><span class="sev">심각도 <span class="dots">●●●●○</span></span></div>
+    <div class="quotes">
+      <blockquote><p>월 구독료로 고정비가 점점 올라가서 부담스러웠는데요.</p><footer><span class="tag t-consider">구독 정리</span>OTT·롱블랙·폴인 복수 구독자 · 메일리 뉴스레터 · 2023.12.11</footer></blockquote>
+      <blockquote><p>구독료에 비해, 아티클 시리즈 등 정량적인 양이 너무 적어요.</p><footer><span class="tag t-complain">가성비 불만</span>폴인 · App Store 「콘텐츠 늘려주세요」 · 2025.04.18</footer></blockquote>
+      <blockquote><p>필요성이 크지 않은 방대한 글과 정보를 위해 매년 20만원을 지불하는건 부담이 좀 크지 않나 싶습니다.</p><footer><span class="tag t-complain">가입 전 저항</span>퍼블리 · 클리앙 사용기 댓글 · 2018.09.29</footer></blockquote>
+      <blockquote><p>읽을 게 별로 없다- 싶으면 멤버십 해지했다가, 보고 싶은게 생기면 다시 구독하면 되는것 같아요</p><footer><span class="tag t-churn">해지·재가입 반복</span>퍼블리 · 클리앙 댓글 · 2018.10.02</footer></blockquote>
+      <blockquote><p>퍼블리 신규등록 하고 싶은데 너무 비싸길래 쉐어하실 분 있나용</p><footer><span class="tag t-complain">가입 전 저항</span>블라인드 · 2024.12.26</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> 고객은 구독을 정리할 때 '없으면 당장 불편한가'로 순서를 정합니다. OTT나 음악은 가족 공유와 플레이리스트 같은 습관·데이터로 묶여 있지만(오픈서베이 2026), 지식 구독은 끊어도 바로 불편하지 않아 <b>가장 먼저 잘립니다</b>. 롱블랙은 2026년 신규 가격을 20% 올리면서 기존 회원 가격은 유지했습니다. 덕분에 기존 회원의 이탈은 막았지만, <b>재가입 고객은 더 비싼 가격을 내야</b> 합니다. T1의 '해지 후 나중에 재구독' 패턴과 부딪히는 지점입니다.</p>
+  </div>
+
+  <!-- T5 -->
+  <div class="theme">
+    <div class="theme-head"><h3>T5. 무료 대안과 AI: 유료의 차별성을 매달 증명해야 한다</h3><span class="sev">심각도 <span class="dots">●●●○○</span></span></div>
+    <div class="quotes">
+      <blockquote><p>무료라고 절대 내용이 부실하거나 가볍지 않다.</p><footer><span class="tag t-complain">비교 인식</span>퍼블리·폴인·롱블랙 이용자 · 오닷 블로그 · 2022.05.29 · 무료 뉴스레터에 대한 평가</footer></blockquote>
+      <blockquote><p>각종 양식은 구글링 하다 보면 무료로 공유된 양식이 많습니다.</p><footer><span class="tag t-complain">비교 인식</span>퍼블리 이용자 분석 글 · 브런치 · 2022.10.15</footer></blockquote>
+      <blockquote><p>50%쯤 읽다가 '결제하세요' 하면서 막아버리잖아요.</p><footer><span class="tag t-op">운영자</span>롱블랙 강연 · 하이아웃풋클럽 · 2026.01 · 그래서 공유 링크를 전문 무료로 공개</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점(가설):</b> 브랜드 사례 요약, 트렌드 정리, 인터뷰 다이제스트는 생성형 AI가 가장 잘 대체하는 영역입니다. 같은 조사에서 AI 구독은 늘고 콘텐츠 멤버십은 줄었습니다. 다만 <b>"AI 때문에 해지했다"는 고객의 직접 진술은 이번 조사에서 확인하지 못했습니다.</b> 검증이 필요한 가설로 두고, 해지 설문에 선택지로 넣어 측정하길 권합니다. 또 공유 링크 무료 공개는 신규 유입에는 도움이 되지만 "필요하면 링크로 보면 된다"는 무임승차 인식을 만들 수 있습니다.</p>
+  </div>
+
+  <!-- T6 -->
+  <div class="theme">
+    <div class="theme-head"><h3>T6. 앱·읽기 경험의 마찰</h3><span class="sev">심각도 <span class="dots">●●●○○</span></span></div>
+    <p style="margin:0;color:var(--ink2)">롱블랙 구글플레이 평점 2.9는 콘텐츠 평가보다 앱 경험의 문제를 보여줍니다. 지식 구독에서 앱은 단순한 전달 통로가 아닙니다. <b>다시 찾기, 밑줄, 기록이 막히면 '쌓아서 활용한다'는 구매 목적이 무너집니다.</b></p>
+    <div class="quotes">
+      <blockquote><p>앱에선 하나씩만 열리니 완독하지 못한 글 찾는게 어렵네요.</p><footer><span class="tag t-complain">사용 중 불만</span>롱블랙 · App Store · 2023.11.01 · 개발사 "백로그에 넣겠다"</footer></blockquote>
+      <blockquote><p>일괄 알림을 보내는 다른 서비스들처럼 그냥 무시하게되는 느낌이 들기도 하더라구요</p><footer><span class="tag t-complain">사용 중 불만</span>롱블랙 · App Store · 2024.07.11 · 이미 읽은 사람에게도 오전 8시 알림 발송 (2025.07 알림 시간 설정 기능 추가)</footer></blockquote>
+      <blockquote><p>제 앱에 읽은 노트가 0이라고 떠요ㅠㅠ</p><footer><span class="tag t-complain">버그</span>롱블랙 267일 연속 독자 · App Store · 2024.01.24 · 개발사 답변 없음</footer></blockquote>
+      <blockquote><p>매번 로그인 하는 번거로움과 들어갈때마가 인터넷 페이지가 계속 쌓이는게 약간 거슬리는편</p><footer><span class="tag t-complain">사용 중 불만</span>롱블랙 180일권 · 29CM · 2022.11.10 · 앱 출시 전</footer></blockquote>
+      <blockquote><p>형광펜 안되면 읽는의미 없어요..</p><footer><span class="tag t-complain">사용 중 불만</span>퍼블리 · App Store · 2023.11.04 · 2024.01 수정 완료 답변</footer></blockquote>
+      <blockquote><p>유료앱인데 이러면 좀 치명적인거 같아요</p><footer><span class="tag t-complain">접속 장애</span>퍼블리 · App Store · 2021.10.19</footer></blockquote>
+      <blockquote><p>매일 접속이 느려서 빈정 상합니다</p><footer><span class="tag t-complain">사용 중 불만</span>폴인 · App Store · 2024.09.25</footer></blockquote>
+      <blockquote><p>이번 정기구독이 끝나면 다시는 쓰지않을 생각입니다.</p><footer><span class="tag t-consider">해지 의향</span>밀리의서재 · Google Play · 2022.03.19 · 듣기 중단·이동 기능 문제</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> 매일 들어오는 습관형 서비스에서는 작은 마찰도 매일 반복됩니다. 특히 <b>"읽은 노트 0"</b> 같은 기록 오류는 267일 연속으로 읽은 충성 고객의 성취감을 지워 버립니다. 습관 서비스에서 기록 데이터는 고객을 붙잡아 두는 자산입니다.</p>
+  </div>
+
+  <!-- T7 -->
+  <div class="theme">
+    <div class="theme-head"><h3>T7. 읽을 상황과 형식이 맞지 않는다: 듣고 싶다</h3><span class="sev">심각도 <span class="dots">●●○○○</span></span></div>
+    <div class="quotes">
+      <blockquote><p>버스에서도 보고싶은데 멀미가 심해서요</p><footer><span class="tag t-complain">기능 요청</span>폴인 · App Store · 2024.05.21 · 음성 듣기 요청</footer></blockquote>
+      <blockquote><p>오디오 서비스나 팟캐스트 형식 요청 (요약)</p><footer><span class="tag t-complain">기능 요청</span>롱블랙 · App Store 「하루 한번 나를 변화시키는 인사이트」 · 2024.03.07</footer></blockquote>
+      <blockquote><p>음성 읽기 기능도 요청 (요약)</p><footer><span class="tag t-complain">기능 요청</span>롱블랙 · App Store · 2023.11.01</footer></blockquote>
+      <blockquote><p>음성이나 영상은 가능하지만 글은 달랐어요.</p><footer><span class="tag t-op">운영자</span>롱블랙 김종원 부대표 · 미디어오늘 · 2022 · 쌓아 두고 소비하는 방식의 차이</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> T1(시간 부족)을 직접 풀 수 있는 수단입니다. 출퇴근, 운동, 운전 시간에 들을 수 있으면 '안 읽어서 해지'하는 비율이 줄어듭니다. 운영자도 "음성·영상은 쌓아 둬도 소비된다"고 말했습니다.</p>
+  </div>
+
+  <!-- T8 -->
+  <div class="theme">
+    <div class="theme-head"><h3>T8. 큐레이션 피로와 선택 부담</h3><span class="sev">심각도 <span class="dots">●●○○○</span></span></div>
+    <div class="quotes">
+      <blockquote><p>browsing만 하다가 1~2시간이 후딱 지나가 버려</p><footer><span class="tag t-churn">유료 구독 하나 정리</span>복수 구독자 · 오닷 블로그 · 2022.01.10 · 반대로 롱블랙의 '하루 한 편'은 선택 부담을 줄인다고 평가</footer></blockquote>
+      <blockquote><p>가끔은 세상에 너무 많은 콘텐츠들과 큐레이션들이 피곤하기도 합니다</p><footer><span class="tag t-complain">독자 질문</span>롱블랙 운영사 인터뷰의 독자 질문 · 브런치 · 2022.04.01</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> 롱블랙이 처음 다른 서비스와 달랐던 점은 '고를 필요가 없다'였습니다. 무제한 플랜, 아카이브, 컨퍼런스, 굿즈로 상품이 넓어질수록 이 장점이 약해질 수 있습니다.</p>
+  </div>
+
+  <!-- T9 -->
+  <div class="theme">
+    <div class="theme-head"><h3>T9. 서비스를 떠나지 않고 결제만 옮긴다: 숨은 매출 누수</h3><span class="sev">심각도 <span class="dots">●●○○○</span></span></div>
+    <div class="quotes">
+      <blockquote><p>저는 KT 장기 혜택 쿠폰으로 밀리의 서재를 이용할 수 있어서, 해지를 했는데요.</p><footer><span class="tag t-churn">직접 결제 해지 → 제휴 이용</span>밀리의서재 · 개인 블로그 · 2024.05.02</footer></blockquote>
+      <blockquote><p>저는 아이패드로 구매해서 조만간 해지하고 컴퓨터로 다시 결제할 예정 ㅠㅠ</p><footer><span class="tag t-churn">앱 결제 → 웹 결제</span>밀리의서재 · 개인 블로그 · 2020.10.28</footer></blockquote>
+      <blockquote><p>이제야 1년 할인권을 알게돼 아쉽지만</p><footer><span class="tag t-complain">가격 경로</span>롱블랙 · 29CM · 2024.05.27</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> 롱블랙도 SKT VIP 무료 이용권, 29CM 할인 연간권, 당근마켓에 나온 무료 이용권 재판매 등 할인 경로가 많습니다. 고객이 정가 월 결제에서 할인 경로로 옮기면, <b>해지율은 그대로여도 고객 1인당 매출(ARPU)이 줄어듭니다</b>. 밀리의서재의 B2C 매출 감소가 이 구조를 보여줍니다.</p>
+  </div>
+</section>
+
+<!-- 04 -->
+<section id="funnel">
+  <h2><span class="no">04</span>이탈이 일어나는 경로</h2>
+  <p class="sub">고객 발화를 시간 순서로 재구성하면 이탈은 한 번에 일어나지 않습니다. 다섯 단계에 걸쳐 진행됩니다.</p>
+  <div class="funnel">
+    <div class="fstep"><div class="k">1</div><div><h4>기대로 가입: "성장하고 싶다"</h4><p>자기계발 의지, 무료 체험, 연초 결심, SKT·29CM 할인이 가입을 이끕니다. 가입 동기는 <b>되고 싶은 나</b>에 있습니다.</p></div></div>
+    <div class="fstep"><div class="k">2</div><div><h4>습관 형성 실패: "바빠서 못 봤다"</h4><p>업무가 바쁜 시기가 오면 읽지 않는 날이 생깁니다. 24시간 제한 모델에서는 놓친 글이 사라지고, 무제한 모델에서는 쌓입니다. 둘 다 <b>손실감</b>을 남깁니다. (T1·T3)</p></div></div>
+    <div class="fstep"><div class="k">3</div><div><h4>가치 체감 하락: "요즘 내 얘기가 아니네"</h4><p>모처럼 읽은 글이 관심사와 맞지 않거나 비슷하게 느껴지면 "소스가 떨어졌나"로 이어집니다. 앱의 작은 마찰도 이때 크게 느껴집니다. (T2·T6)</p></div></div>
+    <div class="fstep"><div class="k">4</div><div><h4>구독 정리의 순간: "고정비가 부담"</h4><p>카드 명세서나 연간 갱신 알림을 보고 구독 목록을 정리합니다. OTT, 음악, AI와 비교하면 지식 구독은 끊어도 당장 불편하지 않아 <b>1순위로 잘립니다</b>. (T4·T5)</p></div></div>
+    <div class="fstep"><div class="k">5</div><div><h4>해지, 그리고 "나중에 다시"</h4><p>여유가 생기면 재구독할 생각으로 떠납니다. 일시정지 기능이 없어 해지가 유일한 선택지이고, 재가입할 때는 오른 가격(5,900원)을 내야 합니다. (T1·T4·T9)</p></div></div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section id="matrix">
+  <h2><span class="no">05</span>사유별 심각도 판단</h2>
+  <p class="sub">빈도는 수집된 발화 수와 여러 서비스에서 반복되는지를, 영향은 실제 해지로 이어졌는지를 기준으로 판단했습니다. 무작위 표본이 아니므로 순위는 정성적 판단입니다.</p>
+  <div class="tablewrap card matrix" style="padding:6px 8px">
+  <table>
+    <thead><tr><th>사유</th><th>빈도</th><th>해지 연결</th><th>여러 서비스 공통</th><th>회사가 통제 가능</th><th>우선순위</th></tr></thead>
+    <tbody>
+      <tr><td>T1 시간 부족·안 읽음</td><td>높음</td><td>직접 해지 다수</td><td>4개 서비스 모두</td><td>중간(오디오, 일시정지, 재활성화)</td><td class="neg"><b>1</b></td></tr>
+      <tr><td>T2 관심사 불일치·반복</td><td>높음</td><td>해지 예약·고민</td><td>롱블랙·퍼블리·밀리</td><td>높음(개인화, 주제 확장)</td><td class="neg"><b>2</b></td></tr>
+      <tr><td>T4 구독 총액 부담</td><td>중간</td><td>구독 정리</td><td>전반</td><td>중간(가격 구조)</td><td><b>3</b></td></tr>
+      <tr><td>T6 앱 마찰</td><td>중간</td><td>간접(사용 감소)</td><td>전반</td><td>매우 높음</td><td><b>4</b></td></tr>
+      <tr><td>T3 24시간·샷</td><td>중간</td><td>체험 단계 이탈</td><td>롱블랙 고유</td><td>높음(무제한 플랜 출시로 일부 대응)</td><td>5</td></tr>
+      <tr><td>T5 무료·AI 대체</td><td>낮음(직접 진술)</td><td>미확인</td><td>전반(가설)</td><td>낮음~중간</td><td>6 · 측정 필요</td></tr>
+      <tr><td>T7 오디오 부재</td><td>낮음</td><td>간접</td><td>롱블랙·폴인</td><td>높음</td><td>7 · T1 해결 수단</td></tr>
+      <tr><td>T8 선택 피로</td><td>낮음</td><td>일부</td><td>복수 구독자</td><td>중간</td><td>8</td></tr>
+      <tr><td>T9 결제 경로 이동</td><td>낮음</td><td>ARPU 누수</td><td>밀리·롱블랙</td><td>높음(채널 가격 정책)</td><td>9 · 재무 점검</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- 06 -->
+<section id="structure">
+  <h2><span class="no">06</span>구조적 원인: 왜 이 업종은 리텐션이 어려운가</h2>
+  <p class="sub">고객 발화와 재무 자료를 종합한 해석입니다. 추론이 포함되어 있습니다.</p>
+  <div class="grid g2">
+    <div class="card"><b>1. 가입 동기와 유지 조건이 다르다</b><p style="margin:6px 0 0;font-size:15px;color:var(--ink2)">가입은 '되고 싶은 나'(열망)로 하고, 유지는 '실제로 쓰는 나'(행동)가 결정합니다. 운동 앱이나 헬스장 회원권과 같은 구조입니다. <b>좋은 콘텐츠라고 인정하면서도 해지할 수 있는 상품</b>입니다.</p></div>
+    <div class="card"><b>2. 해지 비용(전환 비용)이 거의 0이다</b><p style="margin:6px 0 0;font-size:15px;color:var(--ink2)">넷플릭스는 가족 공유, 음악은 플레이리스트가 고객을 붙잡습니다. 지식 구독은 끊어도 잃는 데이터나 관계가 거의 없습니다. 하이라이트, 메모, 읽은 기록, 커뮤니티가 고객을 붙잡을 자산인데, 이 부분의 앱 불만이 가장 많습니다.</p></div>
+    <div class="card"><b>3. 콘텐츠 확대가 모든 고객의 가치를 높이지 않는다</b><p style="margin:6px 0 0;font-size:15px;color:var(--ink2)">폴인 구독자는 "양이 적다"고 하고, 복수 구독자는 "고르다 1~2시간이 간다"고 합니다. 중요한 것은 생산량이 아니라 <b>필요한 글을 찾아 실제로 읽는 비율</b>입니다.</p></div>
+    <div class="card"><b>4. 오래 볼수록 신선도가 떨어진다</b><p style="margin:6px 0 0;font-size:15px;color:var(--ink2)">'브랜드 성공 스토리' 형식은 1년쯤 지나면 패턴이 보입니다. 장기 구독자의 "자가복제", "소스가 떨어졌나"가 이 신호입니다. 반대로 신규 고객 획득은 잘 되므로 <b>매출 성장이 이 문제를 가립니다</b>.</p></div>
+    <div class="card"><b>5. 성장을 신규 유입과 다른 사업이 떠받친다</b><p style="margin:6px 0 0;font-size:15px;color:var(--ink2)">퍼블리는 광고비를 줄이자 매출이 꺾였습니다. 롱블랙은 굿즈, 컨퍼런스, 제휴로 매출을 넓히고 있습니다(구독 4,900원, 키링 21,000원). 이 사업들이 자리 잡기 전에 신규 유입이 둔화되면, 월 13%씩 빠지는 구조가 그대로 드러납니다.</p></div>
+    <div class="card"><b>6. 구독 예산이 AI로 이동한다</b><p style="margin:6px 0 0;font-size:15px;color:var(--ink2)">'인사이트·요약' 수요의 일부가 생성형 AI로 옮겨 가는 거시 흐름(콘텐츠 멤버십 −5.7%p, AI +8.4%p)이 보입니다. 개별 해지와의 인과는 아직 확인되지 않았습니다.</p></div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section id="rx">
+  <h2><span class="no">07</span>리텐션 처방: 고객 목소리에서 바로 나오는 10가지</h2>
+  <p class="sub">각 처방은 위 사유(T1~T9)와 연결됩니다. 롱블랙 같은 서비스를 운영하거나 벤치마킹하는 입장에서 실행 가능한 순서로 정리했습니다.</p>
+  <div class="grid rx">
+    <div class="card"><h4>일시정지(Pause) 도입</h4><p>"바빠서 1~2달 못 본다"는 고객에게 해지 대신 1~3개월 일시정지를 제안합니다. 해지 화면에서 일시정지를 함께 보여 주는 방식입니다. 지금은 "사용 기간 중지·연기 불가" 정책입니다.</p><p class="ev">근거: T1 · 29CM 판매 조건 · 폴인·밀리 후기</p></div>
+    <div class="card"><h4>오디오(TTS·AI 낭독) 버전 제공</h4><p>출퇴근·운동 시간을 소비 시간으로 바꿉니다. 운영자가 직접 "음성·영상은 쌓여도 소비된다"고 말한 영역입니다.</p><p class="ev">근거: T1·T7 · App Store 요청 3건+</p></div>
+    <div class="card"><h4>관심 주제 선택과 개인화 큐레이션</h4><p>가입 시 관심 분야(브랜드, 테크, 공학, 라이프스타일 등)를 고르게 하고, 오늘의 노트 외에 관심사에 맞는 아카이브 노트를 추천합니다.</p><p class="ev">근거: T2 · "패션에 관심이 없다보니", "사업 위주라 아쉽다"</p></div>
+    <div class="card"><h4>'못 읽은 노트' 백로그 관리</h4><p>읽다 만 글 모음, 이어 읽기, 주말 몰아보기 다이제스트를 만듭니다. 쌓인 부채감을 "주말 15분"이라는 작은 단위로 바꿔 줍니다.</p><p class="ev">근거: T1·T6 · "완독하지 못한 글 찾는게 어렵네요"</p></div>
+    <div class="card"><h4>읽은 사람 제외, 개인 시간대 알림</h4><p>2025.07 알림 시간 설정은 출발점입니다. 이미 읽은 사람에게 알림을 보내지 않고, 안 읽은 날이 3일 이상 이어지면 부드러운 복귀 메시지를 보냅니다.</p><p class="ev">근거: T6 · "그냥 무시하게되는 느낌"</p></div>
+    <div class="card"><h4>기록을 자산으로: 연속 독서, 하이라이트, 연말 리포트</h4><p>"267일째"가 0으로 보이는 버그를 우선 고칩니다. 하이라이트·메모·독서 기록을 보여 주는 '나의 지식 자산' 화면을 만들어 해지할 때 잃는 것을 눈에 보이게 합니다.</p><p class="ev">근거: T6 · 구조 원인 2(전환 비용 0)</p></div>
+    <div class="card"><h4>장기 구독자를 위한 신선도 관리</h4><p>가입 기간별(0~3개월, 3~12개월, 12개월+) 만족도와 리텐션을 따로 측정합니다. 장기 구독자에게는 심화 시리즈, 반론, 후속 취재처럼 형식을 바꾼 콘텐츠를 제공합니다.</p><p class="ev">근거: T2 · "자가복제", "소스가 떨어졌나"</p></div>
+    <div class="card"><h4>해지 사유 설문에 'AI로 대체' 선택지 추가</h4><p>AI 대체 가설은 직접 근거가 아직 없습니다. 해지 설문에서 측정하고, 높게 나오면 'AI가 못 하는 것'(독점 인터뷰, 현장 취재, 커뮤니티)에 투자를 늘립니다.</p><p class="ev">근거: T5 · 오픈서베이 2026</p></div>
+    <div class="card"><h4>재가입 고객 가격 정책</h4><p>신규 가격 인상(5,900원) 이후 "나중에 다시" 돌아오는 고객이 오른 가격을 내야 합니다. 이탈 고객에게 기한 한정 기존가 복귀 쿠폰(윈백)을 보냅니다.</p><p class="ev">근거: T4 · 2026.1 가격 개편</p></div>
+    <div class="card"><h4>채널별 ARPU와 코호트 대시보드</h4><p>직접 결제, 29CM, SKT, 앱스토어 결제를 나눠 리텐션과 ARPU를 봅니다. 무제한 플랜과 오늘의 노트 플랜 가입자의 리텐션도 따로 비교합니다(무제한 플랜이 '쌓이는 피로'를 다시 불러오는지 확인).</p><p class="ev">근거: T9 · 밀리 B2C −2.5% 사례</p></div>
+  </div>
+</section>
+
+<!-- 08 -->
+<section id="method">
+  <h2><span class="no">08</span>조사 방법과 한계</h2>
+  <div class="card">
+    <ul class="tight">
+      <li><b>방법:</b> Claude Code와 OpenAI Codex가 각자 웹 리서치를 했습니다. Codex가 수집한 인용 중 9건은 Claude가 원문 페이지에서 다시 확인했고, 8건이 원문과 일치했습니다(1건은 접근 실패).</li>
+      <li><b>표본 편향:</b> 공개 후기는 무작위 표본이 아닙니다. 불만이 강하거나 글쓰기를 좋아하는 사람이 많이 남깁니다. 사유별 비중이나 순위는 정량적으로 추정할 수 없습니다.</li>
+      <li><b>시점:</b> 일부 인용은 2018~2022년 자료입니다. 롱블랙은 2023.11 앱 출시, 2025.07 알림 설정, 2026.01 무제한 플랜으로 과거 불만 일부를 개선했습니다. 과거 리뷰가 현재도 그대로라는 뜻은 아닙니다.</li>
+      <li><b>재무 수치:</b> 타임앤코·퍼블리·뉴닉은 NICE평가정보·나이스디앤비 기반 기업정보 DB(사람인·인크루트) 수치로, 감사보고서 원문은 아닙니다. 타임앤코 페이지는 Claude의 재확인 단계에서 접근이 차단되었습니다. 밀리의서재는 KRX 공시 수치입니다. 사람인의 별도 '(주)롱블랙' 법인 페이지(2024 매출 8.3억)는 운영사와 같은 법인인지 확인되지 않아 제외했습니다.</li>
+      <li><b>찾지 못한 것:</b> 디시·더쿠·X·스레드에서는 인용할 만한 롱블랙 해지 글을 찾지 못했습니다. 롱블랙 구글플레이 리뷰 본문(평점 2.9)은 접근 제한으로 수집하지 못했습니다. <b>이 리뷰 본문을 직접 확인하는 것이 다음 단계로 가장 가치 있는 작업</b>입니다.</li>
+      <li><b>추론 표시:</b> '시사점', '구조적 원인', '처방'에는 리포트의 해석이 들어 있습니다. 고객 발화로 직접 입증되지 않은 부분은 '가설', '추정'으로 표시했습니다.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 09 -->
+<section id="sources">
+  <h2><span class="no">09</span>출처</h2>
+  <h3>고객 리뷰·후기</h3>
+  <ol class="src">
+    <li><a href="https://apps.apple.com/kr/app/%EB%A1%B1%EB%B8%94%EB%9E%99-longblack/id6450910866?see-all=reviews" target="_blank" rel="noopener">롱블랙 App Store 리뷰</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=co.timenco.longblack&hl=ko" target="_blank" rel="noopener">롱블랙 Google Play</a></li>
+    <li><a href="https://www.29cm.co.kr/products/1680853" target="_blank" rel="noopener">29CM 롱블랙 365일권 리뷰·판매 조건</a></li>
+    <li><a href="https://idewce.tistory.com/18" target="_blank" rel="noopener">롱블랙 해지 예약 후기 (2022.03)</a></li>
+    <li><a href="https://marketer-irene.tistory.com/6" target="_blank" rel="noopener">성장형 마케터 아이린: 롱블랙 (2025.03)</a></li>
+    <li><a href="https://88jinkeran88.tistory.com/373" target="_blank" rel="noopener">롱블랙 무료체험 후기 (2022.04)</a></li>
+    <li><a href="https://brunch.co.kr/@ladies-pond/79" target="_blank" rel="noopener">매일 아침 4,900원짜리 롱블랙을 읽는 이유 (브런치)</a></li>
+    <li><a href="https://brunch.co.kr/@seastbest/1" target="_blank" rel="noopener">롱블랙(콘텐츠 구독) 뜯어보기 (브런치)</a></li>
+    <li><a href="https://brunch.co.kr/@cociety/52" target="_blank" rel="noopener">콘텐츠 구독 서비스, 깊이 고민하고 있나요? (브런치)</a></li>
+    <li><a href="https://stibee.com/api/v1.0/emails/share/qgAsJ3LOadckO8VnX0ww9mKYQ4HMHSI" target="_blank" rel="noopener">마케터블 #91 (퍼블리 해지·롱블랙 연간 결제)</a></li>
+    <li><a href="https://odotpedia.tistory.com/181" target="_blank" rel="noopener">오닷: 유료 콘텐츠 구독 (2022.01)</a></li>
+    <li><a href="https://odotpedia.tistory.com/216" target="_blank" rel="noopener">오닷: 영감을 얻는 구독 (2022.05)</a></li>
+    <li><a href="https://maily.so/mungugugeolgeol/posts/e9o0k56nz8w" target="_blank" rel="noopener">문구소녀 뉴스레터 (2023.12)</a></li>
+    <li><a href="https://apps.apple.com/kr/app/%ED%8D%BC%EB%B8%94%EB%A6%AC-%EC%BB%A4%EB%A6%AC%EC%96%B4-%EB%A9%A4%EB%B2%84%EC%8B%AD-publy/id1440756899?see-all=reviews" target="_blank" rel="noopener">퍼블리 App Store 리뷰</a></li>
+    <li><a href="https://www.clien.net/service/board/use/12640643" target="_blank" rel="noopener">클리앙: PUBLY 한달 사용기 (댓글)</a></li>
+    <li><a href="https://www.teamblind.com/kr/company/%ED%8D%BC%EB%B8%94%EB%A6%AC/posts/%ED%8D%BC%EB%B8%94%EB%A6%AC?page=1" target="_blank" rel="noopener">블라인드: 퍼블리 쉐어 글</a></li>
+    <li><a href="https://brunch.co.kr/@66c669db056d4f7/7" target="_blank" rel="noopener">퍼블리 이용자 서비스 분석 (브런치)</a></li>
+    <li><a href="https://brunch.co.kr/@dong02/2126" target="_blank" rel="noopener">이동영 작가: 유료/무료 구독 (브런치)</a></li>
+    <li><a href="https://apps.apple.com/kr/app/%ED%8F%B4%EC%9D%B8-%EC%84%B1%EC%9E%A5%EC%9D%98-%EA%B2%BD%ED%97%98%EC%9D%84-%EB%82%98%EB%88%95%EB%8B%88%EB%8B%A4/id6451428786?see-all=reviews" target="_blank" rel="noopener">폴인 App Store 리뷰</a></li>
+    <li><a href="https://mudnji.tistory.com/650" target="_blank" rel="noopener">밀리의서재 해지 후기 (2019)</a></li>
+    <li><a href="https://bestofme-20.tistory.com/116" target="_blank" rel="noopener">밀리의서재 5개월 이용 후기 (2020)</a></li>
+    <li><a href="https://happyfridaymorning.tistory.com/840" target="_blank" rel="noopener">밀리의서재 해지 후 KT 혜택 이용 (2024)</a></li>
+    <li><a href="https://play.google.com/store/apps/details?hl=ko&id=kr.co.millie.millieshelf" target="_blank" rel="noopener">밀리의서재 Google Play</a></li>
+  </ol>
+  <h3>기사·재무·조사</h3>
+  <ol class="src">
+    <li><a href="https://www.mediatoday.co.kr/news/articleView.html?idxno=301950" target="_blank" rel="noopener">미디어오늘: 24시간 지나면 사라지는 콘텐츠 (2022)</a></li>
+    <li><a href="https://blog.highoutputclub.com/membership-talk-longblack/" target="_blank" rel="noopener">하이아웃풋클럽: 롱블랙의 콘텐츠 전략 (2026.01)</a></li>
+    <li><a href="https://m.journalist.or.kr/m/m_article.html?no=54421" target="_blank" rel="noopener">기자협회보: 롱블랙 재결제율 87% (2023.10)</a></li>
+    <li><a href="https://www.saramin.co.kr/zf_user/company-info/view-inner-finance/csn/SWp2bGNRcEI0NEd2dzBlRExBL1FoUT09/company_nm/%28%EC%A3%BC%29%ED%83%80%EC%9E%84%EC%95%A4%EC%BD%94" target="_blank" rel="noopener">사람인: 타임앤코 재무정보</a></li>
+    <li><a href="https://longblack.co/article/218" target="_blank" rel="noopener">롱블랙 공지: 새해 중요한 변화 (가격 조정)</a></li>
+    <li><a href="https://longblack.co/article/226" target="_blank" rel="noopener">롱블랙 공지: 읽기 플랜이 새로워집니다</a></li>
+    <li><a href="https://lala.heestory26.com/entry/%EB%A1%B1%EB%B8%94%EB%9E%99-%EA%B5%AC%EB%8F%85-%ED%9B%84%EA%B8%B0-%EB%AC%B4%EB%A3%8C-%EA%B5%AC%EB%8F%85-%EB%B0%A9%EB%B2%95-%EA%B5%AC%EB%8F%85%EB%A3%8C-%EC%A0%95%EB%B3%B4" target="_blank" rel="noopener">롱블랙 플랜 가격 정리 블로그 (2026.04)</a></li>
+    <li><a href="https://www.incruit.com/company/1686348865/" target="_blank" rel="noopener">인크루트: 퍼블리 재무정보</a></li>
+    <li><a href="https://publy.co/content/7551" target="_blank" rel="noopener">퍼블리 박소령: 구독 모델 비즈니스의 기쁨과 슬픔</a></li>
+    <li><a href="https://www.mk.co.kr/news/economy/11452140" target="_blank" rel="noopener">매경이코노미: 박소령 인터뷰 (2025.10)</a></li>
+    <li><a href="https://v.daum.net/v/20251113072857804" target="_blank" rel="noopener">시사IN: 퍼블리 경과 (2025.11)</a></li>
+    <li><a href="https://ko.wikipedia.org/wiki/%ED%8D%BC%EB%B8%94%EB%A6%AC" target="_blank" rel="noopener">위키백과: 퍼블리</a></li>
+    <li><a href="https://www.joonganggroup.com/newsroom/article/view?pno=2916" target="_blank" rel="noopener">중앙그룹 뉴스룸: 폴인 (2023.10)</a></li>
+    <li><a href="https://kind.krx.co.kr/external/2026/03/23/000907/20260323004249/11011.htm" target="_blank" rel="noopener">KRX: 밀리의서재 2025 사업보고서</a></li>
+    <li><a href="https://v.daum.net/v/20260213141601430" target="_blank" rel="noopener">시사저널e: 밀리의서재 B2C 매출 (2026.02)</a></li>
+    <li><a href="https://www.saramin.co.kr/zf_user/company-info/view-inner-finance/csn/S2dSbmVNUHJKUlhiVDNGZ3VtUG9sUT09/company_nm/%28%EC%A3%BC%29%EB%89%B4%EB%8B%89" target="_blank" rel="noopener">사람인: 뉴닉 재무정보</a></li>
+    <li><a href="https://blog.opensurvey.co.kr/article/subscription-economy-2026-2/" target="_blank" rel="noopener">오픈서베이: AI 구독은 늘고 콘텐츠 멤버십은 빠진다 (2026.06)</a></li>
+    <li><a href="https://www.iconsumer.or.kr/news/articleView.html?idxno=27177" target="_blank" rel="noopener">소비자평가: 구독 피로는 실재하는가</a></li>
+  </ol>
+</section>
+</main>
+</div>
+
+<footer class="end"><div class="wrap">본 리포트는 공개 웹 자료를 바탕으로 작성했으며 특정 기업과 관련이 없습니다. 인용문의 저작권은 각 작성자에게 있습니다. · 2026.11.11</div></footer>
+<button class="themebtn" id="tb" type="button">테마 전환</button>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('tb');
+try{var s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s);}catch(e){}
+b.addEventListener('click',function(){var cur=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+var n=cur==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n);}catch(e){}});})();
+</script>
+</body>
+</html>
