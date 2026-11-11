@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>사업가 뉴스레터 리서치</title>
+<meta name="description" content="사업가 대상 사업 지식 뉴스레터: 고객 실망 이유, 리텐션 하락 이유, 구독 모델의 한계와 돌파 전략 (2026.11)">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --bg:#f6f5f1;--surface:#ffffff;--ink:#17181a;--ink2:#4f535a;--ink3:#868a91;--line:#e4e3de;
+  --accent:#1f5bd6;--accent-soft:#e3ebfb;--hot:#c2410c;--hot-soft:#fbe9df;--ok:#2f6f4f;--ok-soft:#e1efe6;--warn:#8a6100;--warn-soft:#f5ecd3;
+  --bar:#1f5bd6;--bar2:#9aa0a8;--neg:#c2410c;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121315;--surface:#1b1c1f;--ink:#ecedef;--ink2:#b5b9c0;--ink3:#80848b;--line:#2c2e32;
+  --accent:#7aa5ff;--accent-soft:#1a2540;--hot:#ff9a62;--hot-soft:#3a2216;--ok:#7cc29b;--ok-soft:#1a2c22;--warn:#e3b54c;--warn-soft:#332910;
+  --bar:#7aa5ff;--bar2:#5b6068;--neg:#ff9a62;}}
+:root[data-theme="dark"]{
+  --bg:#121315;--surface:#1b1c1f;--ink:#ecedef;--ink2:#b5b9c0;--ink3:#80848b;--line:#2c2e32;
+  --accent:#7aa5ff;--accent-soft:#1a2540;--hot:#ff9a62;--hot-soft:#3a2216;--ok:#7cc29b;--ok-soft:#1a2c22;--warn:#e3b54c;--warn-soft:#332910;
+  --bar:#7aa5ff;--bar2:#5b6068;--neg:#ff9a62;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:16px;line-height:1.75;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+a:hover{border-bottom-color:var(--accent)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+.topnav{border-bottom:1px solid var(--line);font-size:13.5px}
+.topnav .wrap{display:flex;gap:18px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.topnav a{color:var(--ink2);border:0}.topnav a.on{color:var(--ink);font-weight:700}
+header.hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+.kicker{font-size:13px;letter-spacing:.08em;color:var(--accent);font-weight:700}
+h1{font-size:clamp(30px,5vw,50px);line-height:1.18;letter-spacing:-.035em;margin:12px 0 16px;font-weight:800}
+.lede{font-size:18px;color:var(--ink2);max-width:800px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;font-size:14px;color:var(--ink3)}
+.layout{display:grid;grid-template-columns:210px 1fr;gap:48px;padding:40px 0 80px}
+nav.toc{position:sticky;top:20px;align-self:start;font-size:13.5px;max-height:calc(100vh - 40px);overflow:auto}
+nav.toc b{display:block;font-size:12px;color:var(--ink3);letter-spacing:.06em;margin-bottom:8px}
+nav.toc a{display:block;color:var(--ink2);padding:3px 0;border:0}
+nav.toc a:hover{color:var(--accent)}
+main{min-width:0}
+section{margin-bottom:76px;scroll-margin-top:20px}
+h2{font-size:28px;letter-spacing:-.025em;margin:0 0 8px;font-weight:800;line-height:1.3}
+h2 .no{color:var(--accent);margin-right:8px}
+h3{font-size:19px;margin:34px 0 10px;letter-spacing:-.01em}
+h4{margin:0 0 6px;font-size:16.5px}
+.sub{color:var(--ink2);margin:0 0 24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.stat .n{font-size:28px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.stat .l{font-size:13px;color:var(--ink3);margin-top:4px}
+.stat .d{font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.55}
+.callout{border-left:4px solid var(--accent);background:var(--accent-soft);padding:18px 22px;border-radius:0 12px 12px 0;margin:20px 0}
+.callout.hot{border-color:var(--hot);background:var(--hot-soft)}
+.callout.ok{border-color:var(--ok);background:var(--ok-soft)}
+.callout b.t{display:block;margin-bottom:4px}
+.verdict{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
+.verdict .badge{font-size:15px;font-weight:800;background:var(--ok);color:#fff;border-radius:12px;padding:14px 18px;text-align:center;line-height:1.3}
+:root[data-theme="dark"] .verdict .badge{color:#0f1a14}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .verdict .badge{color:#0f1a14}}
+ul.tight{padding-left:20px;margin:8px 0}ul.tight li{margin:4px 0}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12.5px;color:var(--ink3);font-weight:600;white-space:nowrap}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.neg{color:var(--neg)}.pos{color:var(--ok)}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 6px}
+.tag{display:inline-block;font-size:11.5px;font-weight:600;padding:2px 9px;border-radius:999px;margin:0 4px 2px 0;white-space:nowrap}
+.t-pay{background:var(--ok-soft);color:var(--ok)}
+.t-keep{background:var(--accent-soft);color:var(--accent)}
+.t-churn{background:var(--hot-soft);color:var(--hot)}
+.t-free{background:var(--warn-soft);color:var(--warn)}
+.t-op{background:var(--line);color:var(--ink2)}
+.quotes{display:grid;gap:12px;margin:14px 0}
+.quotes.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+blockquote{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:15px 17px}
+blockquote p{margin:0 0 8px;font-size:15px;line-height:1.65}
+blockquote p::before{content:"“";color:var(--accent);font-weight:800;margin-right:2px}
+blockquote p::after{content:"”";color:var(--accent);font-weight:800;margin-left:2px}
+blockquote footer{font-size:12.5px;color:var(--ink3);line-height:1.55}
+.insight{font-size:15px;color:var(--ink2);border-top:1px dashed var(--line);padding-top:12px;margin-top:6px}
+.insight b{color:var(--ink)}
+.theme{margin-top:30px}
+.theme-head h3{margin:0 0 4px}
+.svc{display:grid;gap:12px}
+.svc .card{padding:18px 20px}
+.svc .card h4{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px}
+.svc .card h4 small{font-weight:500;color:var(--ink3);font-size:12.5px}
+.svc .card p{margin:4px 0 0;font-size:14px;color:var(--ink2);line-height:1.6}
+.kv{display:grid;grid-template-columns:76px 1fr;gap:2px 10px;font-size:13.5px;margin-top:8px}
+.kv dt{color:var(--ink3)}.kv dd{margin:0;color:var(--ink2)}
+.bars{display:grid;gap:9px;margin-top:10px}
+.bar-row{display:grid;grid-template-columns:120px 1fr 64px;gap:10px;align-items:center;font-size:13px}
+.bar-track{height:13px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar-fill{height:100%;background:var(--bar);border-radius:4px}
+.bar-fill.alt{background:var(--bar2)}
+.bar-row .v{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink2)}
+.opt{position:relative}
+.opt .ol{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.06em}
+.opt.rec{border:2px solid var(--accent)}
+.opt.rec::after{content:"추천";position:absolute;top:-11px;right:16px;background:var(--accent);color:var(--surface);font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 4px;font-size:13px}
+.flow span{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:3px 9px}
+.flow i{font-style:normal;color:var(--ink3)}
+.road{display:grid;gap:12px}
+.road .card{display:grid;grid-template-columns:120px 1fr;gap:18px}
+.road .ph{font-weight:800;color:var(--accent);font-size:15px}
+.road .ph small{display:block;font-weight:500;color:var(--ink3);font-size:12.5px}
+.road ul{margin:0;padding-left:18px;font-size:14.5px;color:var(--ink2)}
+.road .gate{margin-top:8px;font-size:13.5px;background:var(--ok-soft);color:var(--ok);border-radius:8px;padding:6px 10px;display:inline-block}
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.calc label{display:block;font-size:13px;color:var(--ink2);margin-bottom:12px}
+.calc label span{display:flex;justify-content:space-between}
+.calc label b{color:var(--ink);font-variant-numeric:tabular-nums}
+.calc input[type=range]{width:100%;accent-color:var(--accent)}
+.calc .out{display:grid;gap:10px;align-content:start}
+.calc .row{display:flex;justify-content:space-between;font-size:14.5px;border-bottom:1px solid var(--line);padding:6px 0}
+.calc .row b{font-variant-numeric:tabular-nums}
+.calc .total{font-size:22px;font-weight:800}
+.calc .note{font-size:12.5px;color:var(--ink3);line-height:1.55}
+.stack{display:flex;height:26px;border-radius:6px;overflow:hidden;background:var(--line)}
+.stack div{height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;color:var(--ink3);margin-top:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+ol.src{font-size:13px;color:var(--ink2);padding-left:22px;columns:2;column-gap:32px}
+ol.src li{margin:3px 0;break-inside:avoid}
+footer.end{border-top:1px solid var(--line);padding:28px 0 60px;font-size:13px;color:var(--ink3)}
+.themebtn{position:fixed;right:16px;bottom:16px;background:var(--surface);color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:inherit;font-size:13px;cursor:pointer}
+@media (max-width:960px){.layout{grid-template-columns:1fr;gap:0}nav.toc{display:none}.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:1fr}.calc{grid-template-columns:1fr}ol.src{columns:1}}
+@media (max-width:620px){.g2,.g4,.quotes.two{grid-template-columns:1fr}header.hero{padding:44px 0 28px}h2{font-size:23px}.card{padding:18px}.road .card{grid-template-columns:1fr;gap:6px}.verdict{grid-template-columns:1fr}.bar-row{grid-template-columns:92px 1fr 56px}}
+</style>
+</head>
+<body>
+<div class="topnav"><div class="wrap">
+  <a href="./newsletter.html" class="on">① 사업가 뉴스레터: 실망·이탈·한계·돌파</a>
+  <a href="./business.html">② 마케팅 지식사업 사업성</a>
+  <a href="./index.html">③ 롱블랙 이탈 원인</a>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">RESEARCH REPORT · 2026.11 · VOL.3</div>
+  <h1>사업가를 위한 사업 지식 뉴스레터,<br>왜 실망하고, 왜 떠나고, 어떻게 뚫는가</h1>
+  <p class="lede">대행 없이 <b>지식 구독 자체가 사업</b>인 뉴스레터를 전제로 다시 조사했습니다. 타겟은 자영업자, 소규모 브랜드 대표, 스타트업 창업자, 1인 사업자입니다. 다루는 주제는 콘텐츠 마케팅, 퍼포먼스 마케팅, 마케팅 개론, 사업개론, 수익모델, 사업기획, 상품기획입니다. 고객과 운영자가 실제로 남긴 문장으로 <b>실망 이유, 리텐션 하락 이유, 구독 모델의 한계, 돌파 전략</b>을 정리했습니다.</p>
+  <div class="meta">
+    <span>조사: Claude Code + OpenAI Codex 교차 리서치 (Codex 2건 + 리서치 에이전트 1건 병렬)</span>
+    <span>고객·운영자 발화 110건+ 수집, 핵심 인용 13건 원문 재대조</span>
+    <span>기준일: 2026-11-11</span>
+  </div>
+</div></header>
+
+<div class="wrap layout">
+<nav class="toc">
+  <b>목차</b>
+  <a href="#tldr">00 결론</a>
+  <a href="#evidence">01 증거를 읽는 법</a>
+  <a href="#disappoint">02 고객은 왜 실망하나</a>
+  <a href="#churn">03 리텐션은 왜 떨어지나</a>
+  <a href="#owner">04 사업가 타겟은 무엇이 다른가</a>
+  <a href="#limits">05 뉴스레터 구독의 구조적 한계</a>
+  <a href="#kr">06 국내 사례: 막힌 곳과 시도</a>
+  <a href="#global">07 해외 돌파 사례</a>
+  <a href="#break">08 돌파 전략 12</a>
+  <a href="#design">09 상품 설계안</a>
+  <a href="#retcalc">10 리텐션 계산기</a>
+  <a href="#test">11 검증 실험과 지표</a>
+  <a href="#method">12 방법과 한계</a>
+  <a href="#sources">13 출처</a>
+</nav>
+
+<main>
+<!-- 00 -->
+<section id="tldr">
+  <h2><span class="no">00</span>결론</h2>
+  <div class="card verdict">
+    <div class="badge">'읽을거리'로는<br>남지 못한다</div>
+    <div>
+      <b>고객이 떠나는 이유는 대부분 글이 나빠서가 아닙니다. 읽지 않은 메일이 쌓이고, 내 사업과 맞는 글이 드물고, 써먹은 기억이 없어서 결제할 명분이 사라집니다.</b>
+      <p style="margin:6px 0 0;color:var(--ink2);font-size:15px">사업가 대상 뉴스레터가 살아남으려면 <b>'매주 읽는 글'에서 '결정할 때 다시 꺼내 쓰는 도구'</b>로 바뀌어야 합니다. 업종과 규모에 맞춘 사례, 실행 템플릿, 문제별로 찾을 수 있는 아카이브, 비슷한 대표들의 비교 답변이 그 도구입니다. 대행을 하지 않으니 수익은 <b>구독료 자체</b>에서 나와야 합니다. 그래서 연간 결제, 팀 결제, 첫 달 안에 가치를 체감하게 하는 설계가 생존 조건입니다.</p>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card"><h4>① 실망: "내 얘기가 아니다"</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">"첫 번째 함정은 체급의 차이입니다"(창업자), "실무와는 거리가 있는 느낌", "I do not have a dedicated marketing budget or a team". 대기업과 유명 브랜드의 성공담은 작은 사업의 예산, 인원, 업종 조건과 맞지 않습니다. 그 밖에 가격 대비 분량, 뻔함과 중복, 광고처럼 보이는 편집이 실망 이유로 반복됩니다.</p></div>
+    <div class="card"><h4>② 이탈: "안 읽은 게 쌓여서"</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">"읽지도 않으면서 왜 계속 받아왔을까?", "한달에 한번도 접속하지 않는 달이 누적되자", "잘 사용하지 않아서 올해는 연장하지 않고 해지". 롱블랙 운영사도 "가장 큰 문제점은 사람들이 읽지 않는다는 점"이라고 말합니다. 미국 조사에서는 뉴스레터 독자의 <b>62%</b>가 받은 뉴스레터 대부분을 읽지 않습니다.</p></div>
+    <div class="card"><h4>③ 한계: 숫자가 냉정하다</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">beehiiv의 유료 전환율 중앙값은 <b>0.62%</b>입니다(1,000명 중 6명). 월 이탈률은 <b>5~17%</b>입니다. 월 13%면 1년 뒤 남는 사람은 <b>19%</b>입니다. 1인 운영자는 "글 하나에 15~20시간", "수수료를 빼면 남는 게 거의 없다", "타겟을 넓히다 이도 저도 아니게"라고 회고합니다.</p></div>
+    <div class="card"><h4>④ 돌파: 좁히고, 도구로 만들고, 사람을 붙인다</h4><p style="margin:0;font-size:14.5px;color:var(--ink2)">해외 비즈니스·마케팅 레터 가운데 구독 한계를 넘은 곳은 글 외의 것을 팝니다. Exit Five는 템플릿 75개 이상과 동료 커뮤니티(월 $49), Lenny는 팟캐스트·Slack·도구 번들, Stratechery는 음성 번들, The Information은 DB를 붙였습니다. 국내에서는 <b>"장사하면서 궁금한 걸 물어볼 곳이 없다"</b>는 사장님 수요가 확인됩니다.</p></div>
+  </div>
+
+  <div class="callout hot"><b class="t">가장 중요한 단서: 한국 사업가 본인의 해지 후기는 공개 웹에 거의 없습니다</b>Codex와 Claude가 각각 찾았지만, 사장님이나 창업자가 "이 뉴스레터를 이래서 끊었다"고 쓴 글은 한 건도 확인하지 못했습니다. 확인된 목소리는 대부분 직장인, 마케터, 운영자의 것입니다. 이것 자체가 시장 신호입니다. <b>사업가는 지식 뉴스레터에 대해 후기를 남길 만큼 관여하지 않거나, 아예 이 범주를 소비하지 않을 가능성</b>이 있습니다. 사업가가 실제로 돈과 시간을 쓴 곳은 배민아카데미 같은 업종 실전 교육, 강의, 커뮤니티였습니다. 04장과 11장에서 이 공백을 어떻게 검증할지 다룹니다.</div>
+</section>
+
+<!-- 01 -->
+<section id="evidence">
+  <h2><span class="no">01</span>증거를 읽는 법</h2>
+  <p class="sub">인용마다 누가 말했는지, 실제 행동(해지·미갱신)이 있었는지 표시했습니다. 같은 사람의 여러 문장은 한 사람으로 셉니다.</p>
+  <div class="grid g4">
+    <div class="card stat"><div class="n">해지</div><div class="l"><span class="tag t-churn">해지·미갱신</span></div><div class="d">구독을 끊었거나 연장하지 않았다고 명시한 발화</div></div>
+    <div class="card stat"><div class="n">불만</div><div class="l"><span class="tag t-free">불만·실망</span></div><div class="d">불편이나 실망은 말했지만 해지 여부는 확인되지 않은 발화</div></div>
+    <div class="card stat"><div class="n">운영자</div><div class="l"><span class="tag t-op">운영자</span></div><div class="d">뉴스레터·지식 구독을 직접 운영하는 사람의 회고와 인터뷰</div></div>
+    <div class="card stat"><div class="n">요구</div><div class="l"><span class="tag t-keep">요구·유지</span></div><div class="d">원하는 형식, 돈을 내는 이유, 계속 보는 이유</div></div>
+  </div>
+  <div class="callout"><b class="t">화자 구분</b><b>사업가</b>(사장님·창업자·1인 사업자)와 <b>직장인·마케터</b>, <b>해외 소기업주</b>(Reddit 등)를 구분했습니다. 해외 소기업주의 발언은 한국 사업가에게도 맞는지 검증이 필요한 <b>인접 증거</b>로 다룹니다. 회사가 직접 골라 게시한 후기는 긍정 쪽으로 치우칠 수 있어 따로 표시했습니다.</div>
+</section>
+
+<!-- 02 -->
+<section id="disappoint">
+  <h2><span class="no">02</span>고객은 왜 실망하나: 7가지 이유</h2>
+  <p class="sub">기대한 것과 실제로 받은 것이 어긋난 지점입니다. 사업가 타겟에 가장 위험한 순서로 배치했습니다.</p>
+
+  <div class="theme">
+    <div class="theme-head"><h3>D1. 체급이 다르다: 큰 회사 이야기는 내 사업에 안 맞는다</h3></div>
+    <div class="quotes two">
+      <blockquote><p>첫 번째 함정은 체급의 차이입니다.</p><footer><span class="tag t-free">비평</span><b>창업자</b>(연쇄창업가 자기소개) · 롱블랙·매거진B 같은 브랜드 서사형 콘텐츠에 대해 · lcreator 뉴스레터 · 원문 확인</footer></blockquote>
+      <blockquote><p>그 가치를 지탱하기 위해 뒤에서 작동하는 처절한 수익 구조</p><footer><span class="tag t-free">비평</span><b>창업자</b> · 같은 글 · 성공담이 수익 구조를 가린다는 지적 · 원문 확인</footer></blockquote>
+      <blockquote><p>I do not have a dedicated marketing budget or a team of content creators.</p><footer><span class="tag t-free">불만</span><b>해외 소기업주</b> · r/smallbusiness "조직이 있다고 전제하는 마케팅 조언에 지쳤다" 글 · Codex 확인</footer></blockquote>
+      <blockquote><p>실무와는 거리가 있는 느낌이었다.</p><footer><span class="tag t-free">불만</span>직장인 · HBR·DBR 등 경영 지식 구독에 대해 · 2022.05.29 · 원문 확인</footer></blockquote>
+      <blockquote><p>업무 경험이 풍부한 사람에게는 깊이가 얕다고 느낄 수 있을 것 같다.</p><footer><span class="tag t-free">불만</span>기획자 · 퍼블리 · 2022.02.18</footer></blockquote>
+      <blockquote><p>Case studies and 'how I learned from my mistakes' style interviews are always an interesting read, but often sector specific.</p><footer><span class="tag t-keep">요구</span><b>해외 소기업주</b> · r/smallbusinessuk "소기업 뉴스레터에 뭘 원하나" · Codex 확인</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> 이 주제 범위(마케팅, 수익모델, 상품기획)는 대기업과 유명 브랜드 사례로 채우기 쉽습니다. 그런데 바로 그 지점에서 사업가는 "내 얘기가 아니다"라고 느낍니다. 사례마다 <b>업종, 매출 규모, 인원, 예산, 걸린 기간</b>을 적어 '적용 조건'을 보여줘야 합니다.</p>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>D2. 낸 돈만큼 얻는 게 없다: 가격 대비 분량·효용</h3></div>
+    <div class="quotes two">
+      <blockquote><p>이 돈이면 책 한 권을 더 사는 게 낫지 않나</p><footer><span class="tag t-churn">구독 중단</span>직장인(제안팀 4년차) · 퍼블리 · 2020.12.22 · 원문 확인</footer></blockquote>
+      <blockquote><p>1년 20만원이라는 비용은 영상컨텐츠가 엄청난 넷플릭스보다도 거의 두배 가까운 수준이라...</p><footer><span class="tag t-free">불만</span>클리앙 댓글 · 퍼블리 · 2018.09.29</footer></blockquote>
+      <blockquote><p>구독료에 비해, 아티클 시리즈 등 정량적인 양이 너무 적어요.</p><footer><span class="tag t-free">불만</span>앱스토어 리뷰 · 폴인 · 2025.04.18</footer></blockquote>
+      <blockquote><p>제 뉴스레터의 분량 등을 생각하면 7500원의 가치는 '너무 높다'고 판단해주신 것 같아요.</p><footer><span class="tag t-op">운영자</span>독자 반응을 전한 운영자 · 문구구절절(메일리) · 2023.12.11 · 이후 멤버십 중단</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> 고객은 구독료를 책, 넷플릭스, 무료판과 비교합니다. 사업가에게 더 설득력 있는 비교 대상은 <b>"이 자료를 직접 만들거나 외주를 주면 드는 시간과 비용"</b>입니다. 그래서 템플릿과 계산 시트처럼 금액으로 환산되는 결과물이 필요합니다.</p>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>D3. 어디서 본 것 같다: 뻔함·중복·알맹이 없음</h3></div>
+    <div class="quotes two">
+      <blockquote><p>어디 블로그에서 보는것같은데?</p><footer><span class="tag t-free">불만</span>디자이너 · 퍼블리 일부 글 · 2021.08.07</footer></blockquote>
+      <blockquote><p>후킹요소에 이끌려 읽다보면 알맹이가 없는 경우</p><footer><span class="tag t-free">불만</span>구독 콘텐츠 전반 · 2021.10.14</footer></blockquote>
+      <blockquote><p>중복되는 이야기라 구취한 적도 있다.</p><footer><span class="tag t-churn">해지</span>주니어 마케터 · 뉴스레터 전반 · 2022.03.03</footer></blockquote>
+      <blockquote><p>매번 비슷한 인사이터들의 글이 노출된다는 아쉬운 점도 있다.</p><footer><span class="tag t-free">불만</span>주니어 마케터 · 오픈애즈 · 2022.03.03</footer></blockquote>
+      <blockquote><p>순살브리핑 콘텐츠만으로 충분하여</p><footer><span class="tag t-free">유료 거절</span>개인 블로거 · 순살브리핑 프리미엄(당시 월 9,900원)을 안 산 이유 · 2022</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> 마케팅 개론과 사업개론은 무료 콘텐츠가 가장 많은 영역입니다. 원리 설명만으로는 차별화가 안 됩니다. <b>원자료</b>(실제 숫자, 실패 기록, 대표 인터뷰)와 <b>판단 과정</b>이 들어가야 "어디서 본 것"이 되지 않습니다.</p>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>D4. 결국 광고였다: 홍보성 편집과 추가 결제 유도</h3></div>
+    <div class="quotes two">
+      <blockquote><p>광고같은 책 요약이 너무 많게 느껴짐.</p><footer><span class="tag t-free">불만</span>디자이너 · 폴인 · 2021.08.07</footer></blockquote>
+      <blockquote><p>아쉬운 점은 뉴스레터에 담긴 콘텐츠가 대부분 세션 홍보에 그친다는 점이다.</p><footer><span class="tag t-free">불만</span>주니어 마케터 · 헤이조이스 · 2022.03.03</footer></blockquote>
+      <blockquote><p>매달 4,900원을 내는 데 샷까지 결제하라고?</p><footer><span class="tag t-free">불만</span>유료 구독자가 전한 반응 · 롱블랙 · 2022.03.15</footer></blockquote>
+      <blockquote><p>구독을 취소하고 메일수신거부를 했는데도 계속 광고메일을 보내고</p><footer><span class="tag t-churn">해지 후 불신</span>링크드인 게시자 · 롱블랙 · 작성자 주장(사실관계 미검증)</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> 대행을 하지 않는 구조는 오히려 강점이 됩니다. "이 레터는 영업 채널이 아니다"라고 약속할 수 있기 때문입니다. 무료 마케팅 레터 대부분은 대행사·플랫폼이 발행합니다(2차 리포트 참조). 대신 <b>제휴·추천 링크와 자체 상품 홍보의 경계를 명확히</b> 해야 합니다.</p>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>D5. 내 관심사가 아니다: 주제 폭과 목적의 불일치</h3></div>
+    <div class="quotes two">
+      <blockquote><p>제가 패션에 관심이 없다보니</p><footer><span class="tag t-churn">해지 예약</span>직장인 · 롱블랙 · 2022.03.30 · 원문 확인</footer></blockquote>
+      <blockquote><p>한달에 한 주 정도는 마음에 드는 테마가 있더란 거죠.</p><footer><span class="tag t-free">고민</span>같은 사람 · 맞는 글 비율이 1/4이라 결제가 고민됨</footer></blockquote>
+      <blockquote><p>웬 커리어에 대한 고민? 짧은 글을 읽고 싶어서 본 것이 아닌데?</p><footer><span class="tag t-churn">해지 회고</span>애널리스트 · 퍼블리 · 2026.01.05</footer></blockquote>
+      <blockquote><p>타겟을 애매하게 넓히다가 이도 저도 아니게 되어버렸어요.</p><footer><span class="tag t-op">운영자</span>오너의 아싸이트(메일리) · 구독자 219명 · 2024.07.21 · 원문 확인</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> "사업 전반의 모든 주제"는 운영자에게는 넓은 시장이지만, 독자에게는 <b>내 글의 비율이 낮은 묶음</b>입니다. 콘텐츠 마케팅을 원하는 대표에게 수익모델 글 세 편이 연달아 가면 그 달의 효용은 떨어집니다. <b>주제 선택(트랙) 또는 단계별 경로</b>가 필요합니다.</p>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>D6. 읽었는데 남은 게 없다: 성장 체감과 활용의 부재</h3></div>
+    <div class="quotes two">
+      <blockquote><p>매일 새로운 콘텐츠가 쏟아지고, 우리는 소비하고 있지만 스스로 성장하고 있는지 의문이 듭니다.</p><footer><span class="tag t-free">불만</span>독자 질문 · 지식 구독 전반 · 2022.04.01</footer></blockquote>
+      <blockquote><p>정보 소스는 내게 이미 많은 것 같은데, 정작 필요할 때 잘 찾아 쓰지 못하는 것 같아요.</p><footer><span class="tag t-free">불만</span>인터뷰 참여자 · 지식 콘텐츠 이용 조사 · 2020.11.04</footer></blockquote>
+      <blockquote><p>지표변화가 어떤 것을 의미하는지는 자세히 알려주지 않는다.</p><footer><span class="tag t-free">불만</span>퍼포먼스 마케팅 강의 수강생 · '다음에 뭘 할지'를 원함 · 2020.10.31</footer></blockquote>
+      <blockquote><p>너무도 좋은 콘텐츠들이 그냥 흘러가는 것 같아 아쉽습니다.</p><footer><span class="tag t-free">불만</span>앱 리뷰 · 퍼블리 뉴스(현 커리어리) · 저장 기능 요청 · 2020.04.10</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> 뉴스레터는 기본적으로 흘러가는 매체입니다. 사업가는 "필요할 때" 찾습니다. 가격을 올릴 때, 광고를 끌 때, 첫 직원을 뽑을 때입니다. <b>발행일 순서가 아니라 문제별로 찾을 수 있는 아카이브</b>가 없으면 지난 글의 가치가 사라집니다.</p>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>D7. 읽기 어렵다: 형식·도구·상황</h3></div>
+    <div class="quotes two">
+      <blockquote><p>뉴스레터의 길이가 다소 길어서 15분 이상 소요해 읽어야 한다는 점.</p><footer><span class="tag t-free">불만</span>주니어 마케터 · 팁스터 · 2022.03.03</footer></blockquote>
+      <blockquote><p>완독하지 못한 글 찾는게 어렵네요.</p><footer><span class="tag t-free">불만</span>앱스토어 · 롱블랙 · 2023.11.01</footer></blockquote>
+      <blockquote><p>음성듣기가 지원되면 더 좋을 것 같습니다</p><footer><span class="tag t-keep">요구</span>앱스토어 · 폴인 · 버스 멀미로 읽기 어려움 · 2024.05.21</footer></blockquote>
+      <blockquote><p>지금은 출근길에 뉴닉을 접하질 못해서 아쉽습니다..</p><footer><span class="tag t-free">이용 중단</span>직장인 · 뉴닉 · 음성 브리핑 변경 후 · 2025.03.25</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> 사장님의 하루에는 '책상에 앉아 15분 읽는 시간'이 드뭅니다. <b>첫 화면 1분 요약, 음성판, 미완독 이어 읽기</b>는 부가 기능이 아니라 사용률을 지키는 기본 기능입니다.</p>
+  </div>
+</section>
+
+<!-- 03 -->
+<section id="churn">
+  <h2><span class="no">03</span>리텐션은 왜 떨어지나: 이탈의 7단계 경로</h2>
+  <p class="sub">실망은 '불만'에서 멈추기도 하지만, 이탈은 대부분 <b>사용하지 않는 상태가 쌓인 결과</b>로 나타났습니다.</p>
+
+  <div class="card">
+    <div class="flow"><span>구독 시작</span><i>→</i><span>첫 달 가치 확인 실패</span><i>→</i><span>안 읽은 메일 누적</span><i>→</i><span>죄책감·피로</span><i>→</i><span>접속 없는 달</span><i>→</i><span>결제일에 "이번 달 뭐 봤지?"</span><i>→</i><span>해지 또는 미갱신</span></div>
+    <p style="margin:10px 0 0;font-size:14px;color:var(--ink2)">beehiiv 2026 보고서는 첫 달을 "critical value-confirmation window"라고 부릅니다. 연간 결제는 "should I cancel?"을 묻는 12번의 결정 지점 가운데 11번을 없앤다고 설명합니다.</p>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>R1. 쌓인다: 안 읽은 메일이 죄책감이 된다</h3></div>
+    <div class="quotes two">
+      <blockquote><p>읽지도 않으면서 왜 계속 받아왔을까?</p><footer><span class="tag t-churn">수신 중단</span>구독 메일 전반 정리 · 2025.08.05 · 원문 확인</footer></blockquote>
+      <blockquote><p>이 메일을 열지 않는 동안에도 나는 죄책감을 느꼈다.</p><footer><span class="tag t-churn">수신 중단</span>같은 사람</footer></blockquote>
+      <blockquote><p>하루에 많으면 열 개가 넘게 와있는 뉴스레터들을 하나하나 꼼꼼하게 읽지는 못한다.</p><footer><span class="tag t-free">피로</span>초보 기획자 · 30개 넘게 구독하다 정리 · 2021.05.24</footer></blockquote>
+      <blockquote><p>제가 가진 가장 큰 문제점은 사람들이 읽지 않는다는 점이었어요.</p><footer><span class="tag t-op">운영자</span>롱블랙 운영사 부대표 · 2026.01.15 · 원문 확인</footer></blockquote>
+    </div>
+    <p class="insight"><b>숫자:</b> Pew Research(미국 성인 5,153명, 2025)에 따르면 뉴스레터 독자의 <b>62%</b>는 받은 뉴스레터 대부분을 읽지 않고, <b>71%</b>는 5개 미만만 구독합니다. 해외 독자 한 명은 "5 news letters is the max I can handle"이라고 썼습니다. 사업가의 메일함에는 거래처 메일, 세금계산서, 광고 플랫폼 알림이 먼저 있습니다.</p>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>R2. 안 쓴다: 미사용이 누적되면 결제 명분이 사라진다</h3></div>
+    <div class="quotes two">
+      <blockquote><p>한달에 한번도 접속하지 않는 달이 누적되자</p><footer><span class="tag t-churn">해지 검토</span>직장인 · 퍼블리 · 구독료 자체는 비싸지 않다고 봄 · 2022.05.29 · 원문 확인</footer></blockquote>
+      <blockquote><p>잘 사용하지 않아서 올해는 연장하지 않고 해지 했어요.</p><footer><span class="tag t-churn">미갱신</span>퍼블리 · 2024년 1월</footer></blockquote>
+      <blockquote><p>신나게 보다가 읽을 게 별로 없다- 싶으면 멤버십 해지했다가</p><footer><span class="tag t-churn">해지·재구독 반복</span>클리앙 댓글 · 퍼블리 · 2018.10.02</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> 비싸서가 아니라 <b>쓰지 않아서</b> 끊습니다. "가격을 내리면 남는다"는 처방이 통하지 않는 이유입니다. 측정해야 할 것은 오픈율이 아니라 <b>월 1회 이상 '활용' 행동</b>(템플릿 다운로드, 아카이브 검색, 질문)을 한 회원의 비율입니다.</p>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>R3. 시간이 없다: 사장님의 하루</h3></div>
+    <div class="quotes two">
+      <blockquote><p>혼자 운영을 하다보니 하루에 14시간이상 일한다</p><footer><span class="tag t-free">상황</span><b>사장님</b>(1인 카페) · Threads · 2024.10.14 · 뉴스레터 언급 없음, 시간 제약의 맥락</footer></blockquote>
+      <blockquote><p>마케팅은 상상이상으로 생각보다 더 어렵다.</p><footer><span class="tag t-free">상황</span><b>같은 사장님</b></footer></blockquote>
+      <blockquote><p>뭘 읽을까 찾다가 시간만 보내는 경우가 생긴다.</p><footer><span class="tag t-free">불만</span>직장인 · 퍼블리·폴인 · 2022.05.29</footer></blockquote>
+    </div>
+    <p class="insight"><b>시사점:</b> 사장님은 마케팅이 어렵다는 걸 압니다. 배울 의지도 있습니다. 문제는 시간입니다. <b>"이번 주에 할 일 하나"</b>로 압축된 형식이 긴 인사이트 글보다 살아남을 가능성이 높습니다.</p>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>R4. 대체된다: 무료판·유튜브·책·AI 요약</h3></div>
+    <div class="quotes two">
+      <blockquote><p>최근에는 주로 유튜브와 브런치를 위주로 보게 됐다.</p><footer><span class="tag t-churn">해지 후 이동</span>퍼블리 해지 경험자 · 2020</footer></blockquote>
+      <blockquote><p>I was using summary and text-to-speech to help me catch up with it</p><footer><span class="tag t-free">대체 행동</span>해외 독자 · 쌓인 뉴스레터를 AI 요약과 음성으로 처리</footer></blockquote>
+      <blockquote><p>절반가량의 분들은 유료 구독을 해야 하면 보지 않을 것</p><footer><span class="tag t-op">운영자</span>커피팟 발행인 · 충성 독자 20명 인터뷰 결과 · 2022.03.28 · 원문 확인</footer></blockquote>
+    </div>
+    <p class="insight"><b>숫자:</b> Reuters 2025 한국 보고서 기준 주간 유튜브 뉴스 이용률은 <b>50%</b>입니다. AI 때문에 지식 구독을 해지했다는 직접 발언은 이번에도 찾지 못했습니다. 다만 beehiiv는 AI 카테고리의 이탈이 높은 이유로 "free AI content improves"를 꼽습니다. <b>일반 개론은 AI가 무료로 대체하는 첫 영역</b>이라고 보는 게 안전합니다. 이것은 추정입니다.</p>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>R5. 필요할 때만 산다: 이벤트형 구독</h3></div>
+    <p style="font-size:15px;color:var(--ink2)">beehiiv는 투자 레터의 높은 이탈을 "specific window of insight"(실적 시즌 같은 특정 시점)에만 돈을 내고 나가는 행동으로 설명합니다. 사업가에게도 비슷한 창이 있습니다. 창업 직전, 광고 첫 집행, 신상품 출시, 가격 인상이 그 시점입니다. 퍼블리 구독자의 "읽을 게 떨어지면 해지했다가 다시 구독"하는 패턴과 같은 구조입니다. <b>이 창이 지나도 남을 이유</b>(다음 단계 경로, 동료, 누적 자료)가 없으면 이탈은 자연스럽습니다.</p>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>R6. 너무 자주 온다: 빈도 피로</h3></div>
+    <div class="quotes two">
+      <blockquote><p>I much prefer informative newsletter once a month or every x months than being informed every 2 days.</p><footer><span class="tag t-churn">해지 설명</span>해외 독자 · r/declutter</footer></blockquote>
+      <blockquote><p>꾸준히 받아온 피드백 중 '뉴스레터가 길다'는 내용이 있어</p><footer><span class="tag t-op">운영자</span>지금 써보러 갑니다 · 2021.08.05</footer></blockquote>
+    </div>
+    <p class="insight"><b>숫자:</b> Optimove 2025 조사(미국 소비자 329명)에서 <b>70%</b>가 과도한 메시지 때문에 최근 3개 이상 브랜드 구독을 해지했다고 답했습니다. 유료 지식 레터만 본 조사는 아니므로 방향성으로만 참고합니다.</p>
+  </div>
+
+  <div class="theme">
+    <div class="theme-head"><h3>R7. 첫 달에 증명하지 못한다</h3></div>
+    <p style="font-size:15px;color:var(--ink2)">beehiiv의 카테고리별 월 이탈률은 아래와 같습니다. 'Business'와 'Marketing' 카테고리 수치는 공개되지 않았고, beehiiv는 Marketing을 "higher-churn" 카테고리로만 묶었습니다.</p>
+    <div class="card">
+      <div class="bars">
+        <div class="bar-row"><span>Food &amp; Drink</span><div class="bar-track"><div class="bar-fill alt" style="width:30.4%"></div></div><span class="v">5.06%</span></div>
+        <div class="bar-row"><span>News</span><div class="bar-track"><div class="bar-fill alt" style="width:32.8%"></div></div><span class="v">5.47%</span></div>
+        <div class="bar-row"><span>Sports</span><div class="bar-track"><div class="bar-fill alt" style="width:46.6%"></div></div><span class="v">7.76%</span></div>
+        <div class="bar-row"><span>Investing</span><div class="bar-track"><div class="bar-fill" style="width:70.3%"></div></div><span class="v">11.72%</span></div>
+        <div class="bar-row"><span>AI</span><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div><span class="v">13.33%</span></div>
+        <div class="bar-row"><span>Money</span><div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--neg)"></div></div><span class="v">16.67%</span></div>
+      </div>
+      <p style="margin:12px 0 0;font-size:13px;color:var(--ink3)">출처: beehiiv, The State of Paid Newsletters 2026 (2026.06). 추정 구독 수명은 Food &amp; Drink 약 20개월, News 약 18개월, Investing 약 8.5개월, Money 약 6개월입니다. 국내 비교치로는 롱블랙의 월 재결제율 87%(2023 상반기, 월 이탈 13%)가 있습니다.</p>
+    </div>
+    <p class="insight"><b>시사점:</b> '돈 버는 법', '사업 잘하는 법'에 가까운 실용 정보 카테고리일수록 이탈이 높습니다. 필요한 걸 얻으면 떠나기 쉽고 대안이 많기 때문입니다. 사업 지식 레터는 이 위험군에 속한다고 가정하고 설계해야 합니다.</p>
+  </div>
+</section>
+
+<!-- 04 -->
+<section id="owner">
+  <h2><span class="no">04</span>사업가 타겟은 무엇이 다른가</h2>
+  <p class="sub">직장인·마케터 대상 지식 구독과 비교해 사업가 타겟에서 달라지는 점입니다. 근거 강도를 함께 표시했습니다.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>차이</th><th>직장인·마케터</th><th>사업가</th><th>근거</th><th>강도</th></tr></thead>
+    <tbody>
+      <tr><td><b>읽는 이유</b></td><td>커리어 성장, 업무 참고, 이직 준비</td><td>당장의 매출·비용 결정. 성장 서사보다 생존 판단</td><td>창업자 비평 "체급의 차이", 배민아카데미 사장님 "새로운 메뉴 개발 아이디어를 얻을 수 있지 않을까 해서 왔다"</td><td>중</td></tr>
+      <tr><td><b>읽는 시간</b></td><td>출퇴근 루틴</td><td>불규칙. 하루 14시간 노동</td><td>1인 카페 사장님 Threads</td><td>약</td></tr>
+      <tr><td><b>원하는 사례</b></td><td>유명 브랜드·대기업의 기획 비하인드</td><td>내 업종·규모·예산에서 된 사례. 실패담</td><td>"often sector specific", "how I learned from my mistakes"</td><td>중(해외)</td></tr>
+      <tr><td><b>비교하고 싶은 것</b></td><td>업계 트렌드</td><td>다른 대표들은 같은 문제를 어떻게 풀었나</td><td>"4-5 business owners … side by side"</td><td>중(해외)</td></tr>
+      <tr><td><b>외로움</b></td><td>사수 부재(마케터)</td><td>물어볼 동료 대표 자체가 없음</td><td>"I've no friends who own businesses", 배민아카데미 "물어볼 곳이 없는데 '친정'이 생긴 것 같다"</td><td>중</td></tr>
+      <tr><td><b>결제 주체</b></td><td>개인 카드, 회사 교육비 일부</td><td>사업 경비 처리 가능. 연간·팀 결제 여력</td><td>Lenny의 기업 비용 처리 지원, Exit Five 팀플랜 3명 이상</td><td>약(추정)</td></tr>
+      <tr><td><b>후기 습관</b></td><td>블로그·브런치에 후기를 남김</td><td>지식 레터 후기 거의 없음. 교육·커뮤니티 후기는 있음</td><td>Codex·Claude 교차 조사에서 사업가 해지 후기 0건</td><td>관찰</td></tr>
+    </tbody>
+  </table></div>
+  <div class="quotes two" style="margin-top:16px">
+    <blockquote><p>40년 경력자가 직접 실수하면서 얻은 노하우를 전수받는다는 게 큰 도움이 된다</p><footer><span class="tag t-keep">지불 이유</span><b>예비 재창업자</b>(전 도시락 업체 운영) · 배민아카데미 오프라인 수업 · 국민일보 2026.07.09</footer></blockquote>
+    <blockquote><p>감자탕을 20년째 하고 있지만 트렌드는 계속 바뀐다</p><footer><span class="tag t-keep">지불 이유</span><b>사장님</b>(감자탕 20년) · 같은 기사</footer></blockquote>
+    <blockquote><p>장사를 하면서 궁금한 것을 물어볼 곳이 없는데, '친정'이 생긴 것 같다고 하더라</p><footer><span class="tag t-keep">유지 이유</span>배민아카데미 교육팀장이 전한 <b>사장님</b> 반응 · 이코노미스트 2025.03.01</footer></blockquote>
+    <blockquote><p>저도 직접 판매하는 제품이 있는데, 배운 걸 바로 적용해보려고 합니다!</p><footer><span class="tag t-keep">적용 동기</span><b>사업자</b> · 인프런 '마케팅 OS 구축' 수강평 · 2026.06.14</footer></blockquote>
+  </div>
+  <div class="callout ok"><b class="t">해석</b>사업가가 돈과 시간을 쓴 곳은 <b>실수에서 나온 노하우, 업종 트렌드, 물어볼 곳, 바로 적용할 방법</b>이었습니다. '인사이트를 읽는 즐거움'은 결제 이유로 나타나지 않았습니다. 사업가 대상 레터는 교양 매체가 아니라 <b>업무 도구이자 동료 네트워크</b>로 포지셔닝해야 합니다.</div>
+</section>
+
+<!-- 05 -->
+<section id="limits">
+  <h2><span class="no">05</span>뉴스레터 구독 서비스의 구조적 한계 10가지</h2>
+  <p class="sub">콘텐츠를 잘 만들어도 부딪히는 벽입니다. 운영자 본인의 목소리를 함께 실었습니다.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>#</th><th>한계</th><th>숫자</th><th>목소리</th></tr></thead>
+    <tbody>
+      <tr><td>L1</td><td><b>무료 독자는 돈을 내지 않는다</b></td><td>beehiiv 유료 전환율 중앙값 <b>0.62%</b>. 상위 게시자는 5% 이상, 방치하면 0.3%. Substack은 참여도 높은 목록(오픈율 40%+)에서 5~10%를 기대치로 안내</td><td>"구독자가 늘어도 아무도 결제하지 않는다." / "한 달, 두 달이 지나도 수익은 0원" <span class="tag t-op">운영자</span>개인 서브스택 · 2025.05.20</td></tr>
+      <tr><td>L2</td><td><b>월 결제는 매달 해지를 묻는다</b></td><td>월 이탈 5%면 1년 생존 약 54%, 17%면 약 11%. 연간 결제가 2025년 중반 월 결제를 추월</td><td>"매달 지출되는 비용을 더 크게 인지하는 순간…브랜드 신뢰도를 떨어뜨리는 요인" <span class="tag t-op">구독사업 실무자</span>2026.05.21</td></tr>
+      <tr><td>L3</td><td><b>목록이 커질수록 독자는 희석된다</b></td><td>스티비 미디어 업종 오픈율: 1천 명 이하 32.2% → 5만 명 초과 14.3%. 뉴닉 약 60만 명(2024.08)도 휴면 독자 문제 인정</td><td>"오픈율은 (구독자가 많아질수록) 희석될 수밖에 없죠." <span class="tag t-op">운영자</span>뉴닉 대표</td></tr>
+      <tr><td>L4</td><td><b>오픈율이라는 지표 자체가 흐리다</b></td><td>2021년 Apple 메일 개인정보 보호(MPP) 이후 열지 않아도 오픈으로 집계될 수 있음</td><td>—</td></tr>
+      <tr><td>L5</td><td><b>입소문만으로는 안 큰다</b></td><td>창작자 34명 인터뷰 중 30명이 운영 난관을 언급. 9.2만 구독자 운영자도 "자연 성장"을 어려움으로 꼽음</td><td>"뉴스레터는 그에 비해 폐쇄적이기 때문에 홍보가 좀 어렵더라구" <span class="tag t-op">운영자</span>메일리 · 2022.04.10</td></tr>
+      <tr><td>L6</td><td><b>1인 생산은 번아웃으로 끝난다</b></td><td>글 1편 15~20시간. 코호트 3개 동시 운영 시 만족도·등록률 하락</td><td>"점점 이런 나 자신에게 지쳐 번아웃이 왔고" <span class="tag t-op">운영자</span>네이버 프리미엄콘텐츠 · 2022.08.26<br>"혼자서 3개의 코호트를 동시에 하다보니 리소스의 한계가 나타났죠." <span class="tag t-op">운영자</span>조쉬</td></tr>
+      <tr><td>L7</td><td><b>플랫폼 수수료와 '빌린 독자'</b></td><td>메일리 정산 시 20% 차감(PG·부가세 포함), 스티비 결제대행 3.2%+VAT, Substack 10%+결제수수료</td><td>"메일리 수수료 15%를 제외하면 제게 남는 건 거의 없습니다." <span class="tag t-op">운영자</span>2023.12 / "구독자 3,441명, 이메일은 0개였습니다" / "플랫폼이 빌려준 독자는 아직 내 독자가 아닙니다." <span class="tag t-op">운영자</span>리드제일</td></tr>
+      <tr><td>L8</td><td><b>커뮤니티는 저절로 식는다</b></td><td>운영자 관찰: 참여가 1주일마다 약 30%씩 감소. 200명을 넘기자 활성화</td><td>"점점 조용하게 변해가는 커뮤니티를 보면서 떠나는 분들이 초기에 있었습니다." <span class="tag t-op">운영자</span>조쉬 · 2024.09.05</td></tr>
+      <tr><td>L9</td><td><b>광고에 기대면 편집이 흔들린다</b></td><td>뉴닉 "주력 비즈니스 모델은 광고 사업". 무료 마케팅 레터 대부분은 대행사·플랫폼의 영업 채널</td><td>"때로는 광고주의 입김에 기사들이 변형되는 경우도 있었고요." <span class="tag t-op">운영자</span>아웃스탠딩 대표</td></tr>
+      <tr><td>L10</td><td><b>무료 대체재와 AI</b></td><td>AI 요약이 있는 검색에서 일반 결과 클릭률 8%(없으면 15%). 이는 검색 행동이며 해지 데이터는 아님</td><td>"순살브리핑 콘텐츠만으로 충분하여" <span class="tag t-free">유료 거절</span></td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout hot"><b class="t">사업가 타겟에 특히 무거운 한계: L1·L2·L6</b>대행 매출이 없으니 L1(전환)과 L2(이탈)를 구독료로만 버텨야 합니다. 주제 범위가 넓어 L6(생산 병목)이 빨리 옵니다. 마케팅, 사업개론, 수익모델, 상품기획을 매주 깊게 쓰려면 혼자서는 한 주제당 월 1편이 한계입니다.</div>
+</section>
+
+<!-- 06 -->
+<section id="kr">
+  <h2><span class="no">06</span>국내 사례: 어디서 막혔고 무엇을 시도했나</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>서비스</th><th>모델</th><th>막힌 지점</th><th>돌파 시도</th><th>확인된 결과</th></tr></thead>
+    <tbody>
+      <tr><td><b>아웃스탠딩</b></td><td>IT·스타트업 유료 기사</td><td>일반 기사와의 차별화</td><td>기사당 투입 확대, 심층·쉬운 형식, 유료 행사, 단체 할인(20~40%)</td><td>첫 구독 후 재구독 비율 <b>90% 이상</b>(2022 대표 인터뷰). 법인 매출 4~5억 원대(2020년 영업손실 3.65억 원)</td></tr>
+      <tr><td><b>롱블랙</b></td><td>하루 1편 유료 구독</td><td>"사람들이 읽지 않는다"</td><td>24시간 열람 제한("헬스장 트레이너 같은 기분 좋은 강제성"), 슬랙 커뮤니티 약 8,000명, 무제한 플랜</td><td>클릭 독자 완독률 85% 이상(자체 수치), 월 재결제율 87%. 매출 30억 원대로 성장했지만 영업손실 지속</td></tr>
+      <tr><td><b>퍼블리</b></td><td>실무 지식·템플릿 멤버십</td><td>품질 편차, 무료 대체재</td><td>템플릿 200개 이상 모음, 문제 해결형 검색, B2B 기업 구독</td><td>누적 유료 고객 12만 명, 콘텐츠 4,000개. 2024년 멤버십 사업을 뉴닉에 매각</td></tr>
+      <tr><td><b>폴인</b></td><td>현업 전문가 인터뷰 아카이브</td><td>무료→유료 전환, 콘텐츠 양에 대한 기대</td><td>무료 레터에서 원문 맛보기, 코너별 글자 수 제한, 세미나</td><td>장기 구독자의 유지 이유는 "아티클보다 세미나". 전환율은 미공개</td></tr>
+      <tr><td><b>캐릿</b></td><td>무료 트렌드 레터 + 유료 사이트</td><td>무료 레터에서 유료 방문으로 이어지게 하기</td><td>2545 직장인으로 타깃 고정, 일부 공개, 독자 질문 활용, 기업 교육</td><td>무료 레터 약 20만 명(2023.08). "대체 불가능해서 구취하면 아쉽다"는 독자 반응</td></tr>
+      <tr><td><b>커피팟</b></td><td>무료 레터 + 유료 '샷 추가'</td><td>광고 없이 버틸 상품의 효용</td><td>충성 독자 20명 인터뷰, 피드백 1,500개 이상 검토, 맥락 해설과 차트</td><td>구독자 약 3만 명(2024). 유료 인원은 미공개. <b>이번 사업과 가장 비슷한 구조</b></td></tr>
+      <tr><td><b>조쉬의 프로덕트 레터</b></td><td>무료 레터 → 코호트·유료 커뮤니티</td><td>혼자 여러 프로그램을 돌리며 품질 하락</td><td>프로그램 정리, 커뮤니티 집중, 파트타임 매니저</td><td>레터 7,150명, 관련 매출 월 2,080만 원(자체 발표), 커뮤니티 첫 달 리텐션 90%. 뉴스레터 구독료 매출이 아님</td></tr>
+      <tr><td><b>순살브리핑·부딩</b></td><td>무료 요약 + 프리미엄</td><td>"무료판만으로 충분"</td><td>프리미엄 심층, 교육, 토론방, 전문가 Q&amp;A(부딩 필진 3명)</td><td>수익 기여 미공개. 부딩 플러스의 현재 운영은 미확인</td></tr>
+      <tr><td><b>개인 유료 레터들</b></td><td>메일리·스티비 유료</td><td>수수료, 번아웃, 타깃 모호</td><td>멤버십 중단(문구구절절, Jay Curve), 이메일 리스트 소유로 이전(리드제일)</td><td>유료 유지에 성공한 공개 사례 드묾</td></tr>
+    </tbody>
+  </table></div>
+  <p class="insight"><b>패턴:</b> 버틴 곳은 모두 글 외에 무엇인가를 붙였습니다. 아웃스탠딩은 행사와 단체 구독, 롱블랙은 강제성과 커뮤니티, 폴인은 세미나, 퍼블리는 템플릿과 B2B, 조쉬는 커뮤니티입니다. <b>글만 판 개인 유료 레터는 대부분 멈췄습니다.</b></p>
+</section>
+
+<!-- 07 -->
+<section id="global">
+  <h2><span class="no">07</span>해외 돌파 사례: 비즈니스·마케팅 레터는 무엇을 붙였나</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>서비스</th><th>돌파 방법</th><th>숫자</th><th>가져올 점</th></tr></thead>
+    <tbody>
+      <tr><td><b>Exit Five</b></td><td>무료 레터·팟캐스트 → 유료 동료 커뮤니티, 템플릿, 업종별 그룹, 팀플랜</td><td>월 $49, 연 $444, 회원 5,700명 이상, 템플릿 75개 이상, 사례 100개 이상</td><td><b>가장 가까운 모델.</b> 글이 아니라 질문, 자료, 동료 접근권에 과금. "It's not a spam-filled promotion fest"</td></tr>
+      <tr><td><b>Lenny's Newsletter</b></td><td>심층 글 + 팟캐스트 + Slack + 소프트웨어 번들, 회사 비용 처리 지원</td><td>구독자 100만 명 이상, Slack 3만 명 이상</td><td>회사 돈으로 결제하게 만드는 장치. 다만 번들 조건 불명확으로 환불 요구도 발생</td></tr>
+      <tr><td><b>Marketing Examples</b></td><td>매주 같은 형식: 사례 3개 + 카피 팁 2개, 검색 가능한 사례 사이트</td><td>독자 13만 명</td><td>"No fluff marketing." 고정된 짧은 형식과 사례 DB</td></tr>
+      <tr><td><b>Stratechery</b></td><td>같은 분석을 글·음성·팟캐스트 번들로</td><td>월 $15 / 연 $150</td><td>소비 상황을 넓혀 사용률을 지킨다</td></tr>
+      <tr><td><b>Every</b></td><td>글 묶음 → 직접 만든 AI 도구 묶음</td><td>월 $20, 앱 4개 포함</td><td>읽기가 아니라 '매일 쓰는' 이유를 만든다</td></tr>
+      <tr><td><b>The Information</b></td><td>독점 보도 + 조직도·DB + 이벤트 + 기업 구독</td><td>Pro 연 $999</td><td>반복 조회하는 데이터가 고가 티어를 정당화</td></tr>
+      <tr><td><b>Morning Brew</b></td><td>추천 보상, 직무별 B2B 레터</td><td>추천 메일 수신자 2배, 전문 분야 사업 연 $25m(2024)</td><td>"Make it as easy as humanly possible to share the newsletter." 단, 광고형 모델</td></tr>
+      <tr><td><b>The Hustle / Trends</b></td><td>무료 레터 + 유료 사업 기회 리서치 + 팟캐스트(My First Million)</td><td>일일 150만 명 이상 시점에 HubSpot이 인수(2021)</td><td>사업 아이디어·창업자 대상 유료 리서치의 선례. 현재 Trends는 HubSpot 블로그로 흡수</td></tr>
+      <tr><td><b>Axios Pro</b></td><td>좁은 산업별 거래 정보, 고가 번들</td><td>분야별 연 $599, 첫해 유료 3,000명 이상·매출 $2m</td><td>큰 결정에 쓰이는 좁은 정보는 비싸게 팔린다</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 08 -->
+<section id="break">
+  <h2><span class="no">08</span>돌파 전략 12가지: 고객 목소리에서 거꾸로 설계</h2>
+  <p class="sub">각 전략이 어떤 실망(D)과 이탈(R)을 막는지 연결했습니다. 대행 없이 지식 구독만으로 구현 가능한 것만 골랐습니다.</p>
+  <div class="svc">
+    <div class="card"><h4>S1. 타겟을 '상황'으로 좁혀서 시작 <small>막는 것: D1·D5·L5</small></h4><p>"사업 전반"은 유지하되 입구는 하나로 좁힙니다. 예: <b>"광고와 콘텐츠를 직접 돌리는 연매출 1~30억 원 소규모 브랜드 대표"</b>. 운영자 회고("타겟을 애매하게 넓히다가 이도 저도")와 캐릿의 타깃 고정 사례가 근거입니다. 확장은 주제가 아니라 <b>단계</b>(예비창업 → 첫 매출 → 재구매 → 첫 채용)로 합니다.</p></div>
+    <div class="card"><h4>S2. 모든 사례에 '적용 조건 카드' <small>막는 것: D1</small></h4><p>업종, 매출 규모, 인원, 예산, 걸린 기간, 실패한 시도를 사례 첫머리에 고정 형식으로 붙입니다. "체급의 차이" 비판과 "I do not have a dedicated marketing budget"에 대한 직접 대응입니다.</p></div>
+    <div class="card"><h4>S3. 실패와 숫자를 파는 레터 <small>막는 것: D3·R4</small></h4><p>"how I learned from my mistakes" 인터뷰, 매출·마진·광고비 같은 실제 숫자, 버린 선택지를 다룹니다. 일반 개론은 무료와 AI가 대체하지만 <b>원자료와 판단 과정</b>은 대체하기 어렵습니다.</p></div>
+    <div class="card"><h4>S4. 한 질문, 대표 4~5명의 답 <small>막는 것: D1·D3, 외로움</small></h4><p>"가격을 올릴 때 어떻게 했나", "광고를 끈 적이 있나"처럼 하나의 질문에 대표 여러 명의 조건과 결과를 나란히 보여주는 정기 코너입니다. "4-5 business owners … side by side" 요구에서 왔습니다. 섭외 자체가 대표 네트워크를 만듭니다.</p></div>
+    <div class="card"><h4>S5. 읽으면 결과물이 남는다: 템플릿 동봉 <small>막는 것: D2·D6·R2</small></h4><p>매 호에 실행 자료 1개를 붙입니다. 가격표 계산 시트, 고객 인터뷰 질문지, 상품 기획서 양식, 광고 실험 기록표가 예입니다. 퍼블리 고객의 "막힐 때면 퍼블리에 먼저 검색해보면서 야근하는 날을 정말 많이 줄였습니다"(회사 선별 후기)와 Exit Five의 템플릿 75개 이상이 근거입니다. 구독료를 "자료 제작비"와 비교하게 만듭니다.</p></div>
+    <div class="card"><h4>S6. 발행일이 아니라 문제로 찾는 아카이브 <small>막는 것: D6·R5</small></h4><p>'첫 고객', '객단가', '재구매', '광고비 효율'처럼 문제별로 색인을 만들어 글, 템플릿, 실패 사례를 한 화면에 모읍니다. 구독의 가치가 <b>쌓일수록 커지는</b> 구조이며, 이벤트형 구독(R5)을 붙잡는 장치입니다.</p></div>
+    <div class="card"><h4>S7. "이번 주 할 일 하나" 첫 화면 <small>막는 것: D7·R1·R3</small></h4><p>메일 첫 화면에는 결정 1개, 실행 1개, 주의 조건 1개만 둡니다. 심층 근거는 아래로 보냅니다. 하루 14시간 일하는 사장님이 1분 안에 쓸모를 판단할 수 있어야 합니다.</p></div>
+    <div class="card"><h4>S8. 빈도·트랙 선택권 <small>막는 것: D5·R6</small></h4><p>주제 트랙(마케팅 / 수익·상품 / 사업 운영)과 빈도(주간 / 월간 모아보기)를 독자가 고릅니다. 해지 버튼 앞에 <b>빈도 축소와 일시정지</b> 옵션을 둡니다. beehiiv는 해지 방지 플로우가 해지 시도자의 10~20%를 되돌린다고 주장합니다(측정 근거는 비공개).</p></div>
+    <div class="card"><h4>S9. 음성판 <small>막는 것: D7·R3</small></h4><p>운전, 매장 준비, 이동 중에 듣는 5~10분 음성판입니다. 폴인("음성듣기가 지원되면"), 뉴닉(음성 변경 후 이탈), Stratechery 번들이 근거입니다. 표와 템플릿은 원문으로 연결합니다.</p></div>
+    <div class="card"><h4>S10. 홍보 없는 작은 동료 그룹 <small>막는 것: 외로움·R5·L8</small></h4><p>비슷한 규모와 업종의 대표 8~12명 단위 그룹과 월 1회 공동 Q&amp;A입니다. 답변은 편집해 아카이브 자산으로 쌓습니다. 개별 대행이나 컨설팅으로 번지지 않게 <b>질문은 공개 형식으로만</b> 받습니다. 커뮤니티는 주당 30%씩 식는다는 운영자 경험이 있으니 상시 채팅방보다 <b>정해진 일정의 모임</b>이 낫습니다.</p></div>
+    <div class="card"><h4>S11. 연간·팀 결제를 기본값으로 <small>막는 것: L2·D2</small></h4><p>월 결제는 매달 해지 결정을 요구합니다. 연간 할인을 크게 두고, 사업 경비 처리용 세금계산서와 3인 이상 팀플랜을 제공합니다. 아웃스탠딩의 단체 할인 20~40%와 Exit Five 팀플랜이 선례입니다.</p></div>
+    <div class="card"><h4>S12. 첫 30일 '가치 확인' 온보딩 <small>막는 것: R7·R2</small></h4><p>가입 직후 사업 단계와 업종을 묻고, 그에 맞는 <b>핵심 자료 5개</b>를 바로 보냅니다. 첫 달 안에 템플릿 1개를 실제로 쓰게 만드는 것이 목표입니다. "이번 달 뭐 봤지?"에 답할 수 있게 월말 '이번 달 당신이 쓴 것' 요약을 보냅니다.</p></div>
+  </div>
+</section>
+
+<!-- 09 -->
+<section id="design">
+  <h2><span class="no">09</span>상품 설계안: 대행 없는 사업가 지식 구독</h2>
+  <p class="sub">위 전략을 하나의 상품으로 묶은 안입니다. 가격은 비교 근거를 붙인 출발점이며 검증 전 가정입니다.</p>
+  <div class="grid g3">
+    <div class="card opt"><div class="ol">무료</div><h4>주간 레터</h4><ul class="tight" style="font-size:14px;color:var(--ink2)"><li>"이번 주 할 일 하나" + 사례 1개(조건 카드 포함)</li><li>트랙과 빈도 선택</li><li>유료 아카이브 미리보기 1건</li></ul><p style="font-size:13px;color:var(--ink3);margin:8px 0 0">역할: 신뢰와 목록. 목표 오픈율 30% 이상(스티비 소규모 미디어 기준 32%)</p></div>
+    <div class="card opt rec"><div class="ol">유료 개인</div><h4>사업 의사결정 라이브러리</h4><ul class="tight" style="font-size:14px;color:var(--ink2)"><li>심층 사례와 실패·숫자 리포트</li><li>매 호 템플릿, 문제별 아카이브</li><li>대표 4~5인 비교 코너, 음성판</li><li>월 1회 공동 Q&amp;A(답변 아카이브화)</li></ul><p style="font-size:13px;color:var(--ink3);margin:8px 0 0">가격 출발점: 월 1.5만 원 안팎, 연간 12~15만 원. 근거: beehiiv Business 중앙값 월 $15, 아웃스탠딩 월 13,900원·연 139,000원, 롱블랙 월 5,900~9,900원</p></div>
+    <div class="card opt"><div class="ol">팀·그룹</div><h4>팀플랜 + 동료 그룹</h4><ul class="tight" style="font-size:14px;color:var(--ink2)"><li>3인 이상 좌석, 세금계산서</li><li>업종·규모별 8~12인 그룹 모임</li><li>분기 오프라인 세션</li></ul><p style="font-size:13px;color:var(--ink3);margin:8px 0 0">근거: Exit Five 월 $49, 아웃스탠딩 단체 할인. 운영 시간 대비 수익을 따로 측정</p></div>
+  </div>
+
+  <h3>한 호의 구조 (유료판)</h3>
+  <div class="card">
+    <div class="flow"><span>1. 이번 주 결정</span><i>→</i><span>2. 적용 조건 카드</span><i>→</i><span>3. 사례와 숫자</span><i>→</i><span>4. 실패·버린 선택지</span><i>→</i><span>5. 실행 순서</span><i>→</i><span>6. 템플릿</span><i>→</i><span>7. 측정 방법</span><i>→</i><span>8. 아카이브 태그</span></div>
+    <p style="margin:10px 0 0;font-size:14px;color:var(--ink2)">주제 예시: 콘텐츠 마케팅(첫 100명 모으기), 퍼포먼스 마케팅(광고비 50만 원으로 테스트 설계), 수익모델(구독·번들·객단가), 상품기획(신상품 검증 인터뷰), 사업기획(손익분기 계산)을 <b>같은 8단 구조</b>로 씁니다. 주제가 넓어도 형식이 같으면 독자의 '쓸모 판단' 비용이 낮아집니다.</p>
+  </div>
+
+  <h3>생산 체계: 1인 번아웃(L6) 피하기</h3>
+  <ul class="tight" style="color:var(--ink2)">
+    <li><b>격주 심층 + 매주 짧은 레터</b>로 시작합니다. 심층 1편에 15~20시간이 든다는 운영자 기록을 기준으로 잡았습니다.</li>
+    <li>대표 인터뷰와 비교 코너는 <b>섭외 → 질문지 → 편집</b> 구조라 직접 쓰는 시간이 적고, 네트워크가 콘텐츠원이 됩니다.</li>
+    <li>템플릿은 한 번 만들면 계속 쓰입니다. 아카이브 가치가 시간이 갈수록 커지는 자산입니다.</li>
+    <li>이메일 목록은 직접 소유합니다. "플랫폼이 빌려준 독자는 아직 내 독자가 아닙니다."</li>
+  </ul>
+</section>
+
+<!-- 10 -->
+<section id="retcalc">
+  <h2><span class="no">10</span>리텐션 계산기: 이탈률이 매출을 얼마나 깎나</h2>
+  <p class="sub">월 이탈률과 연간 결제 비중에 따라 100명의 유료 회원이 1년 뒤 몇 명 남는지, 구독료 매출이 얼마인지 계산합니다. 연간 결제자는 연 1회만 갱신 여부를 판단한다고 가정했습니다.</p>
+  <div class="card calc">
+    <div>
+      <label><span>월 이탈률(월 결제자) <b id="o_churn"></b></span><input type="range" id="churn" min="2" max="20" step="1" value="13"></label>
+      <label><span>연간 결제 비중 <b id="o_annual"></b></span><input type="range" id="annual" min="0" max="80" step="5" value="30"></label>
+      <label><span>연간 갱신율 <b id="o_renew"></b></span><input type="range" id="renew" min="20" max="90" step="5" value="55"></label>
+      <label><span>월 요금 <b id="o_mprice"></b></span><input type="range" id="mprice" min="5000" max="30000" step="1000" value="15000"></label>
+      <p class="note">기본값: 월 이탈 13%는 롱블랙 재결제율 87%에서 가져왔습니다. 연간 요금은 월 요금×10(2개월 할인)으로 가정했습니다. 연간 갱신율 55%는 검증되지 않은 가정입니다.</p>
+    </div>
+    <div class="out">
+      <div class="row"><span>월 결제자 12개월 뒤 생존</span><b id="r_msurv"></b></div>
+      <div class="row"><span>1년 뒤 남는 회원 (100명 중)</span><b id="r_left"></b></div>
+      <div class="row"><span>첫해 회원 1인당 매출</span><b id="r_arpu"></b></div>
+      <div class="row"><span>월 결제자 평균 수명</span><b id="r_life"></b></div>
+      <div class="row total"><span>100명 기준 첫해 매출</span><b id="r_rev"></b></div>
+      <p class="note" id="r_note2"></p>
+    </div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section id="test">
+  <h2><span class="no">11</span>검증 실험과 지표</h2>
+  <p class="sub">공개 웹에는 한국 사업가 본인의 목소리가 부족했습니다. 그래서 출시 전후로 직접 검증해야 할 질문이 남습니다.</p>
+  <div class="road">
+    <div class="card"><div class="ph">0~4주<small>문제 검증</small></div><div><ul><li>타겟 대표 15~20명 인터뷰. 질문은 "최근 3개월 사업 결정 중 정보가 부족했던 것", "그때 어디서 찾았나", "돈을 낸 적이 있나"로 합니다. 커피팟의 20명 인터뷰 방식을 따릅니다.</li><li>네이버 카페(아프니까 사장이다 등)와 블라인드 자영업 게시판은 사람이 직접 읽고 표본을 모읍니다. 자동 수집이 막힌 채널이기 때문입니다.</li></ul><span class="gate">통과 기준: 같은 문제를 5명 이상이 말하고, 3명 이상이 이미 돈을 쓴 경험이 있음</span></div></div>
+    <div class="card"><div class="ph">1~3개월<small>무료 레터</small></div><div><ul><li>"이번 주 할 일 하나" 형식으로 주간 발행, 트랙 선택 설문</li><li>템플릿 다운로드율, 답장률, 공유율 측정</li></ul><span class="gate">통과 기준: 구독자 1,000명, 오픈율 30% 이상, 템플릿 다운로드율 15% 이상</span></div></div>
+    <div class="card"><div class="ph">3~6개월<small>유료 파일럿</small></div><div><ul><li>창립 회원 50~100명을 연간 결제로 모집(할인 제공)</li><li>첫 30일 온보딩, 월 1회 공동 Q&amp;A, 해지 설문 필수화</li></ul><span class="gate">통과 기준: 무료→유료 전환 2% 이상, 첫 달 '활용 행동' 회원 60% 이상</span></div></div>
+    <div class="card"><div class="ph">6~12개월<small>확장 판단</small></div><div><ul><li>트랙 추가 여부는 해지 사유와 검색어 데이터로 결정</li><li>팀플랜과 동료 그룹은 운영 시간 대비 매출로 판단</li></ul><span class="gate">통과 기준: 월 결제자 월 이탈 8% 이하, 연간 갱신율 50% 이상</span></div></div>
+  </div>
+
+  <h3>봐야 할 지표</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>지표</th><th>왜</th><th>오픈율 대신 보는 이유</th></tr></thead>
+    <tbody>
+      <tr><td><b>월 활용 회원 비율</b></td><td>템플릿 다운로드, 아카이브 검색, 질문 중 하나라도 한 회원</td><td>R2 "접속하지 않는 달이 누적"을 직접 잡아냄</td></tr>
+      <tr><td><b>첫 30일 가치 확인율</b></td><td>온보딩 자료 중 1개 이상을 실제로 사용</td><td>beehiiv가 말한 첫 달 이탈 창</td></tr>
+      <tr><td><b>트랙별 클릭 분포</b></td><td>어느 주제가 누구에게 쓰이는지</td><td>D5 관심사 불일치 조기 발견</td></tr>
+      <tr><td><b>해지 사유 분포</b></td><td>해지 시 1문항 필수 설문</td><td>공개 웹에서 못 찾은 '사업가의 해지 이유'를 직접 수집</td></tr>
+      <tr><td><b>연간 결제 비중·갱신율</b></td><td>매출 안정성</td><td>L2 월 결제의 반복 해지 결정을 줄였는지</td></tr>
+      <tr><td><b>콘텐츠 1편당 제작 시간</b></td><td>지속 가능성</td><td>L6 번아웃 선행 지표</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 12 -->
+<section id="method">
+  <h2><span class="no">12</span>방법과 한계</h2>
+  <div class="grid g2">
+    <div class="card"><h4>수행한 조사</h4><ul class="tight" style="font-size:14.5px;color:var(--ink2)">
+      <li>OpenAI Codex(웹 검색) 2건 병렬: ① 한국 고객의 실망·이탈 목소리 42건 ② 구조적 한계, 국내 13개·해외 14개 사례, 인용 35건</li>
+      <li>Claude 리서치 에이전트 1건: 사업가·운영자 목소리 39건(원문 페이지 직접 확인)</li>
+      <li>Claude 직접 검색: beehiiv 2026 보고서, Press Gazette, 국내 검색</li>
+      <li>핵심 인용 13건을 원문 페이지와 재대조: 13건 모두 일치. Reddit 3건은 Claude의 접근이 막혀 Codex 확인만 있음</li>
+      <li>1·2차 리포트의 재무·고객 데이터를 함께 참조</li>
+    </ul></div>
+    <div class="card"><h4>한계</h4><ul class="tight" style="font-size:14.5px;color:var(--ink2)">
+      <li><b>한국 사업가 본인의 지식 레터 해지 후기는 0건입니다.</b> 사업가 관련 결론은 해외 소기업주 발언, 배민아카데미 기사, 창업자 비평에 기댄 <b>가설</b>입니다.</li>
+      <li>네이버 카페, 블라인드, 카카오 오픈채팅은 수집하지 못했습니다.</li>
+      <li>불만을 찾는 검색이라 표본이 부정 쪽으로 치우칩니다. 빈도는 시장 비율이 아닙니다.</li>
+      <li>beehiiv와 Pew 수치는 해외 데이터입니다. 국내 사업가 레터의 전환율과 이탈률은 공개 자료가 없습니다.</li>
+      <li>운영사 발표 수치(재구독 90%, 완독률 85% 등)는 자체 집계입니다.</li>
+      <li>AI로 인한 해지는 이번에도 직접 증거가 없어 추정으로 남겼습니다.</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section id="sources">
+  <h2><span class="no">13</span>출처</h2>
+  <ol class="src">
+    <li><a href="https://lcreator.beehiiv.com/p/b">창업자 비평: 브랜드 서사형 콘텐츠의 함정</a></li>
+    <li><a href="https://viewahra.tistory.com/15">퍼블리 구독 중단 후기 (2020.12)</a></li>
+    <li><a href="https://odotpedia.tistory.com/216">지식 구독 이용 후기 (2022.05)</a></li>
+    <li><a href="https://idewce.tistory.com/18">롱블랙 해지 예약 후기 (2022.03)</a></li>
+    <li><a href="https://kiokao.tistory.com/26">구독 메일 정리 (2025.08)</a></li>
+    <li><a href="https://illustmei.tistory.com/436">폴인·퍼블리 비교 후기 (2021.08)</a></li>
+    <li><a href="https://kimky92.tistory.com/9">구독 콘텐츠 피로 (2021.10)</a></li>
+    <li><a href="https://craftman-2024.tistory.com/category/독서노트">퍼블리 해지 회고 (2026.01)</a></li>
+    <li><a href="https://stibee.com/api/v1.0/emails/share/qgAsJ3LOadckO8VnX0ww9mKYQ4HMHSI">마케터블 레터: 퍼블리 미갱신 (2024.01)</a></li>
+    <li><a href="https://yozm.wishket.com/magazine/detail/1754/">롱블랙 이용기 (요즘IT, 2022.10)</a></li>
+    <li><a href="https://brunch.co.kr/@ladies-pond/79">롱블랙 샷 결제 후기 (2022.03)</a></li>
+    <li><a href="https://brunch.co.kr/@brunchf2r0/22">퍼블리 후기 (2022.02)</a></li>
+    <li><a href="https://www.clien.net/service/board/use/12640643">클리앙 퍼블리 사용기·댓글 (2018)</a></li>
+    <li><a href="https://brunch.co.kr/@2hopper/12">주니어 마케터 뉴스레터 후기 (2022.03)</a></li>
+    <li><a href="https://brunch.co.kr/@filmbyjieun/18">초보 기획자가 구독하는 뉴스레터 31 (2021.05)</a></li>
+    <li><a href="https://brunch.co.kr/@cociety/52">타임앤코 인터뷰 (2022.04)</a></li>
+    <li><a href="https://blog.highoutputclub.com/membership-talk-longblack/">롱블랙 멤버십 토크 (2026.01)</a></li>
+    <li><a href="https://www.openads.co.kr/content/contentDetail?contsId=12330">롱블랙 커뮤니티 분석 (오픈애즈, 2024.01)</a></li>
+    <li><a href="https://www.mobiinside.co.kr/2022/01/06/outstanding-interview/">아웃스탠딩 대표 인터뷰 (2022.01)</a></li>
+    <li><a href="https://apps.apple.com/kr/app/롱블랙-longblack/id6450910866">롱블랙 앱스토어 리뷰</a></li>
+    <li><a href="https://apps.apple.com/kr/app/폴인-성장의-경험을-나눕니다/id6451428786">폴인 앱스토어 리뷰</a></li>
+    <li><a href="https://apps.apple.com/kr/app/뉴닉-가장-쉬운-뉴스-브리핑/id1549450444">뉴닉 앱스토어 리뷰</a></li>
+    <li><a href="https://apps.apple.com/kr/app/퍼블리-커리어-멤버십-publy/id1440756899">퍼블리 앱스토어 리뷰</a></li>
+    <li><a href="https://deep-wide-studio.tistory.com/184">지식 콘텐츠 이용자 인터뷰 (2020.11)</a></li>
+    <li><a href="https://www.threads.com/@sinamon_bakery/post/DBGXGnzp20V">1인 카페 사장님 Threads (2024.10)</a></li>
+    <li><a href="https://www.kmib.co.kr/article/view.asp?arcid=0030082911">배민아카데미 수강 사장님 (국민일보, 2026.07)</a></li>
+    <li><a href="https://economist.co.kr/article/view/ecn202502250079">배민아카데미 교육팀 (이코노미스트, 2025.03)</a></li>
+    <li><a href="https://maily.so/mungugugeolgeol/posts/e9o0k56nz8w">문구구절절 멤버십 중단 (2023.12)</a></li>
+    <li><a href="https://drtuzi.substack.com/p/vs">유료 구독 vs 세일즈 뉴스레터 (2025.05)</a></li>
+    <li><a href="https://maily.so/leadjaeil/posts/8do7k79yrgq">리드제일: 뉴스레터 8개월 회고</a></li>
+    <li><a href="https://maily.so/ownsight/posts/x1zg93e9rqg">오너의 아싸이트 회고 (2024.07)</a></li>
+    <li><a href="https://maily.so/contentsnews/posts/92ze8378zep">뉴스레터 중단 공지 (2024.11)</a></li>
+    <li><a href="https://brunch.co.kr/@bcuration/32">네이버 프리미엄콘텐츠 번아웃 회고 (2022.08)</a></li>
+    <li><a href="https://maily.so/josh/posts/2qzp0jlwr4x">조쉬: 1년 회고 (2024.09)</a></li>
+    <li><a href="https://eopla.net/magazines/20722">조쉬 회고 (EO)</a></li>
+    <li><a href="https://eopla.net/magazines/42576">구독 사업 실무자 칼럼 (EO, 2026.05)</a></li>
+    <li><a href="https://maily.so/marsinmarine/posts/710z3yykolw">마파 뉴스레터 운영기 (2022.04)</a></li>
+    <li><a href="https://ditoday.com/?p=51651">지금 써보러 갑니다 운영자 (2021.08)</a></li>
+    <li><a href="https://blog.stibee.com/nyuseureteodo-bijeuniseuga-doel-su-isseulgga/">커피팟: 뉴스레터도 비즈니스가 될 수 있을까 (2022.03)</a></li>
+    <li><a href="https://v.daum.net/v/q4qCVkOJiY">뉴닉 대표 인터뷰 (미디어오늘, 2024)</a></li>
+    <li><a href="https://v.daum.net/v/E5Joj5OZ06">롱블랙 대표 인터뷰</a></li>
+    <li><a href="https://bemyb.kr/contents/?bmode=view&idx=18616086">폴인 팀장 인터뷰 (비마이비)</a></li>
+    <li><a href="https://www.careet.net/1138">캐릿 운영팀 글 (2023.08)</a></li>
+    <li><a href="https://www.newswire.co.kr/newsRead.php?no=991379">뉴닉 퍼블리 인수 발표 (2024)</a></li>
+    <li><a href="https://sports.khan.co.kr/article/202301252210003/amp">퍼블리 이용자 리포트 (2023.01)</a></li>
+    <li><a href="https://active-wealth-growth.tistory.com/entry/경제-뉴스레터-추천-어피티-부딩-순살브리핑-등-아침-5분만-투자해도-경제지식이-가득-채워지는-기분✨">경제 뉴스레터 독자 후기 (2022)</a></li>
+    <li><a href="https://todaygnimaerd.tistory.com/49">퍼블리 해지 후 폴인 사용기 (2020)</a></li>
+    <li><a href="https://www.beehiiv.com/blog/the-state-of-paid-newsletters-2026">beehiiv: The State of Paid Newsletters 2026</a></li>
+    <li><a href="https://pressgazette.co.uk/newsletters/newsletters-2026-prices-retention-churn/">Press Gazette: newsletter prices, retention, churn (2026.06)</a></li>
+    <li><a href="https://www.pewresearch.org/journalism/2026/02/19/email-newsletters-as-a-source-of-news/">Pew Research: Email newsletters (2026.02)</a></li>
+    <li><a href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/">Pew Research: AI 요약과 검색 클릭 (2025.07)</a></li>
+    <li><a href="https://www.optimove.com/resources/reports/2025-optimove-insights-consumer-marketing-fatigue-full-report">Optimove: Consumer marketing fatigue 2025</a></li>
+    <li><a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025/south-korea">Reuters Institute: Digital News Report 2025 한국</a></li>
+    <li><a href="https://newslettercircle.substack.com/p/the-7-biggest-challenges-newsletter">Newsletter Circle: 창작자 34명 인터뷰</a></li>
+    <li><a href="https://mailchimp.com/help/apple-privacy-faq/">Mailchimp: Apple MPP 설명</a></li>
+    <li><a href="https://faq.substack.com/p/substack-finance-writers-faq">Substack: 유료 전환 기대치</a></li>
+    <li><a href="https://help.stibee.com/paid-newsletter/billing/process">스티비 유료 구독 정산</a></li>
+    <li><a href="https://maily.so/app/guides/monetization/withdraw">메일리 정산 안내</a></li>
+    <li><a href="https://www.reddit.com/r/smallbusiness/comments/1ujiq5a/anyone_else_tired_of_marketing_advice_that/">r/smallbusiness: 조직 전제 마케팅 조언</a></li>
+    <li><a href="https://www.reddit.com/r/smallbusinessuk/comments/1ext041/what_would_interest_you_in_a_small_business/">r/smallbusinessuk: 소기업 뉴스레터에 원하는 것</a></li>
+    <li><a href="https://www.reddit.com/r/declutter/comments/1gmttpw">r/declutter: 뉴스레터 해지</a></li>
+    <li><a href="https://www.reddit.com/r/rss/comments/1l13430/newsletter_overload_is_it_just_me_or_are_you/">r/rss: 뉴스레터 과부하</a></li>
+    <li><a href="https://exitfive.com/pricing/">Exit Five 요금·구성</a></li>
+    <li><a href="https://exitfive.com/community/">Exit Five 회원 후기</a></li>
+    <li><a href="https://www.lennysnewsletter.com/about">Lenny's Newsletter 소개</a></li>
+    <li><a href="https://www.lennysnewsletter.com/p/an-unbelievable-offer-now-get-one/comments">Lenny 번들 고객 댓글</a></li>
+    <li><a href="https://marketingexamples.com/newsletter">Marketing Examples</a></li>
+    <li><a href="https://stratechery.com/stratechery-plus/">Stratechery Plus</a></li>
+    <li><a href="https://every.to/on-every/the-every-bundle-now-includes-cora">Every 번들</a></li>
+    <li><a href="https://theinformation.zendesk.com/hc/en-us/articles/218741157-Individual-Subscriptions">The Information 가격</a></li>
+    <li><a href="https://www.cloudsponge.com/customers/morning-brew/">Morning Brew 추천 프로그램</a></li>
+    <li><a href="https://www.axios.com/2024/10/22/morning-brew-newsletter-b2b-brands">Morning Brew B2B 확장 (Axios, 2024)</a></li>
+    <li><a href="https://ir.hubspot.com/news-releases/news-release-details/hubspot-signs-agreement-acquire-hustle-adding-content-help">HubSpot의 The Hustle 인수 (2021)</a></li>
+    <li><a href="https://digiday.jp/publishers/axios-pro-generated-2-million-in-2022-with-more-than-3k-paid-subscribers/">Axios Pro 첫해 실적</a></li>
+  </ol>
+</section>
+</main>
+</div>
+
+<footer class="end"><div class="wrap">Claude Code + OpenAI Codex 교차 리서치 · 2026-11-11 · 인용은 공개 웹 원문 발췌이며, 화자의 신원과 결제 여부는 독립 검증되지 않았습니다.</div></footer>
+
+<button class="themebtn" id="tb" type="button">테마 전환</button>
+<script>
+(function(){
+  var r=document.documentElement,b=document.getElementById('tb');
+  try{var s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s);}catch(e){}
+  b.addEventListener('click',function(){var cur=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');var n=cur==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n);}catch(e){}});
+  var $=function(id){return document.getElementById(id)};
+  var man=function(v){return (Math.round(v/10000)).toLocaleString('ko-KR')+'만 원'};
+  function calc(){
+    var c=+$('churn').value/100,a=+$('annual').value/100,rn=+$('renew').value/100,p=+$('mprice').value;
+    $('o_churn').textContent=Math.round(c*100)+'%';
+    $('o_annual').textContent=Math.round(a*100)+'%';
+    $('o_renew').textContent=Math.round(rn*100)+'%';
+    $('o_mprice').textContent=p.toLocaleString('ko-KR')+'원';
+    var m=100*(1-a),an=100*a;
+    var surv=Math.pow(1-c,12);
+    var mMonths=0;for(var i=0;i<12;i++){mMonths+=Math.pow(1-c,i);}
+    var revM=m*mMonths*p;
+    var revA=an*p*10;
+    var left=m*surv+an*rn;
+    var rev=revM+revA;
+    $('r_msurv').textContent=Math.round(surv*100)+'%';
+    $('r_left').textContent=Math.round(left)+'명';
+    $('r_arpu').textContent=Math.round(rev/100).toLocaleString('ko-KR')+'원';
+    $('r_life').textContent=(c>0?(1/c).toFixed(1):'∞')+'개월';
+    $('r_rev').textContent=man(rev);
+    var base=100*p*12;
+    $('r_note2').textContent='이탈이 없을 때(100명×12개월) 매출은 '+man(base)+'입니다. 현재 가정에서는 그중 '+Math.round(rev/base*100)+'%만 실현됩니다. 연간 결제자는 1년 뒤 갱신율('+Math.round(rn*100)+'%)만큼 남는다고 계산했습니다.';
+  }
+  ['churn','annual','renew','mprice'].forEach(function(id){$(id).addEventListener('input',calc);});
+  calc();
+})();
+</script>
+</body>
+</html>
